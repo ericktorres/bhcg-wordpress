@@ -395,11 +395,13 @@ function paypal_checkout() {
 	// For sandbox wp_register_script('paypal_sdk_js', 'https://www.paypal.com/sdk/js?client-id=AW4bUR-JIsByh90XMkfp7nDrRfE82PymvDhsIHjHyfC4zZbjViFRm4MzPatcMIOjEQItK4EXYLpl7g01&currency=MXN');
 	wp_register_script('paypal_sdk_js', 'https://www.paypal.com/sdk/js?client-id=AeuffiCqniXPPwchxL-s2xifsebIAYcGFglM9EczNvWQeyqtPMC2czAdhL6mxvTXVVyQEq1xG1YHhlYw&currency=MXN');
 	wp_register_script('jquery331', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js');
+	wp_register_script('conekta_script', 'https://cdn.conekta.io/js/latest/conekta.js');
 	wp_register_style('bootstrap', get_template_directory_uri().'/css/bootstrap-for-courses.css');
 	
 	if (is_page_template('checkout.php')) {
 		wp_enqueue_script('jquery331');
         wp_enqueue_script('paypal_sdk_js');
+        wp_enqueue_script('conekta_script');
         wp_enqueue_style('bootstrap');
     }
 }

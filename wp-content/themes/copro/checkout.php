@@ -66,7 +66,8 @@ get_header();
 
 	<!-- Here start the checkout components -->
 	<div class="container" id="main_container_checkout">
-		<form>
+		<form action="/confirmacion-de-pago" method="POST" id="card-form">
+			<span class="card-errors"></span>
 			<fieldset>
 				<legend><b>Datos del participante</b></legend>
 			<div class="form-group">
@@ -94,11 +95,11 @@ get_header();
 			<div class="row">
 				<div class="col">
 					<label for="txt_phone">Teléfono:</label>
-    				<input type="number" class="form-control" id="txt_phone" name="txt_phone" placeholder="Teléfono" style="height:38px;" min="10" max="10">
+    				<input type="number" class="form-control" id="txt_phone" name="txt_phone" placeholder="Teléfono" style="height:38px;" size="10">
     			</div>
     			<div class="col">
 					<label for="txt_mobile_phone">Teléfono móvil:</label>
-    				<input type="number" class="form-control" id="txt_mobile_phone" name="txt_mobile_phone" aria-describedby="mobile_help" placeholder="Teléfono móvil" style="height:38px;" min="10" max="10" onblur="validateInputs('phone');">
+    				<input type="number" class="form-control" id="txt_mobile_phone" name="txt_mobile_phone" aria-describedby="mobile_help" placeholder="Teléfono móvil" style="height:38px;" size="10" onblur="validateInputs('phone');">
     				<small id="mobile_help" class="form-text" style="display:none; color: red;">El campo teléfono móvil es obligatorio.</small>
     			</div>
 			</div>
@@ -121,9 +122,69 @@ get_header();
 	    			<input type="hidden" id="hdn_start_time" name="hdn_start_time" value="<? echo $_POST['hdn_start_time']; ?>">
 				</div>
 			</fieldset>
+			<fieldset>
+				<legend><b>Información de pago</b></legend>
+				<div class="form-group">
+					<label for="txt_cardholder_name">Nombre del tarjetahabiente:</label>
+    				<input type="text" class="form-control" id="txt_cardholder_name" name="txt_cardholder_name" aria-describedby="cardholder_name" placeholder="Nombre de tarjetahabiente" style="height:38px;" data-conekta="card[name]" size="20">
+    				<small id="name_help" class="form-text" style="display:none; color: red;">El nombre del tarjetahabiente es un campo obligatorio.</small>
+				</div>
+				<div class="form-group">
+					<label for="txt_card_number">Número de tarjeta de crédito:</label>
+    				<input type="text" class="form-control" id="txt_card_number" name="txt_card_number" aria-describedby="cardholder_name" placeholder="Número de tarjeta" style="height:38px;" data-conekta="card[number]" size="20">
+    				<small id="name_help" class="form-text" style="display:none; color: red;">El número de la tarjeta es un campo obligatorio.</small>
+				</div>
+				<div class="form-row">
+    				<div class="form-group col-md-4 mb-3">
+      					<label for="txt_cvc">CVC:</label>
+      					<input type="text" class="form-control" id="txt_cvc" name="txt_cvc" style="height:38px;" placeholder="CVC" size="4" data-conekta="card[cvc]">
+    				</div>
+    				<div class="form-group col-md-4 mb-3">
+      					<label for="txt_expiration_month">Mes de expiración (MM):</label>
+      					<input type="text" class="form-control" id="txt_expiration_month" name="txt_expiration_month" style="height:38px;" placeholder="Mes de expiración" size="2" data-conekta="card[exp_month]">
+    				</div>
+    				<div class="form-group col-md-4 mb-3">
+      					<label for="txt_expiration_year">Año de expiración (AAAA):</label>
+      					<input type="text" class="form-control" id="txt_expiration_year" name="txt_expiration_year" style="height:38px;" placeholder="Año de expiración" size="4" data-conekta="card[exp_year]">
+    				</div>
+  				</div>
+			</fieldset>
+			<button type="submit">Realizar Pago</button>
 		</form>
+		<!-- Card form -->
+		<!--<form action="/confirmacion-de-pago" method="POST" id="card-form">
+  			<span class="card-errors"></span>
+  			<div>
+    			<label>
+      				<span>Nombre del tarjetahabiente</span>
+      				<input type="text" size="20" data-conekta="card[name]">
+    			</label>
+  			</div>
+  			<div>
+    			<label>
+      				<span>Número de tarjeta de crédito</span>
+      				<input type="text" size="20" data-conekta="card[number]">
+    			</label>
+  			</div>
+  			<div>
+    			<label>
+      				<span>CVC</span>
+      				<input type="text" size="4" data-conekta="card[cvc]">
+    			</label>
+  			</div>
+  			<div>
+    			<label>
+      				<span>Fecha de expiración (MM/AAAA)</span>
+      				<input type="text" size="2" data-conekta="card[exp_month]">
+    			</label>
+    			<span>/</span>
+    			<input type="text" size="4" data-conekta="card[exp_year]">
+  			</div>
+  			<button type="submit">Crear token</button>
+		</form>-->
+
 		<div class="container" style="text-align: center;">
-			<p>Elija cualquiera de nuestras diferentes formas de pago (Visa, Mastercard, American Express o Paypal).</p>
+			<p>Se aceptan pagos con tarjetas Visa, Mastercard y American Express.</p>
 			<div id="paypal-button-container" style="width: 320px; display: block; margin: auto;"></div>
 		</div>
 		<script>
@@ -184,117 +245,43 @@ get_header();
 				}
 			}
 
-			$(document).ready(function(){
+  			// Conekta script
+  			Conekta.setPublicKey('key_JZbV8T6Ercs8rXmrNtsTobQ');
+
+  			var conektaSuccessResponseHandler = function(token) {
+  				console.log('Token success');
+  				console.log('Token: ' + token);
+
+    			var $form = $("#card-form");
+    			//Inserta el token_id en la forma para que se envíe al servidor
+     			$form.append($('<input type="hidden" name="conektaTokenId" id="conektaTokenId">').val(token.id));
+    			$form.get(0).submit(); //Hace submit
+  			};
+
+  			var conektaErrorResponseHandler = function(response) {
+  				console.log('Error token');
+
+    			var $form = $("#card-form");
+    			$form.find(".card-errors").text(response.message_to_purchaser);
+    			$form.find("button").prop("disabled", false);
+  			};
+
+  			//jQuery para que genere el token después de dar click en submit
+  			$(function () {
+    			$("#card-form").submit(function(event) {
+      				console.log('Submit ok');
+
+      				var $form = $(this);
+      				// Previene hacer submit más de una vez
+      				$form.find("button").prop("disabled", true);
+      				Conekta.Token.create($form, conektaSuccessResponseHandler, conektaErrorResponseHandler);
+      				return false;
+    			});
+  			});
+
+  			$(document).ready(function(){
   				$( "#txt_name" ).focus();
 			});
-
-  			paypal.Buttons({
-  				style: {
-  					layout: 'vertical',
-  					color: 'silver'
-  				},
-    			createOrder: function(data, actions) {
-      				// Set up the transaction
-      				return actions.order.create({
-        				purchase_units: [{
-          					amount: {
-            					value: 1
-          					},
-          					payer: {
-          						name: {
-          							given_name: document.getElementById('txt_name').value,
-          							surname: document.getElementById('txt_lastname').value
-          						}
-          					}
-        				}]
-      				});
-    			},
-    			onApprove: function(data, actions) {
-    				return actions.order.capture().then(function(details) {
-    					var container = $('#main_container_checkout');
-    					var course_name = $('#txt_course_name').val();
-
-    					var html_success = '<div style="text-align:center;">';
-    					html_success += '<h1>¡Felicidades!</h1>';
-    					html_success += '<p>Has asegurado tu lugar en el curso: '+course_name+'</p>';
-    					html_success += '<p><b>Clave de confirmación: '+details.id+'</b></p>';
-    					html_success += '<p>Guarda tu clave de confirmación y espera los detalles del curso en tu correo electrónico.</p>';
-    					html_success += '</div>';
-
-    					var html_fail = '<div>';
-    					html_fail += '<h1>Ha ocurrido un problema :(</h1>';
-    					html_fail += '<p>Tu pago no ha sido aprobado, verifica tus movimientos e inténtalo de nuevo.</p>';
-    					html_fail += '<p>Si tienes dudas acerca del estado de tu compra puedes comunicarte con nuestro equipo de soporte.</p>';
-    					html_fail = '</div>';
-
-    					if(details.status == 'COMPLETED'){
-    						
-							var to = $('#txt_confirm_email').val();
-							var course_name = $('#txt_course_name').val();
-							var payment_confirmation = details.id;
-							var course_location = $('#hdn_location').val();
-							var course_date = $('#hdn_start_time').val();
-							var course_detail_id = <? echo "'".$_POST['hdn_headquarter_id']."'"; ?>;
-							var name = $('#txt_name').val();
-							var lastname = $('#txt_lastname').val();
-							var email = $('#txt_confirm_email').val();
-							var telephone = $('#txt_mobile_phone').val();
-							var amount = $('#txt_course_cost').val() - (($('#txt_course_cost').val() * 16) / 100);
-							var iva = (($('#txt_course_cost').val() * 16) / 100);
-							var total_amount = $('#txt_course_cost').val();
-							var payment_status = details.status;
-							var payment_date = details.create_time;
-							var email_params = JSON.stringify({to: to, course_name: course_name, payment_confirmation: payment_confirmation, course_location: course_location, course_date: course_date});
-							var save_params = JSON.stringify({course_detail_id: course_detail_id, name: name, lastname: lastname, email: email, telephone: telephone, places: 1, amount: amount, iva: iva, total_amount: total_amount, payment_type: 'Paypal', payment_confirmation: payment_confirmation, payment_status: payment_status, payment_date: payment_date});
-
-							console.log(save_params);
-							
-							// Sending the email notification
-							$.ajax({
-								url: 'https://cms.bluehand.com.mx/api/v1/emails/send-purchase-notification',
-								method: 'post',
-								dataType: 'json',
-								data: email_params,
-								success: function(response){
-									console.log(response.code_result);
-								},
-								error: function(error){
-									console.log('Ha ocurrido un error: ' + error);
-								}
-							});
-
-							// Saving the order in the system
-							$.ajax({
-								url: 'https://cms.bluehand.com.mx/api/v1/payment/post',
-								method: 'post',
-								dataType: 'json',
-								data: save_params,
-								success: function(response){
-									console.log(save_params);
-								},
-								error: function(error){
-
-								}
-							});
-
-							container.empty();
-							container.html(html_success);
-    					}else{
-    						container.empty();
-							container.html(html_fail);
-    					}
-
-    					var response = JSON.stringify({
-    						name: details.payer.name.given_name,
-    						email: details.payer.email_address,
-    						order_id: details.id,
-    						order_status: details.status,
-    						order_time: details.create_time
-    					});
-    					//console.log(response);
-    				});
-    			}
-  			}).render('#paypal-button-container');
 		</script>
 	</div>
 	
