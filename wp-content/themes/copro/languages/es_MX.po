@@ -1,0 +1,4397 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PlaceHolder\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-14 12:14+1000\n"
+"PO-Revision-Date: 2016-11-02 10:07+1000\n"
+"Last-Translator: none\n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.7.3\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:55 framework/helpers/title.php:89
+#: framework/options/sections/pages.php:15
+msgid "404"
+msgstr ""
+
+#: 404.php:56
+msgid "Ooops! That Page Can't Be Found"
+msgstr ""
+
+#: 404.php:57
+msgid "It looks like nothing was found at this location. Try use the search."
+msgstr ""
+
+#: comments.php:35
+#, php-format
+msgctxt "comments title"
+msgid "1 Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:42 comments.php:64
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:44 comments.php:66
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:45 comments.php:67
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:78
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:85
+msgid "Your Comment"
+msgstr ""
+
+#: framework/helpers/actions_filters.php:680
+msgid "From:"
+msgstr ""
+
+#: framework/helpers/actions_filters.php:681
+msgid "Email:"
+msgstr ""
+
+#: framework/helpers/actions_filters.php:682
+msgid "Message:"
+msgstr ""
+
+#: framework/helpers/actions_filters.php:684
+msgid "Contact Form"
+msgstr ""
+
+#: framework/helpers/extras.php:158
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: framework/helpers/like_post.php:156
+msgid "Unlike"
+msgstr ""
+
+#: framework/helpers/like_post.php:160
+msgid "Like"
+msgstr ""
+
+#: framework/helpers/like_post.php:175 framework/helpers/like_post.php:235
+msgid "You Like:"
+msgstr ""
+
+#: framework/helpers/like_post.php:199
+msgid "You don't like anything yet."
+msgstr ""
+
+#: framework/helpers/like_post.php:267
+msgid "Today's Most Popular Posts"
+msgstr ""
+
+#: framework/helpers/like_post.php:299
+msgid "This Month's Most Popular Posts"
+msgstr ""
+
+#: framework/helpers/like_post.php:331
+msgid "This Week's Most Popular Posts"
+msgstr ""
+
+#: framework/helpers/like_post.php:350
+msgid "Most Popular Posts"
+msgstr ""
+
+#: framework/helpers/plugin_ninja_forms.php:37
+msgid "Custom Bootstrap Classes"
+msgstr ""
+
+#: framework/helpers/template-tags.php:69
+msgid "Posts navigation"
+msgstr ""
+
+#: framework/helpers/template-tags.php:121
+#: single-templates/parts/part-post-nav.php:10
+msgid "Post navigation"
+msgstr ""
+
+#: framework/helpers/template-tags.php:124
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span> %title"
+msgstr ""
+
+#: framework/helpers/template-tags.php:125
+msgctxt "Next post link"
+msgid "%title <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: framework/helpers/template-tags.php:146
+msgid "Pingback:"
+msgstr ""
+
+#: framework/helpers/template-tags.php:146
+#: framework/helpers/template-tags.php:174
+msgid "Edit"
+msgstr ""
+
+#: framework/helpers/template-tags.php:158
+msgid "Author"
+msgstr ""
+
+#: framework/helpers/template-tags.php:166
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: framework/helpers/template-tags.php:171
+#, php-format
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: framework/helpers/template-tags.php:182
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: framework/helpers/template-tags.php:197
+msgid "Reply"
+msgstr ""
+
+#: framework/helpers/template-tags.php:220
+msgid "Your Name"
+msgstr ""
+
+#: framework/helpers/template-tags.php:226
+msgid "Your Email"
+msgstr ""
+
+#: framework/helpers/template-tags.php:232
+msgid "Your Website"
+msgstr ""
+
+#: framework/helpers/title.php:27
+msgid "1 search result for"
+msgstr ""
+
+#: framework/helpers/title.php:30
+msgid "search results for"
+msgstr ""
+
+#: framework/helpers/title.php:33
+msgid "Search results for"
+msgstr ""
+
+#: framework/helpers/title.php:46
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: framework/helpers/title.php:49
+#, php-format
+msgid "Day: %s"
+msgstr ""
+
+#: framework/helpers/title.php:52
+#, php-format
+msgid "Month: %s"
+msgstr ""
+
+#: framework/helpers/title.php:52
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: framework/helpers/title.php:55
+#, php-format
+msgid "Year: %s"
+msgstr ""
+
+#: framework/helpers/title.php:55
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: framework/helpers/title.php:62
+msgid "Asides"
+msgstr ""
+
+#: framework/helpers/title.php:65
+msgid "Galleries"
+msgstr ""
+
+#: framework/helpers/title.php:68
+msgid "Images"
+msgstr ""
+
+#: framework/helpers/title.php:71
+msgid "Videos"
+msgstr ""
+
+#: framework/helpers/title.php:74
+msgid "Quotes"
+msgstr ""
+
+#: framework/helpers/title.php:77
+msgid "Links"
+msgstr ""
+
+#: framework/helpers/title.php:80
+msgid "Statuses"
+msgstr ""
+
+#: framework/helpers/title.php:83
+msgid "Audios"
+msgstr ""
+
+#: framework/helpers/title.php:86
+msgid "Chats"
+msgstr ""
+
+#: framework/helpers/title.php:92 framework/options/sections/blog.php:222
+#: sidebar-product.php:19 sidebar-secondary.php:19 sidebar-shop.php:19
+#: sidebar.php:19
+msgid "Archives"
+msgstr ""
+
+#: framework/metaboxes/config.php:39 framework/options/sections/layout.php:7
+msgid "Layout Settings"
+msgstr ""
+
+#: framework/metaboxes/config.php:40 framework/options/sections/layout.php:8
+msgid "Change the main theme's layout and configure it."
+msgstr ""
+
+#: framework/metaboxes/config.php:47 framework/options/sections/layout.php:15
+msgid "Main Layout"
+msgstr ""
+
+#: framework/metaboxes/config.php:48 framework/options/sections/layout.php:16
+msgid ""
+"See that this layout is valid to the whole website, but you can overwrite it "
+"locally in a page, for example."
+msgstr ""
+
+#: framework/metaboxes/config.php:49 framework/options/sections/layout.php:17
+msgid "Select the layout to be used by the website."
+msgstr ""
+
+#: framework/metaboxes/config.php:62 framework/options/sections/layout.php:30
+msgid "Fixed Height Header"
+msgstr ""
+
+#: framework/metaboxes/config.php:63 framework/options/sections/layout.php:31
+msgid ""
+"If on, the header will be fixed at screen top not scrolling together with "
+"page."
+msgstr ""
+
+#: framework/metaboxes/config.php:78 framework/options/sections/layout.php:40
+msgid "Disable Widget Area?"
+msgstr ""
+
+#: framework/metaboxes/config.php:79 framework/options/sections/layout.php:41
+msgid ""
+"If on, the header will not show the widget area below menu. Useful when you "
+"are using Fixed Height Header."
+msgstr ""
+
+#: framework/metaboxes/config.php:93 framework/options/sections/layout.php:49
+msgid "Wide or Boxed"
+msgstr ""
+
+#: framework/metaboxes/config.php:94 framework/options/sections/layout.php:50
+msgid ""
+"See that this configuration is valid to the whole website, but you can "
+"overwrite it locally in a page, for example."
+msgstr ""
+
+#: framework/metaboxes/config.php:95 framework/options/sections/layout.php:51
+msgid "Select if the layout will be boxed or wide."
+msgstr ""
+
+#: framework/metaboxes/config.php:108
+#: framework/options/sections/basic_customizer.php:34
+#: framework/options/sections/basic_settings.php:50
+msgid "Body Background"
+msgstr ""
+
+#: framework/metaboxes/config.php:109
+#: framework/options/sections/basic_customizer.php:35
+msgid ""
+"Body background with image, color and other options. Usually visible only "
+"when using boxed layout."
+msgstr ""
+
+#: framework/metaboxes/config.php:116
+#: framework/options/sections/basic_customizer.php:42
+msgid "Body Background Pattern"
+msgstr ""
+
+#: framework/metaboxes/config.php:117
+#: framework/options/sections/basic_customizer.php:43
+msgid ""
+"Select a predefined background pattern. Usually visible only when using "
+"boxed layout."
+msgstr ""
+
+#: framework/metaboxes/config.php:125
+#: framework/options/sections/basic_customizer.php:537
+#: framework/options/sections/header.php:7
+msgid "Header"
+msgstr ""
+
+#: framework/metaboxes/config.php:126 framework/options/sections/header.php:8
+msgid "Change the header section configuration."
+msgstr ""
+
+#: framework/metaboxes/config.php:134 framework/options/sections/header.php:16
+msgid "Disable header?"
+msgstr ""
+
+#: framework/metaboxes/config.php:135 framework/options/sections/header.php:17
+msgid "If on, this layout part will not be displayed in website."
+msgstr ""
+
+#: framework/metaboxes/config.php:148 framework/options/sections/header.php:24
+msgid "Header Layout"
+msgstr ""
+
+#: framework/metaboxes/config.php:149 framework/options/sections/header.php:25
+msgid "Select the layout to be used at header."
+msgstr ""
+
+#: framework/metaboxes/config.php:173
+#: framework/options/sections/basic_customizer.php:729
+#: framework/options/sections/header.php:50
+msgid "Menu Color"
+msgstr ""
+
+#: framework/metaboxes/config.php:188 framework/options/sections/header.php:65
+msgid "Fixed Header"
+msgstr ""
+
+#: framework/metaboxes/config.php:189 framework/options/sections/header.php:66
+msgid "If on, the header will be fixed at screen top on page scroll."
+msgstr ""
+
+#: framework/metaboxes/config.php:202 framework/options/sections/header.php:73
+msgid "Hide upper header part on scroll"
+msgstr ""
+
+#: framework/metaboxes/config.php:203 framework/options/sections/header.php:74
+msgid "If on, the upper part of header will be hidden on scroll down."
+msgstr ""
+
+#: framework/metaboxes/config.php:220 framework/options/sections/header.php:86
+msgid "Header Layout Configuration."
+msgstr ""
+
+#: framework/metaboxes/config.php:227 framework/options/sections/header.php:93
+msgid "Negative Height"
+msgstr ""
+
+#: framework/metaboxes/config.php:228 framework/options/sections/header.php:94
+msgid ""
+"If on, header will not have height and content will be showed behind it."
+msgstr ""
+
+#: framework/metaboxes/config.php:242
+#: framework/options/sections/header.php:102
+msgid "Disable smooth opening?"
+msgstr ""
+
+#: framework/metaboxes/config.php:243
+#: framework/options/sections/header.php:103
+msgid "If on, smooth opening will be disabled."
+msgstr ""
+
+#: framework/metaboxes/config.php:259
+#: framework/options/sections/header.php:114
+msgid "Enabled Boxed Layout?"
+msgstr ""
+
+#: framework/metaboxes/config.php:260
+#: framework/options/sections/header.php:115
+msgid ""
+"If on, header will look boxed in the website even when the layout is wide."
+msgstr ""
+
+#: framework/metaboxes/config.php:274
+#: framework/options/sections/header.php:125
+msgid "Header Background Type"
+msgstr ""
+
+#: framework/metaboxes/config.php:275
+#: framework/options/sections/header.php:126
+msgid "Select the type of background to be applied in header."
+msgstr ""
+
+#: framework/metaboxes/config.php:289 framework/metaboxes/config.php:861
+#: framework/options/sections/basic_customizer.php:340
+#: framework/options/sections/header.php:140
+msgid "Alternative Color Scheme"
+msgstr ""
+
+#: framework/metaboxes/config.php:290
+#: framework/options/sections/header.php:141
+msgid "Select an alternative color scheme to header items."
+msgstr ""
+
+#: framework/metaboxes/config.php:308
+#: framework/options/sections/header.php:160
+msgid "Header Top Margin"
+msgstr ""
+
+#: framework/metaboxes/config.php:309
+#: framework/options/sections/header.php:161
+msgid "Select a custom margin to the be applied to header top."
+msgstr ""
+
+#: framework/metaboxes/config.php:310
+#: framework/options/sections/basic_customizer.php:641
+#: framework/options/sections/basic_settings.php:41
+#: framework/options/sections/header.php:162
+#: framework/options/sections/header.php:302
+msgid "If not set, default margin will be applied by theme."
+msgstr ""
+
+#: framework/metaboxes/config.php:319
+#: framework/options/sections/header.php:172
+msgid "Display Header after Page Fold?"
+msgstr ""
+
+#: framework/metaboxes/config.php:320
+#: framework/options/sections/header.php:173
+msgid "If on, header will be displayed after user scroll until page fold."
+msgstr ""
+
+#: framework/metaboxes/config.php:334
+#: framework/options/sections/header.php:183
+msgid "Keep showing logo before fold?"
+msgstr ""
+
+#: framework/metaboxes/config.php:335
+#: framework/options/sections/header.php:184
+msgid "If on, only the logo will be showed before page fold."
+msgstr ""
+
+#: framework/metaboxes/config.php:350
+#: framework/options/sections/header.php:194
+msgid "General Modules Configuration."
+msgstr ""
+
+#: framework/metaboxes/config.php:357
+#: framework/options/sections/header.php:201
+msgid "Pull Menu to Left Side"
+msgstr ""
+
+#: framework/metaboxes/config.php:358
+#: framework/options/sections/header.php:202
+msgid ""
+"If on and avaliable in the layout, the menu will be placed at left. Works "
+"with \"Normal Layout\", \"Logo at left and Menu + Modules Aside\" and \"Logo "
+"at left and Menu + Modules Aside -Style 2\" only."
+msgstr ""
+
+#: framework/metaboxes/config.php:371
+#: framework/options/sections/header.php:213
+msgid "Centralized Menu"
+msgstr ""
+
+#: framework/metaboxes/config.php:372
+msgid ""
+"If on, menu will be centralized. Note that this option does not work with "
+"all layouts. Works with \"Normal Layout\" and with all \"Menu Below\" + "
+"\"Only Menu\" header layouts."
+msgstr ""
+
+#: framework/metaboxes/config.php:385
+#: framework/options/sections/header.php:226
+msgid "Center Align Aside Menu Items"
+msgstr ""
+
+#: framework/metaboxes/config.php:386
+msgid ""
+"If on the menu items will be centered, else default alignment left/right "
+"will be used. Works only with \"Aside Layout\"."
+msgstr ""
+
+#: framework/metaboxes/config.php:399
+#: framework/options/sections/header.php:238
+msgid "Lateral Lines"
+msgstr ""
+
+#: framework/metaboxes/config.php:400
+#: framework/options/sections/header.php:239
+msgid "If on, modules will have lateral lines to separate them."
+msgstr ""
+
+#: framework/metaboxes/config.php:414
+#: framework/options/sections/header.php:247
+#: framework/options/sections/top_header.php:90
+msgid "Menu Arrow"
+msgstr ""
+
+#: framework/metaboxes/config.php:415
+#: framework/options/sections/header.php:248
+#: framework/options/sections/top_header.php:91
+msgid "If on, menu items will get a arrow after text."
+msgstr ""
+
+#: framework/metaboxes/config.php:429
+#: framework/options/sections/header.php:256
+msgid "Use select responsive menu instead default?"
+msgstr ""
+
+#: framework/metaboxes/config.php:430
+#: framework/options/sections/header.php:257
+msgid ""
+"If on and avaliable, responsive menu will be displayed in a select instead "
+"default."
+msgstr ""
+
+#: framework/metaboxes/config.php:443
+msgid "Modules Configuration."
+msgstr ""
+
+#: framework/metaboxes/config.php:449
+#: framework/options/sections/header.php:424
+#: framework/options/sections/top_header.php:105
+msgid "Woo Cart"
+msgstr ""
+
+#: framework/metaboxes/config.php:450
+#: framework/options/sections/header.php:425
+#: framework/options/sections/top_header.php:106
+msgid ""
+"If on, a WooCommerce cart will be displayed. Requires WooCommerce plugin "
+"activated."
+msgstr ""
+
+#: framework/metaboxes/config.php:464
+#: framework/options/sections/header.php:432
+msgid "Woo Cart Total"
+msgstr ""
+
+#: framework/metaboxes/config.php:465
+#: framework/options/sections/header.php:433
+msgid ""
+"If on, a WooCommerce cart will be displayed with total value of products in "
+"the cart. Requires WooCommerce plugin activated."
+msgstr ""
+
+#: framework/metaboxes/config.php:479
+#: framework/options/sections/header.php:440
+msgid "Woo Cart Layout"
+msgstr ""
+
+#: framework/metaboxes/config.php:480
+#: framework/options/sections/header.php:441
+msgid "Cart layout."
+msgstr ""
+
+#: framework/metaboxes/config.php:481
+#: framework/options/sections/header.php:442
+msgid "Select the cart layout to be used in the header and top header"
+msgstr ""
+
+#: framework/metaboxes/config.php:493
+#: framework/options/sections/header.php:459
+#: framework/options/sections/top_header.php:119
+msgid "Login AJAX"
+msgstr ""
+
+#: framework/metaboxes/config.php:494
+msgid ""
+"If on, a Login AJAX will be displayed. Requires Login With AJAX plugin "
+"activated."
+msgstr ""
+
+#: framework/metaboxes/config.php:508
+#: framework/options/sections/header.php:473
+#: framework/options/sections/top_header.php:133
+msgid "Search"
+msgstr ""
+
+#: framework/metaboxes/config.php:509
+#: framework/options/sections/header.php:474
+#: framework/options/sections/top_header.php:134
+msgid "If on, a search module will be displayed."
+msgstr ""
+
+#: framework/metaboxes/config.php:523
+#: framework/options/sections/header.php:481
+#: framework/options/sections/top_header.php:141
+msgid "Search Style"
+msgstr ""
+
+#: framework/metaboxes/config.php:524
+#: framework/options/sections/header.php:482
+#: framework/options/sections/top_header.php:142
+msgid "Select the search style."
+msgstr ""
+
+#: framework/metaboxes/config.php:538
+#: framework/options/sections/bottom_footer.php:104
+#: framework/options/sections/header.php:503
+#: framework/options/sections/top_header.php:163
+msgid "Text Module"
+msgstr ""
+
+#: framework/metaboxes/config.php:539
+#: framework/options/sections/bottom_footer.php:105
+#: framework/options/sections/header.php:504
+#: framework/options/sections/top_header.php:164
+msgid "If on, a rich text module will be displayed."
+msgstr ""
+
+#: framework/metaboxes/config.php:553
+#: framework/options/sections/bottom_footer.php:112
+#: framework/options/sections/header.php:511
+#: framework/options/sections/top_header.php:171
+msgid "Text Module Content"
+msgstr ""
+
+#: framework/metaboxes/config.php:554
+#: framework/options/sections/bottom_footer.php:113
+#: framework/options/sections/header.php:512
+#: framework/options/sections/top_header.php:172
+msgid ""
+"Place any text or shortcode to be displayed in header. Use [iv_separator] to "
+"add a separator in the text. Use [iv_icon icon=\"cogs\"] to display Font "
+"Awesome icons. Use [iv_flags] to add WPML flags."
+msgstr ""
+
+#: framework/metaboxes/config.php:563
+#: framework/options/sections/bottom_footer.php:127
+#: framework/options/sections/header.php:526
+#: framework/options/sections/top_header.php:186
+msgid "Social Module"
+msgstr ""
+
+#: framework/metaboxes/config.php:564
+#: framework/options/sections/bottom_footer.php:128
+#: framework/options/sections/header.php:527
+#: framework/options/sections/top_header.php:187
+msgid "If on, a social icon module will be displayed."
+msgstr ""
+
+#: framework/metaboxes/config.php:578
+#: framework/options/sections/bottom_footer.php:135
+#: framework/options/sections/header.php:534
+#: framework/options/sections/top_header.php:194
+msgid "Social Icons"
+msgstr ""
+
+#: framework/metaboxes/config.php:579
+#: framework/options/sections/bottom_footer.php:136
+#: framework/options/sections/header.php:535
+#: framework/options/sections/top_header.php:195
+msgid "Add and organize the icons to be displayed."
+msgstr ""
+
+#: framework/metaboxes/config.php:582
+#: framework/options/sections/bottom_footer.php:139
+#: framework/options/sections/header.php:538
+#: framework/options/sections/top_header.php:198
+msgid "Social Media URL"
+msgstr ""
+
+#: framework/metaboxes/config.php:590
+#: framework/options/sections/header.php:551
+msgid "Header Menu Module"
+msgstr ""
+
+#: framework/metaboxes/config.php:591
+#: framework/options/sections/header.php:552
+msgid "If on, a additional menu will be displayed together with modules."
+msgstr ""
+
+#: framework/metaboxes/config.php:605
+#: framework/options/sections/header.php:565
+msgid "Ads Module"
+msgstr ""
+
+#: framework/metaboxes/config.php:606
+#: framework/options/sections/header.php:566
+msgid ""
+"If on, a ads module will be displayed. Note that it is not avaliable to all "
+"layouts."
+msgstr ""
+
+#: framework/metaboxes/config.php:620
+#: framework/options/sections/header.php:588
+msgid "WPML Language Dropdown"
+msgstr ""
+
+#: framework/metaboxes/config.php:621
+#: framework/options/sections/header.php:589
+msgid ""
+"If on, the avaliable languages will be displayed. Only works with WPML "
+"activated."
+msgstr ""
+
+#: framework/metaboxes/config.php:635
+msgid "Disable Main Sidebar Switcher"
+msgstr ""
+
+#: framework/metaboxes/config.php:636
+msgid ""
+"If on, an main sidebar switcher will be displayed. Note that it is not "
+"avaliable to all layouts."
+msgstr ""
+
+#: framework/metaboxes/config.php:649
+#: framework/options/sections/header.php:607
+#: framework/options/sections/header.php:616
+msgid "Alternative Sidebar Switcher"
+msgstr ""
+
+#: framework/metaboxes/config.php:650
+#: framework/options/sections/header.php:617
+msgid ""
+"If on, a sidebar switcher will be displayed. Note that it is not avaliable "
+"to all layouts."
+msgstr ""
+
+#: framework/metaboxes/config.php:663
+#: framework/options/sections/header.php:625
+msgid "Alternative Sidebar Switcher Text"
+msgstr ""
+
+#: framework/metaboxes/config.php:664
+#: framework/options/sections/header.php:626
+msgid "Place any text to be displayed as sidebar switcher link anchor text."
+msgstr ""
+
+#: framework/metaboxes/config.php:675
+#: framework/options/sections/header.php:643
+msgid "Textarea 1"
+msgstr ""
+
+#: framework/metaboxes/config.php:676 framework/metaboxes/config.php:685
+#: framework/metaboxes/config.php:694
+#: framework/options/sections/header.php:644
+#: framework/options/sections/header.php:653
+#: framework/options/sections/header.php:662
+msgid ""
+"Place any text or shortcode to be displayed in header eg. [ivan_contact_info "
+"icon=\"home\" title=\"...\" subtitle=\"...\" link=\"...\"]. "
+msgstr ""
+
+#: framework/metaboxes/config.php:684
+#: framework/options/sections/header.php:652
+msgid "Textarea 2"
+msgstr ""
+
+#: framework/metaboxes/config.php:693
+msgid "Textarea 3-local"
+msgstr ""
+
+#: framework/metaboxes/config.php:702
+#: framework/options/sections/header.php:669
+msgid "Icons Color"
+msgstr ""
+
+#: framework/metaboxes/config.php:703
+msgid "Custom color for icons generated with [ivan_contact_info] shortcode."
+msgstr ""
+
+#: framework/metaboxes/config.php:717 framework/metaboxes/config.php:1044
+#: framework/metaboxes/config.php:1114
+#: framework/options/sections/bottom_footer.php:170
+#: framework/options/sections/footer.php:83
+msgid "Dynamic Areas"
+msgstr ""
+
+#: framework/metaboxes/config.php:723
+#: framework/options/sections/header.php:689
+msgid "Enable Dynamic Area After Header?"
+msgstr ""
+
+#: framework/metaboxes/config.php:724
+#: framework/options/sections/header.php:690
+msgid "If on, a dynamic area will be displayed after header."
+msgstr ""
+
+#: framework/metaboxes/config.php:738
+#: framework/options/sections/basic_customizer.php:300
+#: framework/options/sections/title_wrapper.php:7
+msgid "Title Wrapper"
+msgstr ""
+
+#: framework/metaboxes/config.php:739
+#: framework/options/sections/title_wrapper.php:8
+msgid "Change the title wrapper section configuration."
+msgstr ""
+
+#: framework/metaboxes/config.php:747 framework/metaboxes/config.php:996
+#: framework/metaboxes/config.php:1030 framework/metaboxes/config.php:1087
+#: framework/options/sections/bottom_footer.php:15
+#: framework/options/sections/footer.php:15
+#: framework/options/sections/title_wrapper.php:15
+#: framework/options/sections/top_header.php:15
+msgid "Disable this layout part?"
+msgstr ""
+
+#: framework/metaboxes/config.php:748 framework/metaboxes/config.php:997
+#: framework/metaboxes/config.php:1031 framework/metaboxes/config.php:1088
+#: framework/options/sections/bottom_footer.php:16
+#: framework/options/sections/footer.php:16
+#: framework/options/sections/title_wrapper.php:16
+#: framework/options/sections/top_header.php:16
+msgid "If on, this layout part will not be displayed."
+msgstr ""
+
+#: framework/metaboxes/config.php:761
+#: framework/options/sections/title_wrapper.php:23
+msgid "Title Wrapper Layout"
+msgstr ""
+
+#: framework/metaboxes/config.php:762
+#: framework/options/sections/title_wrapper.php:24
+msgid "Select the top layout to be used at title wrapper."
+msgstr ""
+
+#: framework/metaboxes/config.php:775
+#: framework/options/sections/title_wrapper.php:37
+msgid "Align Large Title to Left?"
+msgstr ""
+
+#: framework/metaboxes/config.php:776
+msgid ""
+"If on, the large title wrapper layout will be aligned to left. Only works "
+"wiht Large with Description Text."
+msgstr ""
+
+#: framework/metaboxes/config.php:789
+#: framework/options/sections/title_wrapper.php:46
+msgid "Enable Breadcrumb?"
+msgstr ""
+
+#: framework/metaboxes/config.php:790
+msgid ""
+"If on, a breadcrumb will be displayed aside of title wrapper. Only works "
+"with Classic with Description Text."
+msgstr ""
+
+#: framework/metaboxes/config.php:802
+#: framework/options/sections/title_wrapper.php:54
+msgid "Enable Search?"
+msgstr ""
+
+#: framework/metaboxes/config.php:803
+msgid ""
+"If on, a search form will be displayed aside of title wrapper. Only works "
+"with Classic with Description Text."
+msgstr ""
+
+#: framework/metaboxes/config.php:816
+msgid "Title Optional Description"
+msgstr ""
+
+#: framework/metaboxes/config.php:817
+msgid "You can use a, strong, br, em and strong HTML tags."
+msgstr ""
+
+#: framework/metaboxes/config.php:818
+msgid "Use this field to display an optional text below main page title."
+msgstr ""
+
+#: framework/metaboxes/config.php:837
+#: framework/options/sections/basic_customizer.php:310
+msgid "Title Wrapper Background"
+msgstr ""
+
+#: framework/metaboxes/config.php:844
+#: framework/options/sections/basic_customizer.php:317
+msgid "Title Wrapper Border"
+msgstr ""
+
+#: framework/metaboxes/config.php:862
+#: framework/options/sections/basic_customizer.php:341
+msgid "Select an alternative color scheme to title wrapper."
+msgstr ""
+
+#: framework/metaboxes/config.php:880
+#: framework/options/sections/basic_customizer.php:359
+msgid "Title Wrapper Padding"
+msgstr ""
+
+#: framework/metaboxes/config.php:890
+#: framework/options/sections/basic_customizer.php:369
+msgid "Title Typography"
+msgstr ""
+
+#: framework/metaboxes/config.php:914
+#: framework/options/sections/basic_customizer.php:393
+msgid "Title Description Typography"
+msgstr ""
+
+#: framework/metaboxes/config.php:915
+#: framework/options/sections/basic_customizer.php:394
+msgid "Typography to optional description used in pages."
+msgstr ""
+
+#: framework/metaboxes/config.php:939
+#: framework/options/sections/basic_customizer.php:453
+msgid "Separator Color"
+msgstr ""
+
+#: framework/metaboxes/config.php:948
+#: framework/options/sections/basic_customizer.php:120
+#: framework/options/sections/content.php:7
+msgid "Content"
+msgstr ""
+
+#: framework/metaboxes/config.php:949
+msgid "Change the content section configuration."
+msgstr ""
+
+#: framework/metaboxes/config.php:956
+msgid "Display Page/Project inside Box?"
+msgstr ""
+
+#: framework/metaboxes/config.php:957
+msgid "If on, this page will be displayed inside a box."
+msgstr ""
+
+#: framework/metaboxes/config.php:971
+#: framework/options/sections/basic_customizer.php:57
+msgid "Pages: Boxed Content Background"
+msgstr ""
+
+#: framework/metaboxes/config.php:972
+#: framework/options/sections/basic_customizer.php:58
+msgid "Configuration used as background of boxed pages and projects."
+msgstr ""
+
+#: framework/metaboxes/config.php:979
+#: framework/options/sections/basic_customizer.php:65
+msgid "Boxed Content Background Pattern"
+msgstr ""
+
+#: framework/metaboxes/config.php:980
+#: framework/options/sections/basic_customizer.php:66
+msgid ""
+"Select a predefined background pattern. Usually visible only when using "
+"content boxed style."
+msgstr ""
+
+#: framework/metaboxes/config.php:988
+#: framework/options/sections/basic_customizer.php:659
+#: framework/options/sections/top_header.php:7
+msgid "Top Header"
+msgstr ""
+
+#: framework/metaboxes/config.php:989
+#: framework/options/sections/top_header.php:8
+msgid "Change the top header section configuration."
+msgstr ""
+
+#: framework/metaboxes/config.php:1009
+#: framework/options/sections/top_header.php:23
+msgid "Top Header Style"
+msgstr ""
+
+#: framework/metaboxes/config.php:1010
+#: framework/options/sections/top_header.php:24
+msgid "Select the top syle to be used at header."
+msgstr ""
+
+#: framework/metaboxes/config.php:1022
+#: framework/options/sections/basic_customizer.php:901
+#: framework/options/sections/footer.php:7
+msgid "Footer"
+msgstr ""
+
+#: framework/metaboxes/config.php:1023 framework/options/sections/footer.php:8
+msgid "Change the footer section configuration."
+msgstr ""
+
+#: framework/metaboxes/config.php:1050
+#: framework/options/sections/footer.php:89
+msgid "Enable Dynamic Area Before Footer?"
+msgstr ""
+
+#: framework/metaboxes/config.php:1051 framework/metaboxes/config.php:1121
+#: framework/options/sections/bottom_footer.php:177
+#: framework/options/sections/footer.php:90
+msgid "If on, a dynamic area will be displayed above the layout."
+msgstr ""
+
+#: framework/metaboxes/config.php:1064
+#: framework/options/sections/footer.php:106
+msgid "Enable Dynamic Area After Footer?"
+msgstr ""
+
+#: framework/metaboxes/config.php:1065 framework/metaboxes/config.php:1135
+#: framework/options/sections/bottom_footer.php:194
+#: framework/options/sections/footer.php:107
+msgid "If on, a dynamic area will be displayed below the layout."
+msgstr ""
+
+#: framework/metaboxes/config.php:1079
+#: framework/options/sections/basic_customizer.php:1092
+#: framework/options/sections/bottom_footer.php:7
+msgid "Bottom Footer"
+msgstr ""
+
+#: framework/metaboxes/config.php:1080
+#: framework/options/sections/bottom_footer.php:8
+msgid "Change the bottom footer section configuration."
+msgstr ""
+
+#: framework/metaboxes/config.php:1101
+#: framework/options/sections/bottom_footer.php:35
+msgid "Fulll Width"
+msgstr ""
+
+#: framework/metaboxes/config.php:1102
+#: framework/options/sections/bottom_footer.php:36
+msgid "If on, the bottom footer will be full width."
+msgstr ""
+
+#: framework/metaboxes/config.php:1120
+#: framework/options/sections/bottom_footer.php:176
+msgid "Enable Dynamic Area Before Bottom Footer?"
+msgstr ""
+
+#: framework/metaboxes/config.php:1134
+#: framework/options/sections/bottom_footer.php:193
+msgid "Enable Dynamic Area After Bottom Footer?"
+msgstr ""
+
+#: framework/metaboxes/config.php:1149
+msgid "Menus/Sidebars"
+msgstr ""
+
+#: framework/metaboxes/config.php:1150
+msgid "Replace the menus and sidebars to be displayed in the avaliable areas."
+msgstr ""
+
+#: framework/metaboxes/config.php:1157 functions.php:83
+msgid "Primary Menu"
+msgstr ""
+
+#: framework/metaboxes/config.php:1158
+msgid "Select a menu to overwrite the header menu location."
+msgstr ""
+
+#: framework/metaboxes/config.php:1166
+msgid "Module Menu"
+msgstr ""
+
+#: framework/metaboxes/config.php:1167
+msgid "Select a menu to overwrite the module menu location."
+msgstr ""
+
+#: framework/metaboxes/config.php:1175 functions.php:85
+msgid "Secondary Menu"
+msgstr ""
+
+#: framework/metaboxes/config.php:1176
+msgid "Select a menu to overwrite the top header menu location."
+msgstr ""
+
+#: framework/metaboxes/config.php:1184 functions.php:86
+msgid "Bottom Footer Menu"
+msgstr ""
+
+#: framework/metaboxes/config.php:1185
+msgid "Select a menu to overwrite the bottom footer menu location."
+msgstr ""
+
+#: framework/metaboxes/config.php:1193
+#: framework/options/sections/sidebars.php:7
+msgid "Sidebars"
+msgstr ""
+
+#: framework/metaboxes/config.php:1199 functions.php:117
+msgid "Primary Sidebar"
+msgstr ""
+
+#: framework/metaboxes/config.php:1200 framework/metaboxes/config.php:1209
+msgid "Select a sidebar to overwrite the sidebar location."
+msgstr ""
+
+#: framework/metaboxes/config.php:1208 functions.php:127
+msgid "Secondary Sidebar"
+msgstr ""
+
+#: framework/metaboxes/config.php:1218
+#: framework/options/sections/custom_code.php:7
+msgid "Custom JS/CSS"
+msgstr ""
+
+#: framework/metaboxes/config.php:1219
+#: framework/options/sections/custom_code.php:8
+msgid "Easily add custom JS and CSS to your website."
+msgstr ""
+
+#: framework/metaboxes/config.php:1226
+#: framework/options/sections/custom_code.php:21
+msgid "CSS Code"
+msgstr ""
+
+#: framework/metaboxes/config.php:1227
+#: framework/options/sections/custom_code.php:22
+msgid ""
+"Insert your custom CSS code right here. It will be displayed globally in the "
+"website."
+msgstr ""
+
+#: framework/metaboxes/config.php:1237
+#: framework/options/sections/custom_code.php:38
+msgid "JS Code"
+msgstr ""
+
+#: framework/metaboxes/config.php:1238
+#: framework/options/sections/custom_code.php:39
+msgid ""
+"Insert your custom JS code right here. It will be displayed globally in the "
+"website."
+msgstr ""
+
+#: framework/metaboxes/config.php:1248
+#: framework/options/sections/custom_code.php:55
+msgid "Link Tags"
+msgstr ""
+
+#: framework/metaboxes/config.php:1249
+#: framework/options/sections/custom_code.php:57
+msgid ""
+"Insert your custom <link> tags to be displayed in the head, e.g. Google "
+"Fonts link tags and others."
+msgstr ""
+
+#: framework/metaboxes/config.php:1262 framework/metaboxes/config.php:1305
+#: framework/options/theme_options.php:340
+#: framework/options/theme_options.php:341
+msgid "Theme Options"
+msgstr ""
+
+#: framework/metaboxes/config.php:1281
+#: framework/options/sections/single.php:181
+msgid "Display Navigation in Projects?"
+msgstr ""
+
+#: framework/metaboxes/config.php:1282
+#: framework/options/sections/single.php:182
+msgid ""
+"If on, next and previous project will be displayed in single project pages."
+msgstr ""
+
+#: framework/metaboxes/config.php:1294
+#: framework/options/sections/single.php:189
+msgid "Display Related Projects?"
+msgstr ""
+
+#: framework/metaboxes/config.php:1295
+#: framework/options/sections/single.php:190
+msgid "If on, the related projects will be displayed below project contents."
+msgstr ""
+
+#: framework/metaboxes/extensions/metaboxes/extension_metaboxes.php:843
+msgid "Options"
+msgstr ""
+
+#: framework/metaboxes/extensions/metaboxes/extension_metaboxes.php:987
+msgid "Settings Imported!"
+msgstr ""
+
+#: framework/metaboxes/extensions/metaboxes/extension_metaboxes.php:990
+msgid "Settings have changed, you should save them!"
+msgstr ""
+
+#: framework/metaboxes/extensions/metaboxes/extension_metaboxes.php:994
+#: framework/metaboxes/extensions/metaboxes/extension_metaboxes.php:1276
+msgid "error(s) were found!"
+msgstr ""
+
+#: framework/metaboxes/extensions/metaboxes/extension_metaboxes.php:997
+msgid "warning(s) were found!"
+msgstr ""
+
+#: framework/metaboxes/extensions/metaboxes/extension_metaboxes.php:1001
+msgid "Expand"
+msgstr ""
+
+#: framework/metaboxes/extensions/metaboxes/extension_metaboxes.php:1281
+msgid "warnings(s) were found!"
+msgstr ""
+
+#: framework/modules/class-live-search.php:39
+msgid "Type &amp; hit enter"
+msgstr ""
+
+#: framework/modules/class-menu.php:55
+msgid "Assign a menu at Appearance > Menus"
+msgstr ""
+
+#: framework/modules/class-woo-cart-total.php:49
+#: woocommerce/configuration.php:354
+msgid "Shopping Cart"
+msgstr ""
+
+#: framework/modules/class-wpml-lang-dropdown.php:52
+msgid "Language"
+msgstr ""
+
+#: framework/options/fields/border_mod/field_border.php:114
+#: framework/options/fields/spacing_mod/field_spacing_mod.php:191
+msgid "All"
+msgstr ""
+
+#: framework/options/fields/border_mod/field_border.php:127
+#: framework/options/fields/spacing_mod/field_spacing_mod.php:215
+msgid "Top"
+msgstr ""
+
+#: framework/options/fields/border_mod/field_border.php:134
+#: framework/options/fields/spacing_mod/field_spacing_mod.php:222
+msgid "Right"
+msgstr ""
+
+#: framework/options/fields/border_mod/field_border.php:141
+#: framework/options/fields/spacing_mod/field_spacing_mod.php:229
+msgid "Bottom"
+msgstr ""
+
+#: framework/options/fields/border_mod/field_border.php:148
+#: framework/options/fields/spacing_mod/field_spacing_mod.php:236
+msgid "Left"
+msgstr ""
+
+#: framework/options/fields/border_mod/field_border.php:162
+msgid "Border style"
+msgstr ""
+
+#: framework/options/fields/social_select/field_social_select.php:124
+#: framework/options/fields/social_select/field_social_select.php:169
+msgid "Title"
+msgstr ""
+
+#: framework/options/fields/social_select/field_social_select.php:126
+#: framework/options/fields/social_select/field_social_select.php:171
+msgid "URL"
+msgstr ""
+
+#: framework/options/fields/social_select/field_social_select.php:158
+#: framework/options/fields/social_select/field_social_select.php:202
+msgid "Delete"
+msgstr ""
+
+#: framework/options/fields/social_select/field_social_select.php:205
+msgid "Add"
+msgstr ""
+
+#: framework/options/fields/spacing_mod/field_spacing_mod.php:245
+#: framework/options/fields/spacing_mod/field_spacing_mod.php:246
+msgid "Units"
+msgstr ""
+
+#: framework/options/fields/typography_mod/field_typography.php:258
+msgid "Font Family"
+msgstr ""
+
+#: framework/options/fields/typography_mod/field_typography.php:259
+msgid "Font family"
+msgstr ""
+
+#: framework/options/fields/typography_mod/field_typography.php:285
+#: framework/options/fields/typography_mod/field_typography.php:286
+msgid "Backup Font Family"
+msgstr ""
+
+#: framework/options/fields/typography_mod/field_typography.php:300
+#: framework/options/fields/typography_mod/field_typography.php:307
+msgid "Font style"
+msgstr ""
+
+#: framework/options/fields/typography_mod/field_typography.php:301
+msgid "Font Weight &amp; Style"
+msgstr ""
+
+#: framework/options/fields/typography_mod/field_typography.php:307
+msgid "Style"
+msgstr ""
+
+#: framework/options/fields/typography_mod/field_typography.php:347
+msgid "Font subsets"
+msgstr ""
+
+#: framework/options/fields/typography_mod/field_typography.php:349
+msgid "Font Subsets"
+msgstr ""
+
+#: framework/options/fields/typography_mod/field_typography.php:350
+msgid "Subsets"
+msgstr ""
+
+#: framework/options/fields/typography_mod/field_typography.php:350
+msgid "Font script"
+msgstr ""
+
+#: framework/options/fields/typography_mod/field_typography.php:367
+#: framework/options/fields/typography_mod/field_typography.php:368
+#: framework/options/fields/typography_mod/field_typography.php:369
+msgid "Text Align"
+msgstr ""
+
+#: framework/options/fields/typography_mod/field_typography.php:390
+#: framework/options/fields/typography_mod/field_typography.php:391
+#: framework/options/fields/typography_mod/field_typography.php:392
+msgid "Text Transform"
+msgstr ""
+
+#: framework/options/fields/typography_mod/field_typography.php:413
+#: framework/options/fields/typography_mod/field_typography.php:414
+#: framework/options/fields/typography_mod/field_typography.php:415
+msgid "Font Variant"
+msgstr ""
+
+#: framework/options/fields/typography_mod/field_typography.php:433
+#: framework/options/fields/typography_mod/field_typography.php:434
+#: framework/options/fields/typography_mod/field_typography.php:435
+msgid "Text Decoration"
+msgstr ""
+
+#: framework/options/fields/typography_mod/field_typography.php:457
+#: framework/options/fields/typography_mod/field_typography.php:458
+msgid "Font Size"
+msgstr ""
+
+#: framework/options/fields/typography_mod/field_typography.php:458
+msgid "Size"
+msgstr ""
+
+#: framework/options/fields/typography_mod/field_typography.php:466
+#: framework/options/fields/typography_mod/field_typography.php:467
+msgid "Line Height"
+msgstr ""
+
+#: framework/options/fields/typography_mod/field_typography.php:467
+msgid "Height"
+msgstr ""
+
+#: framework/options/fields/typography_mod/field_typography.php:475
+#: framework/options/fields/typography_mod/field_typography.php:476
+msgid "Word Spacing"
+msgstr ""
+
+#: framework/options/fields/typography_mod/field_typography.php:484
+#: framework/options/fields/typography_mod/field_typography.php:485
+msgid "Letter Spacing"
+msgstr ""
+
+#: framework/options/fields/typography_mod/field_typography.php:503
+msgid "Font Color"
+msgstr ""
+
+#: framework/options/fields/typography_mod/field_typography.php:505
+msgid "Font color"
+msgstr ""
+
+#: framework/options/fields/typography_mod/field_typography.php:868
+msgid "Standard Fonts"
+msgstr ""
+
+#: framework/options/fields/typography_mod/field_typography.php:975
+msgid "Google Webfonts"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:7
+msgid "Customizer"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:8
+msgid "Check child sections to style properly the correct area of the theme."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:15
+msgid "Remove default fonts?"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:16
+msgid ""
+"If on, the theme will not include the default fonts linked. This can be used "
+"after customize the font sections and if you are not using the default "
+"fonts, you should check this option to improve performance."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:24
+msgid "BG Colors"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:25
+msgid "Body background and accent color configuration"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:50
+msgid "Boxed Content Background"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:74
+msgid "Blog: Boxed Content Background"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:75
+msgid "Configuration used as background of boxed blog and archives."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:82
+msgid "Single Post: Boxed Content Background"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:83
+msgid "Configuration used as background of boxed single posts."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:90
+msgid "Shop: Boxed Content Background"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:91
+msgid "Configuration used as background of boxed at shop and single product."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:97
+msgid "Blog/Single Backgrounds"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:104
+msgid "Blog: Content Background"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:105
+msgid ""
+"Configuration used as background to blogs with boxed style activated or "
+"mansory and full layouts."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:112
+msgid "Single: Content Background"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:113
+msgid ""
+"Configuration used as background to blogs with boxed style activated for "
+"single."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:121
+msgid "Configure general content styles"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:129
+msgid "Accent Background"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:130
+msgid ""
+"Pick an accent color to overwrite the default from the theme. Usually used "
+"as link hover."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:138
+msgid "Optional Constrast Accent Color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:139
+msgid ""
+"Pick an accent color that fits with the Accent Background color. Usually "
+"something like white or dark according to accent background."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:147
+msgid "Link Color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:148
+msgid "Color used in links in normal state."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:156
+msgid "Typography"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:162
+msgid "Base Font"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:163
+msgid ""
+"Font used in the content in general, usually overwrite by local layout "
+"fonts, but used in paragraphs, lists and others."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:189
+msgid "Heading Font"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:190
+msgid "Font used in heading elements and a few others."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:219
+msgid "Headings Color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:220
+msgid "Color used in headings."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:228
+msgid "Headings Weight"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:229
+#: framework/options/sections/basic_customizer.php:249
+msgid ""
+"Not all listed weight are avaliable to the font you select. Usually normal "
+"and bold are avalible to almost all fonts, check Google Fonts details to see "
+"avaliable weights to your font."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:248
+msgid "Widget Title and Post Title Weight"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:268
+msgid "Secondary Font"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:269
+msgid ""
+"Optional: Font used when a smoother font is necessary, used in entry meta at "
+"blog, product title and price."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:301
+msgid "Configure Title Wrapper styles"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:334
+msgid "Title Style"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:418
+msgid "Breadcrumbs"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:424
+msgid "Breadcrumbs Typography"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:461
+msgid "Search Form"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:467
+msgid "Border & Icon Color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:479
+msgid "Border Focus Color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:489
+msgid "Text Color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:499
+msgid "Placeholder Text Color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:506
+msgid "Specific Title Wrappers"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:513
+msgid "Blog: Title Wrapper Background"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:514
+msgid "Overwrite title wrapper at blog and archives."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:521
+msgid "Single Post: Title Wrapper Background"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:522
+msgid "Overwrite title wrapper at single post."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:529
+msgid "Shop: Title Wrapper Background"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:530
+msgid ""
+"Overwrite title wrapper at shop and single products when possible (header is "
+"usually hidden in single products)."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:538
+msgid "Configure header styles"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:546
+#: framework/options/sections/basic_customizer.php:980
+msgid "Header Typography"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:613
+msgid "Aside: Header Background"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:614
+msgid ""
+"Works only in aside header styles. Do not forget to upload a correct logo "
+"that works better with the new background."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:620
+msgid "Aside: Alternative Color Scheme"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:621
+msgid ""
+"Select an alternative color scheme to aside header items. Works only in "
+"aside header styles."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:639
+msgid "Aside: Logo Margin"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:640
+msgid ""
+"Select a custom margin padding) to the be applied in the logo in aside "
+"layouts."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:649
+msgid "Aside: Remove Border"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:650
+msgid "If on, a small border of aside header layout will be removed."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:660
+msgid "Configure top header styles"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:668
+msgid "Top Header Typography"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:692
+msgid "Background color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:693
+msgid "Background color settings."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:703
+msgid "Text color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:704
+msgid "Text color settings."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:717
+msgid "Search Box Submit Color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:718
+msgid "Color for search box settings."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:730
+msgid "Configure menu item color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:738
+msgid "Active Link Color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:739
+msgid "Menu item active link color settings."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:755
+msgid "Hover Link color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:756
+msgid "Menu hover link color settings."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:765
+msgid "Border color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:766
+msgid "Menu border color settings."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:787
+#: woocommerce/cart/cart.php:29
+msgid "Product"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:788
+msgid "Configure product item color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:796
+msgid "Quick View Button Background Color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:797
+msgid "Quick view background color settings."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:808
+msgid "Quick View Button Background Hover Color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:809
+msgid "Quick view background hover color settings."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:820
+msgid "Quick View Text Color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:821
+msgid "Quick view text color settings."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:831
+msgid "Add Cart Button Background Color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:832
+msgid "Add cart background settings."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:843
+msgid "Add Cart Button Background Hover Color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:844
+msgid "Add cart background hover settings."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:855
+msgid "View Cart Button Background Color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:856
+msgid "View cart background settings."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:867
+msgid "View Cart Button Background Hover Color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:868
+msgid "View cart background hover settings."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:880
+msgid "Widgets"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:881
+msgid "Configure widgets item color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:889
+msgid "Instagram Username Color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:890
+msgid "Instagram username color settings."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:902
+msgid "Configure footer styles"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:911
+msgid "Footer Background"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:912
+msgid "Footer background settings."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:918
+msgid "Footer Typography"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:942
+msgid "Footer Widget Title Typography"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:966
+#: framework/options/sections/footer.php:123
+msgid "Floating Contact Form"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:973
+msgid "Background"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:974
+msgid "Floating contact form background settings."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:1004
+msgid "Description Typography"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:1028
+msgid "Notice Typography"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:1053
+msgid "Form Fields Background Color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:1061
+msgid "Button Text Color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:1069
+msgid "Button Hover Text Color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:1077
+msgid "Button Background Color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:1085
+msgid "Button Background Hover Color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:1093
+msgid "Configure bottom footer styles"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:1102
+msgid "Bottom Footer Background"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:1103
+msgid "Bottom Footer background settings."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:1109
+msgid "Bottom Footer Typography"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:1133
+msgid "Bottom Footer Social Color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:1134
+msgid "Bottom footer social icons color settings."
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:1144
+msgid "Bottom Footer Social Hover Color"
+msgstr ""
+
+#: framework/options/sections/basic_customizer.php:1145
+msgid "Bottom footer social icons hover color settings."
+msgstr ""
+
+#: framework/options/sections/basic_settings.php:4
+msgid "Basic Settings"
+msgstr ""
+
+#: framework/options/sections/basic_settings.php:5
+msgid ""
+"Redux Framework was created with the developer in mind. It allows for any "
+"theme developer to have an advanced theme panel with most of the features a "
+"developer would need. For more information check out the Github repo at: <a "
+"href=\"https://github.com/ReduxFramework/Redux-Framework\">https://github."
+"com/ReduxFramework/Redux-Framework</a>"
+msgstr ""
+
+#: framework/options/sections/basic_settings.php:13
+#: framework/options/sections/bottom_footer.php:83
+#: framework/options/sections/header.php:272
+msgid "Logo"
+msgstr ""
+
+#: framework/options/sections/basic_settings.php:14
+msgid "Logo Dimensions in our demo: "
+msgstr ""
+
+#: framework/options/sections/basic_settings.php:15
+#: framework/options/sections/header.php:273
+#: framework/options/sections/header.php:320
+#: framework/options/sections/header.php:347
+msgid "Upload the logo that will be displayed in the header."
+msgstr ""
+
+#: framework/options/sections/basic_settings.php:21
+#: framework/options/sections/header.php:280
+msgid "Logo Retina"
+msgstr ""
+
+#: framework/options/sections/basic_settings.php:22
+#: framework/options/sections/header.php:281
+#: framework/options/sections/header.php:329
+#: framework/options/sections/header.php:356
+msgid ""
+"The same logo image but with twice dimensions, e.g. your logo is 100x100, "
+"then your retina logo must be 200x200."
+msgstr ""
+
+#: framework/options/sections/basic_settings.php:23
+#: framework/options/sections/header.php:282
+#: framework/options/sections/header.php:330
+#: framework/options/sections/header.php:357
+msgid ""
+"Optional retina version displayed in devices with retina display (high "
+"resolution display)."
+msgstr ""
+
+#: framework/options/sections/basic_settings.php:39
+#: framework/options/sections/header.php:300
+msgid "Logo Margin"
+msgstr ""
+
+#: framework/options/sections/basic_settings.php:40
+#: framework/options/sections/header.php:301
+msgid "Select a custom margin to the be applied in the logo."
+msgstr ""
+
+#: framework/options/sections/basic_settings.php:51
+msgid "Body background with image, color, etc."
+msgstr ""
+
+#: framework/options/sections/blog.php:7
+msgid "Blog"
+msgstr ""
+
+#: framework/options/sections/blog.php:8
+msgid "Change blog and archives templates."
+msgstr ""
+
+#: framework/options/sections/blog.php:15
+msgid "Main Blog."
+msgstr ""
+
+#: framework/options/sections/blog.php:22
+#: framework/options/sections/single.php:22
+msgid "Base Layout"
+msgstr ""
+
+#: framework/options/sections/blog.php:23
+#: framework/options/sections/single.php:23
+msgid "Select the layout to be used in blog."
+msgstr ""
+
+#: framework/options/sections/blog.php:38
+#: framework/options/sections/blog.php:53
+#: framework/options/sections/blog.php:66
+#: framework/options/sections/blog.php:79
+#: framework/options/sections/single.php:36
+msgid "Layout Style"
+msgstr ""
+
+#: framework/options/sections/blog.php:39
+#: framework/options/sections/blog.php:54
+#: framework/options/sections/blog.php:67
+#: framework/options/sections/blog.php:80
+#: framework/options/sections/single.php:37
+msgid "Select the layout style to be applied in the blog posts."
+msgstr ""
+
+#: framework/options/sections/blog.php:111
+#: framework/options/sections/woo_templates.php:44
+msgid "Columns"
+msgstr ""
+
+#: framework/options/sections/blog.php:112
+msgid "Define the columns numbers to be used in the blog."
+msgstr ""
+
+#: framework/options/sections/blog.php:134
+msgid "Disable blog items container?"
+msgstr ""
+
+#: framework/options/sections/blog.php:135
+msgid "If on, content will be full width."
+msgstr ""
+
+#: framework/options/sections/blog.php:142
+#: framework/options/sections/single.php:91
+msgid "Enable Sidebar at Right?"
+msgstr ""
+
+#: framework/options/sections/blog.php:143
+#: framework/options/sections/blog.php:151
+#: framework/options/sections/single.php:92
+#: framework/options/sections/single.php:100
+msgid "If on, sidebar will be displayed in the specified location."
+msgstr ""
+
+#: framework/options/sections/blog.php:150
+#: framework/options/sections/single.php:99
+msgid "Enable Sidebar at Left?"
+msgstr ""
+
+#: framework/options/sections/blog.php:158
+#: framework/options/sections/blog.php:228
+#: framework/options/sections/single.php:107
+#: framework/options/sections/woo_templates.php:112
+msgid "Disable Title Wrapper?"
+msgstr ""
+
+#: framework/options/sections/blog.php:159
+#: framework/options/sections/single.php:108
+#: framework/options/sections/woo_templates.php:113
+msgid "If on, title wrapper will not be displayed."
+msgstr ""
+
+#: framework/options/sections/blog.php:166
+msgid "Display Blog Boxed?"
+msgstr ""
+
+#: framework/options/sections/blog.php:167
+msgid "If on, the blog will be displayed in a boxed layout."
+msgstr ""
+
+#: framework/options/sections/blog.php:174
+msgid "First Post Featured?"
+msgstr ""
+
+#: framework/options/sections/blog.php:175
+msgid "If on, the first post will receive a different template."
+msgstr ""
+
+#: framework/options/sections/blog.php:183
+#: framework/options/sections/single.php:123
+msgid "Effects/Additional Styles"
+msgstr ""
+
+#: framework/options/sections/blog.php:189
+msgid "Enable boxed style?"
+msgstr ""
+
+#: framework/options/sections/blog.php:190
+msgid ""
+"If on, posts will be displayed in a boxed style. Useful when using custom "
+"background colors."
+msgstr ""
+
+#: framework/options/sections/blog.php:198
+#: framework/options/sections/single.php:129
+msgid "Disable Thumbnails?"
+msgstr ""
+
+#: framework/options/sections/blog.php:199
+msgid "If on, thumbnails will not be displayed in the blog."
+msgstr ""
+
+#: framework/options/sections/blog.php:206
+msgid "Enable Hover Effect in Thumbnail?"
+msgstr ""
+
+#: framework/options/sections/blog.php:207
+#: framework/options/sections/blog.php:215
+msgid "If on, the effect will be displayed in thumbnail images."
+msgstr ""
+
+#: framework/options/sections/blog.php:214
+msgid "Enable Grayscale Effect in Thumbnail?"
+msgstr ""
+
+#: framework/options/sections/blog.php:229
+msgid "If on, title wrapper will not be displayed in archives pages."
+msgstr ""
+
+#: framework/options/sections/blog.php:236
+#: framework/options/sections/single.php:220
+msgid "Advanced Configuration"
+msgstr ""
+
+#: framework/options/sections/blog.php:242
+msgid "Custom Blog Thumbnail Size"
+msgstr ""
+
+#: framework/options/sections/blog.php:243
+#: framework/options/sections/single.php:227
+msgid "Select a custom thumbnail size to your blog."
+msgstr ""
+
+#: framework/options/sections/bottom_footer.php:23
+msgid "Bottom Header Layout"
+msgstr ""
+
+#: framework/options/sections/bottom_footer.php:24
+msgid "Select the bottom footer to be used at header."
+msgstr ""
+
+#: framework/options/sections/bottom_footer.php:43
+msgid "Enable Expanded Paddings?!"
+msgstr ""
+
+#: framework/options/sections/bottom_footer.php:44
+msgid "If on, the bottom footer will receive extra vertical padding."
+msgstr ""
+
+#: framework/options/sections/bottom_footer.php:51
+#: framework/options/sections/top_header.php:49
+msgid "Left Area Width"
+msgstr ""
+
+#: framework/options/sections/bottom_footer.php:52
+#: framework/options/sections/bottom_footer.php:64
+#: framework/options/sections/top_header.php:50
+#: framework/options/sections/top_header.php:62
+msgid "Define columns number of top header left side."
+msgstr ""
+
+#: framework/options/sections/bottom_footer.php:53
+#: framework/options/sections/bottom_footer.php:65
+#: framework/options/sections/top_header.php:51
+#: framework/options/sections/top_header.php:63
+msgid ""
+"The left and right side combined should not be greater than 12! Otherwise "
+"the layout will break."
+msgstr ""
+
+#: framework/options/sections/bottom_footer.php:63
+#: framework/options/sections/top_header.php:61
+msgid "Right Area Width"
+msgstr ""
+
+#: framework/options/sections/bottom_footer.php:75
+#: framework/options/sections/top_header.php:73
+msgid "Disable Menu?"
+msgstr ""
+
+#: framework/options/sections/bottom_footer.php:76
+#: framework/options/sections/top_header.php:74
+msgid "If on, menu will not be displayed."
+msgstr ""
+
+#: framework/options/sections/bottom_footer.php:84
+msgid "Upload the logo that will be displayed in the bottom footer."
+msgstr ""
+
+#: framework/options/sections/bottom_footer.php:89
+#: framework/options/sections/top_header.php:81
+msgid "Display Menu at Left Area"
+msgstr ""
+
+#: framework/options/sections/bottom_footer.php:90
+msgid "If on, menu will display at left side of bottom footer."
+msgstr ""
+
+#: framework/options/sections/bottom_footer.php:98
+#: framework/options/sections/header.php:497
+#: framework/options/sections/top_header.php:157
+msgid "Text Module Configuration."
+msgstr ""
+
+#: framework/options/sections/bottom_footer.php:121
+#: framework/options/sections/header.php:520
+#: framework/options/sections/top_header.php:180
+msgid "Social Module Configuration."
+msgstr ""
+
+#: framework/options/sections/bottom_footer.php:184
+#: framework/options/sections/footer.php:97
+msgid "Before Dynamic Content Page"
+msgstr ""
+
+#: framework/options/sections/bottom_footer.php:185
+#: framework/options/sections/bottom_footer.php:202
+#: framework/options/sections/footer.php:98
+#: framework/options/sections/footer.php:115
+#: framework/options/sections/header.php:698
+#: framework/options/sections/single.php:212
+msgid "Select the page from where the content will be loaded and displayed."
+msgstr ""
+
+#: framework/options/sections/bottom_footer.php:201
+#: framework/options/sections/footer.php:114
+msgid "After Dynamic Content Page"
+msgstr ""
+
+#: framework/options/sections/content.php:8
+msgid "Change the content configurations."
+msgstr ""
+
+#: framework/options/sections/content.php:15
+msgid "Display Pages/Projects Boxed?"
+msgstr ""
+
+#: framework/options/sections/content.php:16
+msgid ""
+"If on, the pages will be displayed in a boxed layout. Can be overloaded per "
+"page."
+msgstr ""
+
+#: framework/options/sections/custom_code.php:15
+msgid "Custom CSS"
+msgstr ""
+
+#: framework/options/sections/custom_code.php:32
+msgid "Custom JS"
+msgstr ""
+
+#: framework/options/sections/custom_code.php:49
+msgid "Google Fonts and Favicon"
+msgstr ""
+
+#: framework/options/sections/custom_code.php:56
+msgid ""
+"You can insert aside link tags from Google Fonts, favicon code. We recommend "
+"this website to generate optimal markup:"
+msgstr ""
+
+#: framework/options/sections/favicon.php:7
+msgid "Favicon Settings"
+msgstr ""
+
+#: framework/options/sections/favicon.php:8
+msgid ""
+"Configure the favicon in a lot of plataforms. Generate and download your "
+"package at http://realfavicongenerator.net/"
+msgstr ""
+
+#: framework/options/sections/favicon.php:15
+msgid ""
+"Generate and download your image package at http://realfavicongenerator.net/"
+msgstr ""
+
+#: framework/options/sections/favicon.php:21
+msgid "Default Favicons"
+msgstr ""
+
+#: framework/options/sections/favicon.php:25
+msgid "Favicon 16x16"
+msgstr ""
+
+#: framework/options/sections/favicon.php:26
+msgid "Upload favicon image in the following dimensions (16x16)"
+msgstr ""
+
+#: framework/options/sections/favicon.php:34
+msgid "Favicon 32x32"
+msgstr ""
+
+#: framework/options/sections/favicon.php:35
+msgid "Upload favicon image in the following dimensions (32x32)"
+msgstr ""
+
+#: framework/options/sections/favicon.php:43
+msgid "Favicon 96x96"
+msgstr ""
+
+#: framework/options/sections/favicon.php:44
+msgid "Upload favicon image in the following dimensions (96x96)"
+msgstr ""
+
+#: framework/options/sections/favicon.php:52
+msgid "Favicon 160x160"
+msgstr ""
+
+#: framework/options/sections/favicon.php:53
+msgid "Upload favicon image in the following dimensions (160x160)"
+msgstr ""
+
+#: framework/options/sections/favicon.php:61
+msgid "Favicon 192x192"
+msgstr ""
+
+#: framework/options/sections/favicon.php:62
+msgid "Upload favicon image in the following dimensions (192x192)"
+msgstr ""
+
+#: framework/options/sections/favicon.php:72
+msgid "Apple Favicons"
+msgstr ""
+
+#: framework/options/sections/favicon.php:76
+msgid "Favicon 57x57"
+msgstr ""
+
+#: framework/options/sections/favicon.php:77
+msgid "Upload favicon image in the following dimensions (57x57)"
+msgstr ""
+
+#: framework/options/sections/favicon.php:85
+msgid "Favicon 114x114"
+msgstr ""
+
+#: framework/options/sections/favicon.php:86
+msgid "Upload favicon image in the following dimensions (114x114)"
+msgstr ""
+
+#: framework/options/sections/favicon.php:94
+msgid "Favicon 72x72"
+msgstr ""
+
+#: framework/options/sections/favicon.php:95
+msgid "Upload favicon image in the following dimensions (72x72)"
+msgstr ""
+
+#: framework/options/sections/favicon.php:103
+msgid "Favicon 144x144"
+msgstr ""
+
+#: framework/options/sections/favicon.php:104
+msgid "Upload favicon image in the following dimensions (144x144)"
+msgstr ""
+
+#: framework/options/sections/favicon.php:112
+msgid "Favicon 60x60"
+msgstr ""
+
+#: framework/options/sections/favicon.php:113
+msgid "Upload favicon image in the following dimensions (60x60)"
+msgstr ""
+
+#: framework/options/sections/favicon.php:121
+msgid "Favicon 120x120"
+msgstr ""
+
+#: framework/options/sections/favicon.php:122
+msgid "Upload favicon image in the following dimensions (120x120)"
+msgstr ""
+
+#: framework/options/sections/favicon.php:130
+msgid "Favicon 76x76"
+msgstr ""
+
+#: framework/options/sections/favicon.php:131
+msgid "Upload favicon image in the following dimensions (76x76)"
+msgstr ""
+
+#: framework/options/sections/favicon.php:139
+msgid "Favicon 152x152"
+msgstr ""
+
+#: framework/options/sections/favicon.php:140
+msgid "Upload favicon image in the following dimensions (152x152)"
+msgstr ""
+
+#: framework/options/sections/favicon.php:148
+msgid "Favicon 180x180"
+msgstr ""
+
+#: framework/options/sections/favicon.php:149
+msgid "Upload favicon image in the following dimensions (180x180)"
+msgstr ""
+
+#: framework/options/sections/favicon.php:159
+msgid "Windows Metro"
+msgstr ""
+
+#: framework/options/sections/favicon.php:165
+msgid "Custom Tile Background Color"
+msgstr ""
+
+#: framework/options/sections/favicon.php:166
+msgid "Pick a background color for the tile."
+msgstr ""
+
+#: framework/options/sections/favicon.php:173
+msgid "Tile Image 70x70"
+msgstr ""
+
+#: framework/options/sections/favicon.php:174
+msgid ""
+"Upload favicon image in the following dimensions. Minimum image size: 70x70. "
+"Recommended: 128x128."
+msgstr ""
+
+#: framework/options/sections/favicon.php:182
+msgid "Tile Image 150x150"
+msgstr ""
+
+#: framework/options/sections/favicon.php:183
+msgid ""
+"Upload favicon image in the following dimensions. Minimum image size: "
+"150x150. Recommended: 270x270."
+msgstr ""
+
+#: framework/options/sections/favicon.php:191
+msgid "Tile Image 310x150"
+msgstr ""
+
+#: framework/options/sections/favicon.php:192
+msgid ""
+"Upload favicon image in the following dimensions. Minimum image size: "
+"310x150. Recommended: 558x270."
+msgstr ""
+
+#: framework/options/sections/favicon.php:200
+msgid "Tile Image 310x310"
+msgstr ""
+
+#: framework/options/sections/favicon.php:201
+msgid ""
+"Upload favicon image in the following dimensions. Minimum image size: "
+"310x310. Recommended: 558x558."
+msgstr ""
+
+#: framework/options/sections/footer.php:23
+msgid "Footer Layout"
+msgstr ""
+
+#: framework/options/sections/footer.php:24
+msgid "Select the footer layout to be used."
+msgstr ""
+
+#: framework/options/sections/footer.php:35
+msgid "#1 Column Width"
+msgstr ""
+
+#: framework/options/sections/footer.php:36
+#: framework/options/sections/footer.php:48
+#: framework/options/sections/footer.php:60
+#: framework/options/sections/footer.php:72
+msgid "Define column width, max is 12 parts, set as 0 to disable this area."
+msgstr ""
+
+#: framework/options/sections/footer.php:37
+#: framework/options/sections/footer.php:49
+#: framework/options/sections/footer.php:61
+#: framework/options/sections/footer.php:73
+msgid ""
+"The four columns width combined should be equal to 12! Otherwise the layout "
+"will break."
+msgstr ""
+
+#: framework/options/sections/footer.php:47
+msgid "#2 Column Width"
+msgstr ""
+
+#: framework/options/sections/footer.php:59
+msgid "#3 Column Width"
+msgstr ""
+
+#: framework/options/sections/footer.php:71
+msgid "#4 Column Width"
+msgstr ""
+
+#: framework/options/sections/footer.php:129
+msgid "Enable Floating Contact Form"
+msgstr ""
+
+#: framework/options/sections/footer.php:130
+msgid ""
+"If on, a floating contact form will be displayed in the right bottom corner."
+msgstr ""
+
+#: framework/options/sections/footer.php:131
+#, php-format
+msgid ""
+"If you don't receive emails please check your email server settings. Most "
+"servers doesn't allow to send emails without smtp authentication. This "
+"little plugin can be helpful %s"
+msgstr ""
+
+#: framework/options/sections/footer.php:138
+msgid "Enable reCaptcha"
+msgstr ""
+
+#: framework/options/sections/footer.php:139
+msgid "If on, reCaptcha will be activated."
+msgstr ""
+
+#: framework/options/sections/footer.php:140
+#, php-format
+msgid "Register your site here %s and get you site and secret key."
+msgstr ""
+
+#: framework/options/sections/footer.php:148
+msgid "reCaptcha Site Key"
+msgstr ""
+
+#: framework/options/sections/footer.php:149
+msgid "Site key"
+msgstr ""
+
+#: framework/options/sections/footer.php:157
+msgid "reCaptcha Secret Key"
+msgstr ""
+
+#: framework/options/sections/footer.php:158
+msgid "Secret key"
+msgstr ""
+
+#: framework/options/sections/footer.php:166
+msgid "reCaptcha Theme"
+msgstr ""
+
+#: framework/options/sections/footer.php:167
+msgid "Select the theme to be used for reCaptcha."
+msgstr ""
+
+#: framework/options/sections/footer.php:182
+msgid "Email"
+msgstr ""
+
+#: framework/options/sections/footer.php:183
+msgid "Destination email address"
+msgstr ""
+
+#: framework/options/sections/footer.php:191
+msgid "Form Header"
+msgstr ""
+
+#: framework/options/sections/footer.php:192
+msgid "Header of the form"
+msgstr ""
+
+#: framework/options/sections/footer.php:201
+msgid "Form Description"
+msgstr ""
+
+#: framework/options/sections/footer.php:202
+msgid "Short text displayed below the form header"
+msgstr ""
+
+#: framework/options/sections/general.php:7
+msgid "General Settings"
+msgstr ""
+
+#: framework/options/sections/general.php:8
+msgid "Configure easily the basic theme's settings."
+msgstr ""
+
+#: framework/options/sections/general.php:15
+msgid "Enable Comments in Pages?"
+msgstr ""
+
+#: framework/options/sections/general.php:16
+msgid "If on, the comment form will be avaliable in all pages."
+msgstr ""
+
+#: framework/options/sections/general.php:23
+msgid "Enable Shop Search instead default Search?"
+msgstr ""
+
+#: framework/options/sections/general.php:24
+msgid ""
+"If on, the search forms of Live Search modules will be for shop products "
+"instead default."
+msgstr ""
+
+#: framework/options/sections/general.php:31
+msgid "Enable Loader Effect?"
+msgstr ""
+
+#: framework/options/sections/general.php:32
+msgid "If on, a loader will appear before loading the page."
+msgstr ""
+
+#: framework/options/sections/general.php:39
+msgid "Disable Responsive Layout?"
+msgstr ""
+
+#: framework/options/sections/general.php:40
+msgid ""
+"If on, the website will not adapt in smaller devices like tablets or "
+"smartphones."
+msgstr ""
+
+#: framework/options/sections/header.php:214
+msgid ""
+"If on, menu will be centralized. Note that this option does not work with "
+"all layouts."
+msgstr ""
+
+#: framework/options/sections/header.php:227
+msgid ""
+"If on the menu items will be centered, else default alignment left/right "
+"will be used."
+msgstr ""
+
+#: framework/options/sections/header.php:258
+msgid "Useful to single page layouts or small menus."
+msgstr ""
+
+#: framework/options/sections/header.php:265
+msgid "Logo Module Configuration."
+msgstr ""
+
+#: framework/options/sections/header.php:310
+msgid "Light Logo"
+msgstr ""
+
+#: framework/options/sections/header.php:311
+msgid "Turn on to upload a light version of logo used in dark backgrounds."
+msgstr ""
+
+#: framework/options/sections/header.php:319
+msgid "Logo (light)"
+msgstr ""
+
+#: framework/options/sections/header.php:328
+msgid "Logo Retina (light)"
+msgstr ""
+
+#: framework/options/sections/header.php:337
+msgid "Dark Logo"
+msgstr ""
+
+#: framework/options/sections/header.php:338
+msgid "Turn on to upload a dark version of logo used in light backgrounds."
+msgstr ""
+
+#: framework/options/sections/header.php:346
+msgid "Logo (dark)"
+msgstr ""
+
+#: framework/options/sections/header.php:355
+msgid "Logo Retina (dark)"
+msgstr ""
+
+#: framework/options/sections/header.php:364
+msgid "Logo Dimensions"
+msgstr ""
+
+#: framework/options/sections/header.php:370
+msgid "Logo Columns (Large)"
+msgstr ""
+
+#: framework/options/sections/header.php:371
+msgid ""
+"Define how many columns of header is occupied by the logo in larger devices. "
+"More than 1200px."
+msgstr ""
+
+#: framework/options/sections/header.php:372
+#: framework/options/sections/header.php:384
+#: framework/options/sections/header.php:396
+#: framework/options/sections/header.php:408
+msgid "Do not use too big values because this can break the layout."
+msgstr ""
+
+#: framework/options/sections/header.php:382
+msgid "Logo Columns (Medium)"
+msgstr ""
+
+#: framework/options/sections/header.php:383
+msgid ""
+"Define how many columns of header is occupied by the logo in normal devices. "
+"More than 991px."
+msgstr ""
+
+#: framework/options/sections/header.php:394
+msgid "Logo Columns (Tablets)"
+msgstr ""
+
+#: framework/options/sections/header.php:395
+msgid ""
+"Define how many columns of header is occupied by the logo in tablet devices. "
+"Smaller than 991px. "
+msgstr ""
+
+#: framework/options/sections/header.php:406
+msgid "Logo Columns (Mobile)"
+msgstr ""
+
+#: framework/options/sections/header.php:407
+msgid ""
+"Define how many columns of header is occupied by the logo in small mobile "
+"devices. Smaller than 768px."
+msgstr ""
+
+#: framework/options/sections/header.php:418
+#: framework/options/sections/top_header.php:99
+msgid "Woo Cart Module Configuration."
+msgstr ""
+
+#: framework/options/sections/header.php:453
+#: framework/options/sections/top_header.php:113
+msgid "Login AJAX Module Configuration."
+msgstr ""
+
+#: framework/options/sections/header.php:460
+#: framework/options/sections/top_header.php:120
+msgid ""
+"If on, a Login AJAX will be displayed. Requires Login With Ajax plugin "
+"activated."
+msgstr ""
+
+#: framework/options/sections/header.php:467
+#: framework/options/sections/top_header.php:127
+msgid "Search Module Configuration."
+msgstr ""
+
+#: framework/options/sections/header.php:545
+msgid "Menu Module Configuration."
+msgstr ""
+
+#: framework/options/sections/header.php:559
+msgid "Ads Module Configuration."
+msgstr ""
+
+#: framework/options/sections/header.php:573
+msgid "Ads Module Content"
+msgstr ""
+
+#: framework/options/sections/header.php:574
+msgid "Place your Ads code, it supports HTML code as well or even JavaScript."
+msgstr ""
+
+#: framework/options/sections/header.php:583
+#: framework/options/sections/top_header.php:205
+msgid "WPML Modules"
+msgstr ""
+
+#: framework/options/sections/header.php:600
+msgid "Sidebar Switcher Module Configuration."
+msgstr ""
+
+#: framework/options/sections/header.php:608
+msgid ""
+"If on, an alternative sidebar switcher will be displayed. Note that it is "
+"not avaliable to all layouts."
+msgstr ""
+
+#: framework/options/sections/header.php:637
+msgid "Text areas used for Dark Menu"
+msgstr ""
+
+#: framework/options/sections/header.php:661
+msgid "Textarea 3"
+msgstr ""
+
+#: framework/options/sections/header.php:683
+#: framework/options/sections/single.php:197
+msgid "Dynamic Area"
+msgstr ""
+
+#: framework/options/sections/header.php:697
+msgid "After Header Dynamic Content Page"
+msgstr ""
+
+#: framework/options/sections/header.php:706
+msgid "Blog: Header Dynamic Content"
+msgstr ""
+
+#: framework/options/sections/header.php:707
+msgid ""
+"Select the page from where the content will be loaded and displayed. "
+"Displayed only at blog."
+msgstr ""
+
+#: framework/options/sections/header.php:715
+msgid "Single: Header Dynamic Content"
+msgstr ""
+
+#: framework/options/sections/header.php:716
+msgid ""
+"Select the page from where the content will be loaded and displayed. "
+"Displayed only at single."
+msgstr ""
+
+#: framework/options/sections/header.php:724
+msgid "Shop: Header Dynamic Content"
+msgstr ""
+
+#: framework/options/sections/header.php:725
+msgid ""
+"Select the page from where the content will be loaded and displayed. "
+"Displayed only at shop."
+msgstr ""
+
+#: framework/options/sections/header.php:733
+msgid "Product: Header Dynamic Content"
+msgstr ""
+
+#: framework/options/sections/header.php:734
+msgid ""
+"Select the page from where the content will be loaded and displayed. "
+"Displayed only at product."
+msgstr ""
+
+#: framework/options/sections/layout.php:63
+msgid "Container Configuration."
+msgstr ""
+
+#: framework/options/sections/layout.php:69
+msgid "Header Container Type"
+msgstr ""
+
+#: framework/options/sections/layout.php:70
+#: framework/options/sections/layout.php:84
+#: framework/options/sections/layout.php:98
+msgid ""
+"Define container configuration to be used, it can be normal, expanded or "
+"compact."
+msgstr ""
+
+#: framework/options/sections/layout.php:83
+msgid "Content Container Type"
+msgstr ""
+
+#: framework/options/sections/layout.php:97
+msgid "Footer Container Type"
+msgstr ""
+
+#: framework/options/sections/layout.php:111
+msgid "Aside Container Type"
+msgstr ""
+
+#: framework/options/sections/layout.php:112
+msgid "Define container configuration to be used, it can be normal or compact."
+msgstr ""
+
+#: framework/options/sections/pages.php:7
+msgid "Pages"
+msgstr ""
+
+#: framework/options/sections/pages.php:8
+msgid "Change pages settings."
+msgstr ""
+
+#: framework/options/sections/pages.php:22
+msgid "404 Page"
+msgstr ""
+
+#: framework/options/sections/pages.php:23
+msgid "Override 404 page."
+msgstr ""
+
+#: framework/options/sections/sidebars.php:8
+msgid "Define custom sidebars."
+msgstr ""
+
+#: framework/options/sections/sidebars.php:15
+msgid "Custom Sidebars"
+msgstr ""
+
+#: framework/options/sections/sidebars.php:16
+msgid "Custom sidebars can be assigned to any page or post."
+msgstr ""
+
+#: framework/options/sections/sidebars.php:17
+msgid "You can add as many custom sidebars as you need."
+msgstr ""
+
+#: framework/options/sections/single.php:7
+msgid "Single"
+msgstr ""
+
+#: framework/options/sections/single.php:8
+msgid "Change single post templates."
+msgstr ""
+
+#: framework/options/sections/single.php:15
+msgid "Single Post."
+msgstr ""
+
+#: framework/options/sections/single.php:83
+msgid "Use Reduced Width?"
+msgstr ""
+
+#: framework/options/sections/single.php:84
+msgid ""
+"If on, the post will use reduced width. Recommended to full single layout."
+msgstr ""
+
+#: framework/options/sections/single.php:115
+msgid "Display Single Boxed?"
+msgstr ""
+
+#: framework/options/sections/single.php:116
+msgid "If on, the single will be displayed in a boxed layout."
+msgstr ""
+
+#: framework/options/sections/single.php:130
+msgid "If on, thumbnails will not be displayed in single post."
+msgstr ""
+
+#: framework/options/sections/single.php:137
+msgid "Components"
+msgstr ""
+
+#: framework/options/sections/single.php:143
+msgid "Enable Post Navigation?"
+msgstr ""
+
+#: framework/options/sections/single.php:144
+msgid "If on, navigation will be displayed below content."
+msgstr ""
+
+#: framework/options/sections/single.php:151
+msgid "Enable author box?"
+msgstr ""
+
+#: framework/options/sections/single.php:152
+msgid "If on, the author box with details and social icons will be displayed."
+msgstr ""
+
+#: framework/options/sections/single.php:159
+msgid "Enable Related Posts?"
+msgstr ""
+
+#: framework/options/sections/single.php:160
+msgid "If on, the related posts box will be displayed."
+msgstr ""
+
+#: framework/options/sections/single.php:167
+msgid "Enable Tags after Content?"
+msgstr ""
+
+#: framework/options/sections/single.php:168
+msgid "If on, the tags will be displayed after post content."
+msgstr ""
+
+#: framework/options/sections/single.php:175
+msgid "Single Project"
+msgstr ""
+
+#: framework/options/sections/single.php:203
+msgid "Enable Dynamic Area After Post Content?"
+msgstr ""
+
+#: framework/options/sections/single.php:204
+msgid ""
+"If on, a dynamic area will be displayed after post contents. Great to a "
+"newsletter form!"
+msgstr ""
+
+#: framework/options/sections/single.php:211
+msgid "After Content Dynamic Content Page"
+msgstr ""
+
+#: framework/options/sections/single.php:226
+msgid "Custom Single Thumbnail Size"
+msgstr ""
+
+#: framework/options/sections/title_wrapper.php:38
+msgid "If on, the large title wrapper layout will be aligned to left."
+msgstr ""
+
+#: framework/options/sections/title_wrapper.php:47
+msgid "If on, a breadcrumb will be displayed aside of title wrapper."
+msgstr ""
+
+#: framework/options/sections/title_wrapper.php:55
+msgid "If on, a search form will be displayed aside of title wrapper."
+msgstr ""
+
+#: framework/options/sections/title_wrapper.php:62
+msgid "Disable Projects Breadcrumb?"
+msgstr ""
+
+#: framework/options/sections/title_wrapper.php:63
+msgid "If on, breadcrumbs will not be displayed in projects."
+msgstr ""
+
+#: framework/options/sections/title_wrapper.php:71
+msgid "Disable Shop Breadcrumb?"
+msgstr ""
+
+#: framework/options/sections/title_wrapper.php:72
+msgid "If on, breadcrumbs will not be displayed in shop pages."
+msgstr ""
+
+#: framework/options/sections/title_wrapper.php:90
+msgid "Default Titles."
+msgstr ""
+
+#: framework/options/sections/title_wrapper.php:96
+msgid "Default Blog Title"
+msgstr ""
+
+#: framework/options/sections/title_wrapper.php:97
+msgid "Title used in index post listing."
+msgstr ""
+
+#: framework/options/sections/title_wrapper.php:105
+msgid "Default Blog Description"
+msgstr ""
+
+#: framework/options/sections/title_wrapper.php:106
+msgid "Place any text or shortcode to be displayed below blog title."
+msgstr ""
+
+#: framework/options/sections/title_wrapper.php:124
+msgid "Default Shop Title"
+msgstr ""
+
+#: framework/options/sections/title_wrapper.php:125
+msgid "Title used in single product title when avaliable."
+msgstr ""
+
+#: framework/options/sections/title_wrapper.php:133
+msgid "Default Shop Description"
+msgstr ""
+
+#: framework/options/sections/title_wrapper.php:134
+msgid "Place any text or shortcode to be displayed below shop title."
+msgstr ""
+
+#: framework/options/sections/top_header.php:37
+msgid "Top Header Layout"
+msgstr ""
+
+#: framework/options/sections/top_header.php:38
+msgid "Select the top layout to be used at header."
+msgstr ""
+
+#: framework/options/sections/top_header.php:82
+msgid "If on, menu will display at left side of top header."
+msgstr ""
+
+#: framework/options/sections/top_header.php:211
+msgid "WPML Language Flags"
+msgstr ""
+
+#: framework/options/sections/top_header.php:212
+msgid ""
+"If on, the avaliable languages flags will be displayed. Only works with WPML "
+"activated."
+msgstr ""
+
+#: framework/options/sections/top_header.php:219
+msgid "WPML Shop Currencies"
+msgstr ""
+
+#: framework/options/sections/top_header.php:220
+msgid ""
+"If on, the avaliable currencies flags will be displayed. Only works with "
+"WPML + WooCommerce Multilingual activated."
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:7
+msgid "Shop"
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:8
+msgid "Change shop templates and configurations."
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:15
+msgid "General Configuration."
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:21
+msgid "Shop Layout"
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:22
+msgid "Select the layout to be used in shop."
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:35
+msgid "Products per Page"
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:36
+msgid "Define the number of products displayed per page."
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:45
+msgid "Define columns number at shop."
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:55
+msgid "Display Products in List"
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:56
+msgid "If on, products will be displayed as list instead thumbs at shop."
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:63
+msgid "Enable Catalog Mode?"
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:64
+msgid "If on, Add to Cart buttons will not be displayed to users."
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:71
+msgid "Catalog Mode Text"
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:72
+msgid "What will be displayed instead default Add to Cart button."
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:80
+msgid "Enable Category Image?"
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:81
+msgid ""
+"If on, the uploaded image will be displayed above the products in shop "
+"listing."
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:88
+msgid "Enable Sorting Options?"
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:89
+msgid ""
+"If on, the sorting options will be displayed in the shop, this way users can "
+"order by price or others."
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:96
+msgid "Disable Quick View Feature?"
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:97
+msgid "If on, the quick view feature will not be avaliable."
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:104
+msgid "Disable Front/Back Feature?"
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:105
+msgid "If on, the front and back images will not be avaliable."
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:120
+msgid "Single Product Configuration."
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:126
+msgid "Product Layout"
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:127
+msgid "Select the layout to be used in single products."
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:140
+msgid "Display Wide Thumbnail"
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:141
+msgid ""
+"If on, instead two columns in single products, they will appear as one "
+"column."
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:148
+msgid "Product Tabs Layout"
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:149
+msgid "Select the layout to be used in single products tabs."
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:162
+msgid "Enable Extra Tab?"
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:163
+msgid "If on, an additional global tab will be displayed in products tabs."
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:170
+msgid "Extra Tab Title"
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:171
+msgid "Define the extra tab title."
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:180
+msgid "Extra Tab Content"
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:181
+msgid "Define the extra tab content."
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:190
+msgid "Disable Breadcrumb?"
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:191
+msgid "If on, breadcrumb above product title will not be displayed."
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:198
+msgid "Disable Social Share?"
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:199
+msgid "If on, social share icons below product details will not be displayed."
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:206
+msgid "Disable Related Products?"
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:207
+msgid "If on, related products will not be displayed."
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:226
+msgid "Shop and Product Settings."
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:232
+msgid "Display Shop/Products Boxed?"
+msgstr ""
+
+#: framework/options/sections/woo_templates.php:233
+msgid "If on, the shop and products will be displayed in a boxed layout."
+msgstr ""
+
+#: framework/options/theme_options.php:167
+#, php-format
+msgid "Customize &#8220;%s&#8221;"
+msgstr ""
+
+#: framework/options/theme_options.php:185
+#, php-format
+msgid "By %s"
+msgstr ""
+
+#: framework/options/theme_options.php:186
+#, php-format
+msgid "Version %s"
+msgstr ""
+
+#: framework/options/theme_options.php:187
+msgid "Tags"
+msgstr ""
+
+#: framework/options/theme_options.php:192
+#, php-format
+msgid "This <a href=\"%1$s\">child theme</a> requires its parent theme, %2$s."
+msgstr ""
+
+#: framework/options/theme_options.php:192
+msgid "http://codex.wordpress.org/Child_Themes"
+msgstr ""
+
+#: framework/options/theme_options.php:273
+msgid "<strong>Theme URL:</strong> "
+msgstr ""
+
+#: framework/options/theme_options.php:274
+msgid "<strong>Author:</strong> "
+msgstr ""
+
+#: framework/options/theme_options.php:275
+msgid "<strong>Version:</strong> "
+msgstr ""
+
+#: framework/options/theme_options.php:279
+msgid "<strong>Tags:</strong> "
+msgstr ""
+
+#: framework/options/theme_options.php:290
+msgid "Theme Information"
+msgstr ""
+
+#: framework/options/theme_options.php:291
+msgid ""
+"<p class=\"description\">This is the Description. Again HTML is allowed</p>"
+msgstr ""
+
+#: framework/options/theme_options.php:309
+msgid "Theme Information 1"
+msgstr ""
+
+#: framework/options/theme_options.php:310
+#: framework/options/theme_options.php:316
+msgid "<p>This is the tab content, HTML is allowed.</p>"
+msgstr ""
+
+#: framework/options/theme_options.php:315
+msgid "Theme Information 2"
+msgstr ""
+
+#: framework/options/theme_options.php:320
+msgid "<p>This is the sidebar content, HTML is allowed.</p>"
+msgstr ""
+
+#: framework/templates/title_wrapper/part-breadcrumb.php:25
+#: framework/templates/title_wrapper/part-breadcrumb.php:70
+#: woocommerce/archive-product.php:55 woocommerce/archive-product.php:132
+#: woocommerce/single-product/single-breadcrumb.php:13
+msgid "Home"
+msgstr "Inicio"
+
+#: framework/templates/title_wrapper/part-breadcrumb.php:63
+#: framework/templates/title_wrapper/part-breadcrumb.php:64
+#: framework/templates/title_wrapper/part-breadcrumb.php:65
+msgid "Archive for"
+msgstr ""
+
+#: framework/templates/title_wrapper/part-breadcrumb.php:66
+msgid "Author Archive"
+msgstr ""
+
+#: framework/templates/title_wrapper/part-breadcrumb.php:67
+msgid "Blog Archives"
+msgstr ""
+
+#: framework/templates/title_wrapper/part-breadcrumb.php:68
+msgid "Search Results"
+msgstr ""
+
+#: functions.php:84
+msgid "Header Module Menu"
+msgstr ""
+
+#: functions.php:118
+msgid "Widgets displayed at right side of content."
+msgstr ""
+
+#: functions.php:128
+msgid "Widgets displayed at left side of content when the layout supports it."
+msgstr ""
+
+#: functions.php:137
+msgid "Aside Sidebar"
+msgstr ""
+
+#: functions.php:138
+msgid "Widgets displayed at aside layout left or right."
+msgstr ""
+
+#: functions.php:147
+msgid "Side Header Sidebar"
+msgstr ""
+
+#: functions.php:148
+msgid "Widgets displayed at header style Horizontal With Sidebar."
+msgstr ""
+
+#: functions.php:157
+msgid "Footer Sidebar #1"
+msgstr ""
+
+#: functions.php:158 functions.php:168 functions.php:178 functions.php:188
+msgid "Widgets displayed at footer."
+msgstr ""
+
+#: functions.php:167
+msgid "Footer Sidebar #2"
+msgstr ""
+
+#: functions.php:177
+msgid "Footer Sidebar #3"
+msgstr ""
+
+#: functions.php:187
+msgid "Footer Sidebar #4"
+msgstr ""
+
+#: functions.php:197
+msgid "Shop Sidebar"
+msgstr ""
+
+#: functions.php:198
+msgid "Widgets displayed at shop."
+msgstr ""
+
+#: functions.php:207
+msgid "Product Sidebar"
+msgstr ""
+
+#: functions.php:208
+msgid "Widgets displayed at single product."
+msgstr ""
+
+#: functions.php:355 functions.php:372
+msgid "Fill all required fields!"
+msgstr ""
+
+#: functions.php:356 functions.php:357
+msgid "Sending"
+msgstr ""
+
+#: functions.php:373
+msgid "Sending..."
+msgstr ""
+
+#: functions.php:374
+msgid "Send"
+msgstr ""
+
+#: functions.php:375
+msgid "Sent"
+msgstr ""
+
+#: functions.php:376
+msgid "Form already submitted!"
+msgstr ""
+
+#: functions.php:377
+msgid "Thank you!"
+msgstr ""
+
+#: functions.php:378
+msgid "Sending failed. Configuration error!"
+msgstr ""
+
+#: functions.php:379
+msgid "Sending failed. Server error!"
+msgstr ""
+
+#: header.php:44
+msgid "Contact Us"
+msgstr ""
+
+#: page-templates/content-page.php:15
+msgid "Pages:"
+msgstr ""
+
+#: part-loader.php:9
+msgid "Loading..."
+msgstr ""
+
+#: plugins/login-with-ajax/default/widget_in.php:17
+msgid "Howdy,"
+msgstr ""
+
+#: plugins/login-with-ajax/default/widget_in.php:30
+msgid "My Account"
+msgstr ""
+
+#: plugins/login-with-ajax/default/widget_in.php:38
+#: plugins/login-with-ajax/default/widget_in.php:42
+msgid "Profile"
+msgstr ""
+
+#: plugins/login-with-ajax/default/widget_in.php:48
+msgid "Log Out"
+msgstr ""
+
+#: plugins/login-with-ajax/default/widget_in.php:53
+msgid "Dashboard"
+msgstr ""
+
+#: plugins/login-with-ajax/default/widget_out.php:13
+msgid "Login"
+msgstr ""
+
+#: plugins/login-with-ajax/default/widget_out.php:17
+#: plugins/login-with-ajax/default/widget_out.php:74
+msgid "Username"
+msgstr ""
+
+#: plugins/login-with-ajax/default/widget_out.php:23
+msgid "Password"
+msgstr ""
+
+#: plugins/login-with-ajax/default/widget_out.php:55
+msgid "Enter username or email"
+msgstr ""
+
+#: plugins/login-with-ajax/default/widget_out.php:79
+msgid "E-mail"
+msgstr ""
+
+#: post-templates/content-none.php:13 single-templates/content-none.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: post-templates/content-none.php:19 single-templates/content-none.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: post-templates/content-none.php:23 single-templates/content-none.php:23
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: post-templates/masonry-simple/content-link.php:12
+#: post-templates/masonry-simple/content-video.php:12
+#: post-templates/medium-simple/content-link.php:12
+#: post-templates/medium-simple/content-video.php:15
+#: single-templates/large-simple/content-link.php:12
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: post-templates/parts/part-meta-clean.php:3
+#: post-templates/parts/part-meta-no-comments.php:5
+#: post-templates/parts/part-meta.php:5
+msgid "By"
+msgstr "por"
+
+#: post-templates/parts/part-meta-clean.php:5
+#: post-templates/parts/part-meta-no-comments.php:7
+#: post-templates/parts/part-meta.php:7
+msgid "In"
+msgstr "en"
+
+#: post-templates/parts/part-meta-clean.php:12
+#: post-templates/parts/part-meta-small.php:9
+#: post-templates/parts/part-meta.php:14
+msgid "No Comments"
+msgstr "Sin comentarios"
+
+#: post-templates/parts/part-meta-clean.php:12
+#: post-templates/parts/part-meta-small.php:9
+#: post-templates/parts/part-meta.php:14
+msgid "1 Comment"
+msgstr ""
+
+#: post-templates/parts/part-meta-clean.php:12
+#: post-templates/parts/part-meta-small.php:9
+#: post-templates/parts/part-meta.php:14
+msgid "% Comments"
+msgstr ""
+
+#: post-templates/parts/part-meta-no-comments.php:3
+#: post-templates/parts/part-meta.php:3
+msgid "Posted On"
+msgstr "Publicado el"
+
+#: post-templates/parts/part-read-more-simple.php:2
+msgid "Continue Reading "
+msgstr ""
+
+#: post-templates/parts/part-read-more.php:2
+msgid "Read More"
+msgstr "Leer más"
+
+#: post-templates/parts/part-title.php:3
+msgid "Featured"
+msgstr ""
+
+#: search.php:73
+msgid "Displaying results to"
+msgstr ""
+
+#: search.php:73
+msgid "Results."
+msgstr ""
+
+#: sidebar-product.php:26 sidebar-secondary.php:26 sidebar-shop.php:26
+#: sidebar.php:26
+msgid "Meta"
+msgstr ""
+
+#: single-templates/parts/part-author-box.php:17
+msgid "All articles by"
+msgstr ""
+
+#: single-templates/parts/part-author-box.php:23
+msgid "Website"
+msgstr ""
+
+#: single-templates/parts/part-post-nav.php:15
+msgid "Next"
+msgstr ""
+
+#: single-templates/parts/part-post-nav.php:22
+msgid "Previous"
+msgstr ""
+
+#: single-templates/parts/part-post-related.php:39
+msgid "Related Articles"
+msgstr ""
+
+#: single-templates/parts/part-project-related.php:14
+msgid "Related Work"
+msgstr ""
+
+#: single-templates/parts/part-tags.php:3
+msgid "Tags:"
+msgstr "Etiquetas:"
+
+#: theme-configs/dummy_importer/init_importer.php:149
+#: theme-configs/dummy_importer/init_importer.php:159
+msgid "Import Dummy Content"
+msgstr ""
+
+#: theme-configs/dummy_importer/init_importer.php:164
+msgid "Import Dummy Demo"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/parsers.php:42
+#: theme-configs/dummy_importer/wordpress-importer/parsers.php:72
+#: theme-configs/dummy_importer/wordpress-importer/parsers.php:80
+msgid "There was an error when reading this WXR file"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/parsers.php:43
+msgid ""
+"Details are shown above. The importer will now try again with a different "
+"parser..."
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/parsers.php:84
+#: theme-configs/dummy_importer/wordpress-importer/parsers.php:89
+#: theme-configs/dummy_importer/wordpress-importer/parsers.php:279
+#: theme-configs/dummy_importer/wordpress-importer/parsers.php:468
+msgid ""
+"This does not appear to be a WXR file, missing/invalid WXR version number"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:134
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:143
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:194
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:198
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:207
+msgid "Sorry, there has been an error."
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:135
+msgid "The file does not exist, please try again."
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:178
+msgid "All done."
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:178
+msgid "Have fun!"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:179
+msgid "Remember to update the passwords and roles of imported users."
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:199
+#, php-format
+msgid ""
+"The export file could not be found at <code>%s</code>. It is likely that "
+"this was caused by a permissions problem."
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:215
+#, php-format
+msgid ""
+"This WXR file (version %s) may not be supported by this version of the "
+"importer. Please consider updating."
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:240
+#, php-format
+msgid ""
+"Failed to import author %s. Their posts will be attributed to the current "
+"user."
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:266
+msgid "Assign Authors"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:267
+msgid ""
+"To make it easier for you to edit and save the imported content, you may "
+"want to reassign the author of the imported item to an existing user of this "
+"site. For example, you may want to import all the entries as <code>admin</"
+"code>s entries."
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:269
+#, php-format
+msgid ""
+"If a new user is created by WordPress, a new password will be randomly "
+"generated and the new user&#8217;s role will be set as %s. Manually changing "
+"the new user&#8217;s details will be necessary."
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:279
+msgid "Import Attachments"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:282
+msgid "Download and import file attachments"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:299
+msgid "Import author:"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:310
+msgid "or create new user with login name:"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:313
+msgid "as a new user:"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:321
+msgid "assign posts to an existing user:"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:323
+msgid "or assign posts to an existing user:"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:324
+msgid "- Select -"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:374
+#, php-format
+msgid ""
+"Failed to create new user for %s. Their posts will be attributed to the "
+"current user."
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:427
+#, php-format
+msgid "Failed to import category %s"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:467
+#, php-format
+msgid "Failed to import post tag %s"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:513
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:654
+#, php-format
+msgid "Failed to import %s %s"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:539
+#, php-format
+msgid "Failed to import &#8220;%s&#8221;: Invalid post type %s"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:561
+#, php-format
+msgid "%s &#8220;%s&#8221; already exists."
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:620
+#, php-format
+msgid "Failed to import %s &#8220;%s&#8221;"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:785
+msgid "Menu item skipped due to missing menu slug"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:792
+#, php-format
+msgid "Menu item skipped due to invalid menu slug: %s"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:855
+msgid "Fetching attachments is not enabled"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:868
+msgid "Invalid file type"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:912
+msgid "Remote server did not respond"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:918
+#, php-format
+msgid "Remote server returned error response %1$d %2$s"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:925
+msgid "Remote file is incorrect size"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:930
+msgid "Zero size file downloaded"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:936
+#, php-format
+msgid "Remote file is too large, limit is %s"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:1034
+msgid "Import WordPress"
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:1041
+#, php-format
+msgid ""
+"A new version of this importer is available. Please update to version %s to "
+"ensure compatibility with newer export files."
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:1056
+msgid ""
+"Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import "
+"the posts, pages, comments, custom fields, categories, and tags into this "
+"site."
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:1057
+msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
+msgstr ""
+
+#: theme-configs/dummy_importer/wordpress-importer/wordpress-importer.php:1132
+msgid ""
+"Import <strong>posts, pages, comments, custom fields, categories, and tags</"
+"strong> from a WordPress export file."
+msgstr ""
+
+#: theme-configs/options/vc_presets.php:24
+msgid "You can find me here"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:196
+#: theme-configs/tgm/tgm_init.php:167
+msgid "Install Required Plugins"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:197
+#: theme-configs/tgm/tgm_init.php:168
+msgid "Install Plugins"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:198
+#: theme-configs/tgm/tgm_init.php:169
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:199
+msgid "Something went wrong."
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:200
+#: theme-configs/tgm/tgm_init.php:171
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:201
+#: theme-configs/tgm/tgm_init.php:172
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:202
+#: theme-configs/tgm/tgm_init.php:173
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"installed."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to install the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins installed."
+msgstr[0] ""
+msgstr[1] ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:203
+#: theme-configs/tgm/tgm_init.php:174
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:204
+#: theme-configs/tgm/tgm_init.php:175
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:205
+#: theme-configs/tgm/tgm_init.php:176
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugin. Contact the administrator of this site for help on getting the "
+"plugin activated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins activated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:206
+#: theme-configs/tgm/tgm_init.php:177
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:207
+#: theme-configs/tgm/tgm_init.php:178
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"updated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to update the %s plugins. "
+"Contact the administrator of this site for help on getting the plugins "
+"updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:208
+#: theme-configs/tgm/tgm_init.php:179
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:209
+#: theme-configs/tgm/tgm_init.php:180
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:210
+#: theme-configs/tgm/tgm_init.php:181
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:211
+msgid "Return to the dashboard"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:212
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1945
+#: theme-configs/tgm/tgm_init.php:182
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:213
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1632
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:214
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:215
+msgid "Dismiss this notice"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:541
+#: theme-configs/tgm/class-tgm-plugin-activation.php:2162
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1171
+msgid "Private Repository"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1174
+msgid "Pre-Packaged"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1179
+msgid "WordPress Repository"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1182
+msgid "Required"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1182
+msgid "Recommended"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1185
+msgid "Not Installed"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1187
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1287
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1395
+msgid "Install"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1309
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1396
+msgid "Activate"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1358
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1374
+msgid "Plugin"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1375
+msgid "Source"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1376
+msgid "Type"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1377
+msgid "Status"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1505
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1610
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1928
+msgid "Install package not available."
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1929
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1930
+msgid "Unpacking the package&#8230;"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1931
+msgid "Installing the plugin&#8230;"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1932
+msgid "Plugin install failed."
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1933
+msgid "Plugin installed successfully."
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:1944
+msgid "Plugin activation failed."
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:2058
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:2059
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:2059
+#: theme-configs/tgm/class-tgm-plugin-activation.php:2068
+msgid "Show Details"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:2059
+#: theme-configs/tgm/class-tgm-plugin-activation.php:2068
+msgid "Hide Details"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:2060
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:2061
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:2065
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:2066
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:2067
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:2068
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:2069
+msgid "All installations have been completed."
+msgstr ""
+
+#: theme-configs/tgm/class-tgm-plugin-activation.php:2070
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: theme-configs/tgm/tgm_init.php:170
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: theme-configs/tgm/tgm_init.php:183
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: woocommerce/archive-product.php:51 woocommerce/archive-product.php:128
+msgid "You are here:"
+msgstr ""
+
+#: woocommerce/cart/cart.php:32
+msgid "Price"
+msgstr ""
+
+#: woocommerce/cart/cart.php:33
+msgid "Quantity"
+msgstr ""
+
+#: woocommerce/cart/cart.php:34
+msgid "Total"
+msgstr ""
+
+#: woocommerce/cart/cart.php:51
+msgid "Remove this item"
+msgstr ""
+
+#: woocommerce/cart/cart.php:76
+msgid "Available on backorder"
+msgstr ""
+
+#: woocommerce/cart/cart.php:136
+msgid "Update Cart"
+msgstr ""
+
+#: woocommerce/cart/cart.php:153
+msgid "Coupon"
+msgstr ""
+
+#: woocommerce/cart/cart.php:153
+msgid "Coupon code"
+msgstr ""
+
+#: woocommerce/cart/cart.php:153
+msgid "Use Code"
+msgstr ""
+
+#: woocommerce/cart/cross-sells.php:38
+msgid "You may be interested in&hellip;"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:20
+msgid "You must be logged in to checkout."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:55
+msgid "Your order"
+msgstr ""
+
+#: woocommerce/content-product-list.php:94 woocommerce/content-product.php:92
+msgid "Quick View"
+msgstr ""
+
+#: woocommerce/content-product_cat.php:68
+msgid "Products"
+msgstr ""
+
+#: woocommerce/global/breadcrumb.php:73
+msgid "Products tagged &ldquo;"
+msgstr ""
+
+#: woocommerce/global/breadcrumb.php:101 woocommerce/global/breadcrumb.php:203
+msgid "Search results for &ldquo;"
+msgstr ""
+
+#: woocommerce/global/breadcrumb.php:157
+msgid "Error 404"
+msgstr ""
+
+#: woocommerce/global/breadcrumb.php:207
+msgid "Posts tagged &ldquo;"
+msgstr ""
+
+#: woocommerce/global/breadcrumb.php:212
+msgid "Author:"
+msgstr ""
+
+#: woocommerce/global/breadcrumb.php:217
+msgid "Page"
+msgstr ""
+
+#: woocommerce/loop/orderby.php:13
+msgid "Order By:"
+msgstr ""
+
+#: woocommerce/loop/pagination.php:19
+msgid "Products navigation"
+msgstr ""
+
+#: woocommerce/loop/result-count.php:27
+msgid "Showing the single result"
+msgstr ""
+
+#: woocommerce/loop/result-count.php:29
+#, php-format
+msgid "Showing all %d results"
+msgstr ""
+
+#: woocommerce/loop/result-count.php:31
+#, php-format
+msgctxt "%1$d = first, %2$d = last, %3$d = total"
+msgid "Showing %1$d&ndash;%2$d of %3$d results"
+msgstr ""
+
+#: woocommerce/share.php:16
+msgid "My Wishlist"
+msgstr ""
+
+#: woocommerce/single-product/rating.php:23
+#, php-format
+msgid "Rated %s out of 5"
+msgstr ""
+
+#: woocommerce/single-product/rating.php:25
+msgid "out of 5"
+msgstr ""
+
+#: woocommerce/single-product/related.php:36
+msgid "Related Products"
+msgstr ""
+
+#: woocommerce/single-product/up-sells.php:39
+msgid "You may also like&hellip;"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:30
+msgid "Edit title"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:39
+msgid "Save"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:43
+msgid "Cancel"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:88
+msgid "Product Name"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:95
+msgid "Unit Price"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:108
+msgid "Stock Status"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:154 woocommerce/wishlist-view.php:260
+msgid "Remove this product"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:184
+msgid "Free!"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:195
+msgid "Out of Stock"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:198
+msgid "In Stock"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:209
+#, php-format
+msgid "Added on : %s"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:228
+msgid "Move"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:240
+msgid "Shared"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:243
+msgid "Private"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:246
+msgid "Public"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:260
+msgid "Remove"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:270
+msgid "No products were added to the wishlist"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:287
+msgid "Add the selected products to the cart"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:295 woocommerce/wishlist-view.php:338
+msgid "Ask for an estimate"
+msgstr ""
