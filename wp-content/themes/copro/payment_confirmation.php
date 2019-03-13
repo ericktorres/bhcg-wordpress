@@ -65,7 +65,7 @@ get_header(); ?>
 
 	<!-- Here start the payment confirmation page -->
 	<?php
-		require_once("lib/Conekta.php");
+		//require_once("lib/Conekta.php");
 		\Conekta\Conekta::setApiKey("key_tSD9hmj2QAnLj5X7JxqGNg");
 		\Conekta\Conekta::setApiVersion("4.0.4");
         
