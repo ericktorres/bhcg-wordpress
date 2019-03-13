@@ -64,10 +64,18 @@ get_header(); ?>
 	</div>
 
 	<!-- Here start the payment confirmation page -->
-	<div class="container">
 	<?php
-        print_r($_POST);
+		/*require_once("/conekta/lib/Conekta.php");
+		\Conekta\Conekta::setApiKey("key_tSD9hmj2QAnLj5X7JxqGNg");
+		\Conekta\Conekta::setApiVersion("4.0.4");*/
+        
     ?>
+	<div class="container">
+		<div id="payment_status">
+			<?php
+			print_r($_POST);
+			?>
+		</div>
 	</div>
 	
 
