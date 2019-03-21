@@ -148,43 +148,19 @@ get_header();
       					<input type="text" class="form-control" id="txt_expiration_year" name="txt_expiration_year" style="height:38px;" placeholder="Año de expiración" size="4" data-conekta="card[exp_year]">
     				</div>
   				</div>
+  				<div class="form-check">
+  					<input class="form-check-input" type="checkbox" value="" id="chk_terms_conditions" required>
+  					<label class="form-check-label" for="chk_terms_conditions">
+    					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Al dar click en esta casilla acepto los <a href="https://www.bh-cg.com.mx/politica-terminos-de-servicio/" target="_blank">Términos de servicio</a>, la <a href="https://www.bh-cg.com.mx/politica-reembolso-y-cambios/" target="_blank">Política de reembolsos y/o cambios.</a> y el <a href="https://www.bh-cg.com.mx/aviso-de-privacidad/" target="_blank">Aviso de Privacidad.</a>
+  					</label>
+				</div>
 			</fieldset>
 			<button type="submit">Realizar Pago</button>
 		</form>
-		<!-- Card form -->
-		<!--<form action="/confirmacion-de-pago" method="POST" id="card-form">
-  			<span class="card-errors"></span>
-  			<div>
-    			<label>
-      				<span>Nombre del tarjetahabiente</span>
-      				<input type="text" size="20" data-conekta="card[name]">
-    			</label>
-  			</div>
-  			<div>
-    			<label>
-      				<span>Número de tarjeta de crédito</span>
-      				<input type="text" size="20" data-conekta="card[number]">
-    			</label>
-  			</div>
-  			<div>
-    			<label>
-      				<span>CVC</span>
-      				<input type="text" size="4" data-conekta="card[cvc]">
-    			</label>
-  			</div>
-  			<div>
-    			<label>
-      				<span>Fecha de expiración (MM/AAAA)</span>
-      				<input type="text" size="2" data-conekta="card[exp_month]">
-    			</label>
-    			<span>/</span>
-    			<input type="text" size="4" data-conekta="card[exp_year]">
-  			</div>
-  			<button type="submit">Crear token</button>
-		</form>-->
 
 		<div class="container" style="text-align: center;">
 			<p>Se aceptan pagos con tarjetas Visa, Mastercard y American Express.</p>
+			<img src="https://bluehand.com.mx/console/img/payments-cards.png" width="270">
 			<div id="paypal-button-container" style="width: 320px; display: block; margin: auto;"></div>
 		</div>
 		<script>
