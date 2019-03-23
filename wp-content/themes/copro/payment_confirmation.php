@@ -116,9 +116,14 @@ get_header(); ?>
 		}
     ?>
 	<div class="container">
-		<div id="payment_status">
+		<div id="payment_status" style="border: 2px dotted black; width: 70%; margin: auto; margin-bottom: 50px; padding: 30px; text-align: center;">
 			<?php if($order->payment_status == 'paid'){ ?>
-				<h1>Felicidades</h1>
+				<h1>¡Felicidades!</h1>
+				<p>
+					Has asegurado tu lugar en el curso: <b><?= $_POST['txt_course_name'] ?> </b><br>
+					Tu clave de confirmación es <b><?= $order->id ?> </b><br>
+					Guarda tu clave de confirmación y espera los detalles de curso en tu correo electrónico.
+				</p>
 			<?php } ?>
 		</div>
 	</div>
