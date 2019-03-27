@@ -124,6 +124,11 @@ get_header();
 			</fieldset>
 			<fieldset>
 				<legend><b>Información de pago</b></legend>
+				<?php if($_POST['hdn_cost'] > 5000){ ?>
+				<?php $payment_type = "spei"; ?>
+				<h4>El costo de este curso sólo aplica para pago vía SPEI, al dar click en realizar pago se le proporcionarán los datos para transferencia.</h4>
+				<?php } else { ?>
+				<?php $payment_type = "card"; ?>
 				<div class="form-group">
 					<label for="txt_cardholder_name">Nombre del tarjetahabiente:</label>
     				<input type="text" class="form-control" id="txt_cardholder_name" name="txt_cardholder_name" aria-describedby="cardholder_name" placeholder="Nombre de tarjetahabiente" style="height:38px;" data-conekta="card[name]" size="20" required>
@@ -148,13 +153,16 @@ get_header();
       					<input type="text" class="form-control" id="txt_expiration_year" name="txt_expiration_year" style="height:38px;" placeholder="Año de expiración" size="4" data-conekta="card[exp_year]" required>
     				</div>
   				</div>
+  				<?php } ?>
   				<div class="form-check">
   					<input class="form-check-input" type="checkbox" value="" id="chk_terms_conditions" required>
   					<label class="form-check-label" for="chk_terms_conditions">
     					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Al dar click en esta casilla acepto los <a href="https://www.bh-cg.com.mx/politica-terminos-de-servicio/" target="_blank">Términos de servicio</a>, la <a href="https://www.bh-cg.com.mx/politica-reembolso-y-cambios/" target="_blank">Política de reembolsos y/o cambios.</a> y el <a href="https://www.bh-cg.com.mx/aviso-de-privacidad/" target="_blank">Aviso de Privacidad.</a>
   					</label>
 				</div>
+				<input type="hidden" id="hdn_payment_type" name="hdn_payment_type" value="<? echo $payment_type; ?>">
 			</fieldset>
+			<br>
 			<button type="submit">Realizar Pago</button>
 		</form>
 
@@ -243,17 +251,20 @@ get_header();
   			};
 
   			//jQuery para que genere el token después de dar click en submit
-  			$(function () {
-    			$("#card-form").submit(function(event) {
-      				console.log('Submit ok');
+  			if($('#hdn_payment_type').val() == 'card'){
+  				$(function () {
+	    			$("#card-form").submit(function(event) {
+	      				console.log('Submit ok');
 
-      				var $form = $(this);
-      				// Previene hacer submit más de una vez
-      				$form.find("button").prop("disabled", true);
-      				Conekta.Token.create($form, conektaSuccessResponseHandler, conektaErrorResponseHandler);
-      				return false;
-    			});
-  			});
+	      				var $form = $(this);
+	      				// Previene hacer submit más de una vez
+	      				$form.find("button").prop("disabled", true);
+	      				Conekta.Token.create($form, conektaSuccessResponseHandler, conektaErrorResponseHandler);
+	      				return false;
+	    			});
+	  			});
+  			}
+  			
 
   			$(document).ready(function(){
   				$( "#txt_name" ).focus();

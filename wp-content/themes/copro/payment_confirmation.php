@@ -73,13 +73,13 @@ get_header(); ?>
 		$phone_number = $_POST['txt_mobile_phone'];
 		$course_code = $_POST['txt_course_code'];
 		$token_id = $_POST['conektaTokenId'];
+		$payment_type = $_POST['hdn_payment_type'];
 		//require_once("lib/Conekta.php");
 		\Conekta\Conekta::setApiKey("key_tSD9hmj2QAnLj5X7JxqGNg");
 		\Conekta\Conekta::setApiVersion("2.0.0");
         
-        try{
-  			$order = \Conekta\Order::create(
-    			array(
+        if($payment_type == "card"){
+        	$order_params = array(
       				"line_items" => array(
         				array(
           					"name" => $course_name,
@@ -105,26 +105,94 @@ get_header(); ?>
                 			//you can indicate the card's source_id as shown in the Retry Card Section
           				) //first charge
       				) //charges
-    			)//order
-  			);
-		}catch(\Conekta\ProcessingError $error){
-  			echo $error->getMessage();
-		}catch(\Conekta\ParameterValidationError $error){
-  			echo $error->getMessage();
-		}catch(\Conekta\Handler $error){
-  			echo $error->getMessage();
-		}
+    		);//order
+
+			try{
+	  			$order = \Conekta\Order::create($order_params);
+			}catch(\Conekta\ProcessingError $error){
+	  			//echo $error->getMessage();
+	  			$error_message = $error->getMessage();
+			}catch(\Conekta\ParameterValidationError $error){
+	  			//echo $error->getMessage();
+	  			$error_message = $error->getMessage();
+			}catch(\Conekta\Handler $error){
+	  			//echo $error->getMessage();
+	  			$error_message = $error->getMessage();
+			}
+
+        }else if($payment_type == "spei"){
+        	$order_params = array(
+      				"line_items" => array(
+        				array(
+          					"name" => $course_name,
+          					"unit_price" => $price,
+          					"quantity" => 1
+        				)//first line_item
+      				), //line_items
+      				"currency" => "MXN",
+      				"customer_info" => array(
+        				"name" => $client_name,
+        				"email" => $email,
+        				"phone" => $phone_number
+      				), //customer_info
+      				"metadata" => array("reference" => $course_code, "more_info" => "Pago de curso en línea"),
+      				"charges" => array(
+          				array(
+              				"payment_method" => array(
+                  				//"monthly_installments" => 3,
+                  				"type" => "spei",
+                  			) //payment_method - use customer's default - a card
+                			//to charge a card, different from the default,
+                			//you can indicate the card's source_id as shown in the Retry Card Section
+          				) //first charge
+      				) //charges
+    		);//order
+			
+			try{
+				$order = \Conekta\Order::create($order_params);
+			}catch (\Conekta\ParameterValidationError $error){
+	  			//echo $error->getMessage();
+	  			$error_message = $error->getMessage();
+			} catch (\Conekta\Handler $error){
+	  			//echo $error->getMessage();
+	  			$error_message = $error->getMessage();
+			}
+        }
     ?>
 	<div class="container">
 		<div id="payment_status" style="border: 2px dotted black; width: 70%; margin: auto; margin-bottom: 50px; padding: 30px; text-align: center;">
-			<?php if($order->payment_status == 'paid'){ ?>
+			
+				<?php if($payment_type == "card"){ ?>
+					<?php if($order->payment_status == 'paid'){ ?>
 				<h1>¡Felicidades!</h1>
 				<p>
 					Has asegurado tu lugar en el curso: <b><?= $_POST['txt_course_name'] ?> </b><br>
 					Tu clave de confirmación es <b><?= $order->id ?> </b><br>
 					Guarda tu clave de confirmación y espera los detalles de curso en tu correo electrónico.
 				</p>
-			<?php } ?>
+					<?php } else { ?>
+				<h1>Lo sentimos :(</h1>
+				<p><?php echo $error_message; ?></p>
+					<?php } ?>
+				<?php } else if($payment_type == "spei"){ ?>
+				<h1>¡Felicidades!</h1>
+				<p>
+					Estás a un paso de asegurar tu lugar en el curso: <?= $_POST['txt_course_name'] ?>
+					Realiza el pago vía SPEI con los siguiente datos:
+					<?php
+					echo "<b>Número de orden:</b> ". $order->id . "<br>";
+					echo "<b>Banco: </b>". $order->charges->data[0]->payment_method->receiving_account_bank . "<br>";
+					echo "<b>CLABE: </b>". $order->charges->data[0]->payment_method->receiving_account_number . "<br>";
+					echo "<b>$". $order->amount/100 . $order->currency . "</b><br>";
+					echo "Orden ";
+					echo $order->line_items->data[0]->quantity .
+					      "-". $order->line_items->data[0]->name .
+					      "- $". $order->line_items->data->unit_price/100 . "<br>";
+					?>
+					Una vez hecho el pago recibirás toda la información del curso en tu correo electrónico.
+				</p>
+				<?php } ?>	
+			
 		</div>
 	</div>
 	
