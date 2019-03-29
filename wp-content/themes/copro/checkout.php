@@ -123,44 +123,27 @@ get_header();
 				</div>
 			</fieldset>
 			<fieldset>
+				<legend><b>Seleccione método de pago</b></legend>
+				<div class="form-check form-check-inline">
+  					<input class="form-check-input" type="radio" name="rdo_payment_method" id="rdo_card_payment" value="card" onclick="selectPaymentType('card');">
+  					<label class="form-check-label" for="rdo_card_payment">Tarjeta de crédito/Débito</label>
+				</div>
+				<div class="form-check form-check-inline">
+  					<input class="form-check-input" type="radio" name="rdo_payment_method" id="rdo_spei_payment" value="spei" onclick="selectPaymentType('spei');">
+  					<label class="form-check-label" for="rdo_spei_payment">SPEI</label>
+				</div>
+			</fieldset>
+			<fieldset>
 				<legend><b>Información de pago</b></legend>
-				<?php if($_POST['hdn_cost'] > 5000){ ?>
-				<?php $payment_type = "spei"; ?>
-				<h4>El costo de este curso sólo aplica para pago vía SPEI, al dar click en realizar pago se le proporcionarán los datos para transferencia.</h4>
-				<?php } else { ?>
-				<?php $payment_type = "card"; ?>
-				<div class="form-group">
-					<label for="txt_cardholder_name">Nombre del tarjetahabiente:</label>
-    				<input type="text" class="form-control" id="txt_cardholder_name" name="txt_cardholder_name" aria-describedby="cardholder_name" placeholder="Nombre de tarjetahabiente" style="height:38px;" data-conekta="card[name]" size="20" required>
-    				<small id="name_help" class="form-text" style="display:none; color: red;">El nombre del tarjetahabiente es un campo obligatorio.</small>
-				</div>
-				<div class="form-group">
-					<label for="txt_card_number">Número de tarjeta de crédito:</label>
-    				<input type="text" class="form-control" id="txt_card_number" name="txt_card_number" aria-describedby="cardholder_name" placeholder="Número de tarjeta" style="height:38px;" data-conekta="card[number]" size="20" required>
-    				<small id="name_help" class="form-text" style="display:none; color: red;">El número de la tarjeta es un campo obligatorio.</small>
-				</div>
-				<div class="form-row">
-    				<div class="form-group col-md-4 mb-3">
-      					<label for="txt_cvc">CVC:</label>
-      					<input type="text" class="form-control" id="txt_cvc" name="txt_cvc" style="height:38px;" placeholder="CVC" size="4" data-conekta="card[cvc]" required>
-    				</div>
-    				<div class="form-group col-md-4 mb-3">
-      					<label for="txt_expiration_month">Mes de expiración (MM):</label>
-      					<input type="text" class="form-control" id="txt_expiration_month" name="txt_expiration_month" style="height:38px;" placeholder="Mes de expiración" size="2" data-conekta="card[exp_month]" required>
-    				</div>
-    				<div class="form-group col-md-4 mb-3">
-      					<label for="txt_expiration_year">Año de expiración (AAAA):</label>
-      					<input type="text" class="form-control" id="txt_expiration_year" name="txt_expiration_year" style="height:38px;" placeholder="Año de expiración" size="4" data-conekta="card[exp_year]" required>
-    				</div>
-  				</div>
-  				<?php } ?>
+				<div id="payment_type_container"></div>
+  				
   				<div class="form-check">
   					<input class="form-check-input" type="checkbox" value="" id="chk_terms_conditions" required>
   					<label class="form-check-label" for="chk_terms_conditions">
     					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Al dar click en esta casilla acepto los <a href="https://www.bh-cg.com.mx/politica-terminos-de-servicio/" target="_blank">Términos de servicio</a>, la <a href="https://www.bh-cg.com.mx/politica-reembolso-y-cambios/" target="_blank">Política de reembolsos y/o cambios.</a> y el <a href="https://www.bh-cg.com.mx/aviso-de-privacidad/" target="_blank">Aviso de Privacidad.</a>
   					</label>
 				</div>
-				<input type="hidden" id="hdn_payment_type" name="hdn_payment_type" value="<? echo $payment_type; ?>">
+				<input type="hidden" id="hdn_payment_type" name="hdn_payment_type">
 			</fieldset>
 			<br>
 			<button type="submit">Realizar Pago</button>
@@ -172,62 +155,7 @@ get_header();
 			<div id="paypal-button-container" style="width: 320px; display: block; margin: auto;"></div>
 		</div>
 		<script>
-			var validateInputs = function(input){
-				switch(input){
-					case 'name':
-						if($('#txt_name').val() == ''){
-							$('#name_help').css('display', 'inline');
-							$('#txt_name').css('border', '1px solid red');
-						}else{
-							$('#txt_name').css('border', '1px solid #e7e7e7');
-							$('#name_help').css('display', 'none');
-						}
-						break;
-					case 'lastname':
-						if($('#txt_lastname').val() == ''){
-							$('#lastname_help').css('display', 'inline');
-							$('#txt_lastname').css('border', '1px solid red');
-						}else{
-							$('#txt_lastname').css('border', '1px solid #e7e7e7');
-							$('#lastname_help').css('display', 'none');
-						}
-						break;
-					case 'email':
-						if($('#txt_email').val() == ''){
-							$('#email_help').css('display', 'inline');
-							$('#txt_email').css('border', '1px solid red');
-						}else{
-							$('#txt_email').css('border', '1px solid #e7e7e7');
-							$('#email_help').css('display', 'none');
-						}
-						break;
-					case 'email2':
-						if($('#txt_confirm_email').val() == ''){
-							$('#email2_help').css('display', 'inline');
-							$('#email2_help').html('El campo de confirmación de correo es obligatorio.');
-							$('#txt_confirm_email').css('border', '1px solid red');
-						}else{
-							if($('#txt_confirm_email').val() != $('#txt_email').val()){
-								$('#email2_help').css('display', 'inline');
-								$('#email2_help').html('El correo electrónico ingresado no es igual al anterior.');
-								$('#txt_confirm_email').css('border', '1px solid red');
-							}else{
-								$('#txt_confirm_email').css('border', '1px solid #e7e7e7');
-								$('#email2_help').css('display', 'none');
-							}
-						}
-						break;
-					case 'phone':
-						if($('#txt_mobile_phone').val() == ''){
-							$('#mobile_help').css('display', 'inline');
-							$('#txt_mobile_phone').css('border', '1px solid red');
-						}else{
-							$('#txt_mobile_phone').css('border', '1px solid #e7e7e7');
-							$('#mobile_help').css('display', 'none');
-						}
-						break;
-				}
-			}
+			
 
   			// Conekta script
   			Conekta.setPublicKey('key_JZbV8T6Ercs8rXmrNtsTobQ');
@@ -251,20 +179,36 @@ get_header();
   			};
 
   			//jQuery para que genere el token después de dar click en submit
-  			if($('#hdn_payment_type').val() == 'card'){
+  			
   				$(function () {
 	    			$("#card-form").submit(function(event) {
-	      				console.log('Submit ok');
+	    				if($('#hdn_payment_type').val() == 'card'){
+		      				console.log('Submit ok');
 
-	      				var $form = $(this);
-	      				// Previene hacer submit más de una vez
-	      				$form.find("button").prop("disabled", true);
-	      				Conekta.Token.create($form, conektaSuccessResponseHandler, conektaErrorResponseHandler);
-	      				return false;
+		      				var $form = $(this);
+		      				// Previene hacer submit más de una vez
+		      				$form.find("button").prop("disabled", true);
+		      				Conekta.Token.create($form, conektaSuccessResponseHandler, conektaErrorResponseHandler);
+		      				return false;
+		      			}
 	    			});
 	  			});
-  			}
   			
+
+  			var selectPaymentType = function(payment_type){
+  				var container = $('#payment_type_container');
+  				var main_form = $('#card-form');
+  				
+  				if(payment_type == "card"){
+  					var card_form = '<div class="form-group"><label for="txt_cardholder_name">Nombre del tarjetahabiente:</label> <input type="text" class="form-control" id="txt_cardholder_name" name="txt_cardholder_name" aria-describedby="cardholder_name" placeholder="Nombre de tarjetahabiente" style="height:38px;" data-conekta="card[name]" size="20" required> <small id="name_help" class="form-text" style="display:none; color: red;">El nombre del tarjetahabiente es un campo obligatorio.</small></div><div class="form-group"><label for="txt_card_number">Número de tarjeta de crédito:</label> <input type="text" class="form-control" id="txt_card_number" name="txt_card_number" aria-describedby="cardholder_name" placeholder="Número de tarjeta" style="height:38px;" data-conekta="card[number]" size="20" required> <small id="name_help" class="form-text" style="display:none; color: red;">El número de la tarjeta es un campo obligatorio.</small></div><div class="form-row"> <div class="form-group col-md-4 mb-3"> <label for="txt_cvc">CVC:</label> <input type="text" class="form-control" id="txt_cvc" name="txt_cvc" style="height:38px;" placeholder="CVC" size="4" data-conekta="card[cvc]" required> </div><div class="form-group col-md-4 mb-3"> <label for="txt_expiration_month">Mes de expiración (MM):</label> <input type="text" class="form-control" id="txt_expiration_month" name="txt_expiration_month" style="height:38px;" placeholder="Mes de expiración" size="2" data-conekta="card[exp_month]" required> </div><div class="form-group col-md-4 mb-3"> <label for="txt_expiration_year">Año de expiración (AAAA):</label> <input type="text" class="form-control" id="txt_expiration_year" name="txt_expiration_year" style="height:38px;" placeholder="Año de expiración" size="4" data-conekta="card[exp_year]" required> </div></div>';
+  					container.html(card_form);
+  				}else if(payment_type = "spei"){
+  					var spei_legend = '<h4>Los datos para pago vía SPEI serán generados al momento de confirmar la compra.</h4>';
+  					container.html(spei_legend);
+  				}
+
+  				$('#hdn_payment_type').val(payment_type);
+  			}
 
   			$(document).ready(function(){
   				$( "#txt_name" ).focus();

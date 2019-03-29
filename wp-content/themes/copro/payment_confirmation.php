@@ -177,8 +177,8 @@ get_header(); ?>
 				<?php } else if($payment_type == "spei"){ ?>
 				<h1>¡Felicidades!</h1>
 				<p>
-					Estás a un paso de asegurar tu lugar en el curso: <?= $_POST['txt_course_name'] ?>
-					Realiza el pago vía SPEI con los siguiente datos:
+					Estás a un paso de asegurar tu lugar en el curso: <?= $_POST['txt_course_name'] ?><br>
+					Realiza el pago vía SPEI con los siguiente datos:<br>
 					<?php
 					echo "<b>Número de orden:</b> ". $order->id . "<br>";
 					echo "<b>Banco: </b>". $order->charges->data[0]->payment_method->receiving_account_bank . "<br>";
