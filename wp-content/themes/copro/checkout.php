@@ -110,6 +110,7 @@ get_header();
 				<div class="form-group">
 					<label for="txt_course_name">Nombre del curso:</label>
 	    			<input type="text" class="form-control" id="txt_course_name" name="txt_course_name" placeholder="Curso" value="<? echo $_POST['hdn_course_name']; ?>" style="height:38px;" readonly>
+	    			<input type="hidden" name="hdn_headquarter_id" id="hdn_headquarter_id" value="<?php echo $_POST['hdn_headquarter_id']; ?>">
 				</div>
 				<div class="form-group">
 					<label for="txt_course_code">Código:</label>
@@ -120,6 +121,10 @@ get_header();
 	    			<input type="text" class="form-control" id="txt_course_cost" name="txt_course_cost" placeholder="Costo" value="<? echo $_POST['hdn_cost']; ?>" style="height:38px;" readonly>
 	    			<input type="hidden" id="hdn_location" name="hdn_location" value="<? echo $_POST['hdn_location']; ?>">
 	    			<input type="hidden" id="hdn_start_time" name="hdn_start_time" value="<? echo $_POST['hdn_start_time']; ?>">
+				</div>
+				<div class="form-group">
+					<label for="txt_course_cost">IVA:</label>
+	    			<input type="text" class="form-control" id="txt_iva" name="txt_iva" placeholder="IVA" value="<? echo (($_POST['hdn_cost'] * 16) / 100); ?>" style="height:38px;" readonly>
 				</div>
 			</fieldset>
 			<fieldset>
@@ -158,7 +163,6 @@ get_header();
 			
 
   			// Conekta script
-  			Conekta.setPublicKey('key_JZbV8T6Ercs8rXmrNtsTobQ');
 
   			var conektaSuccessResponseHandler = function(token) {
   				console.log('Token success');
@@ -212,6 +216,8 @@ get_header();
 
   			$(document).ready(function(){
   				$( "#txt_name" ).focus();
+
+  				Conekta.setPublicKey('key_JZbV8T6Ercs8rXmrNtsTobQ');
 			});
 		</script>
 	</div>

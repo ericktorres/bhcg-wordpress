@@ -66,15 +66,21 @@ get_header(); ?>
 	<!-- Here start the payment confirmation page -->
 	<?php
 		//Variables
+		$course_detail_id = $_POST['hdn_headquarter_id'];
 		$course_name = $_POST['txt_course_name'];
-		$price = ($_POST['txt_course_cost'] * 100);
-		$client_name = $_POST['txt_name'] .' '. $_POST['txt_lastname'];
+		$price = $_POST['txt_course_cost'];
+		$iva = $_POST['txt_iva'];
+		$price_in_cents = (($price + $iva) * 100);
+		$total_price = ($price + $iva);
+		$client_complete_name = $_POST['txt_name'] .' '. $_POST['txt_lastname'];
+		$client_name = $_POST['txt_name'];
+		$client_lastname = $_POST['txt_lastname'];
 		$email = $_POST['txt_confirm_email'];
 		$phone_number = $_POST['txt_mobile_phone'];
 		$course_code = $_POST['txt_course_code'];
 		$token_id = $_POST['conektaTokenId'];
 		$payment_type = $_POST['hdn_payment_type'];
-		//require_once("lib/Conekta.php");
+		
 		\Conekta\Conekta::setApiKey("key_tSD9hmj2QAnLj5X7JxqGNg");
 		\Conekta\Conekta::setApiVersion("2.0.0");
         
@@ -83,13 +89,13 @@ get_header(); ?>
       				"line_items" => array(
         				array(
           					"name" => $course_name,
-          					"unit_price" => $price,
+          					"unit_price" => $price_in_cents,
           					"quantity" => 1
         				)//first line_item
       				), //line_items
       				"currency" => "MXN",
       				"customer_info" => array(
-        				"name" => $client_name,
+        				"name" => $client_complete_name,
         				"email" => $email,
         				"phone" => $phone_number
       				), //customer_info
@@ -125,13 +131,13 @@ get_header(); ?>
       				"line_items" => array(
         				array(
           					"name" => $course_name,
-          					"unit_price" => $price,
+          					"unit_price" => $price_in_cents,
           					"quantity" => 1
         				)//first line_item
       				), //line_items
       				"currency" => "MXN",
       				"customer_info" => array(
-        				"name" => $client_name,
+        				"name" => $client_complete_name,
         				"email" => $email,
         				"phone" => $phone_number
       				), //customer_info
@@ -191,7 +197,38 @@ get_header(); ?>
 					?>
 					Una vez hecho el pago recibirás toda la información del curso en tu correo electrónico.
 				</p>
-				<?php } ?>	
+				<?php } ?>
+
+				<?php 
+					$params = array(
+						"course_detail_id" => $course_detail_id,
+						"name" => $client_name,
+						"lastname" => $client_lastname,
+						"email" => $email,
+						"telephone" => $phone_number,
+						"places" => 1,
+						"amount" => $price,
+						"iva" => $iva,
+						"total_amount" => $total_price,
+						"payment_type" => strtoupper($payment_type),
+						"payment_confirmation" => $order->id,
+						"payment_status" => strtoupper($order->payment_status),
+						"payment_date" => $order->created_at
+					);
+					$data_json = json_encode($params);
+
+					// Calling the service that register the order in our system
+					$ch = curl_init('https://cms.bluehand.com.mx/api/v1/payment/post');
+					curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
+					curl_setopt($ch, CURLOPT_POSTFIELDS, $data_json);
+					curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
+					curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
+    					'Content-Type: application/json',                                                                                
+    					'Content-Length: ' . strlen($data_json)) 
+					);                                                                                                                   
+                                                                                                                     
+					$result = curl_exec($ch);
+				?>
 			
 		</div>
 	</div>
