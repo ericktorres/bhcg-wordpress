@@ -79,6 +79,10 @@ get_header(); ?>
 		$phone_number = $_POST['txt_mobile_phone'];
 		$course_code = $_POST['txt_course_code'];
 		$token_id = $_POST['conektaTokenId'];
+		$course_location = $_POST['hdn_location'];
+		$course_start_time = $_POST['hdn_start_time'];
+		$course_start_date = $_POST['hdn_start_date'];
+		$instructor_name = $_POST['hdn_instrutor_name'];
 		$rfc = $_POST['txt_rfc'];
 		$business_name = $_POST['txt_business_name'];
 		$payment_type = $_POST['hdn_payment_type'];
@@ -178,6 +182,33 @@ get_header(); ?>
 					Tu clave de confirmación es <b><?= $order->id ?> </b><br>
 					Guarda tu clave de confirmación y espera los detalles de curso en tu correo electrónico.
 				</p>
+					<?php
+						$email_params = array(
+							"to" => $email,
+							"course_name" => $course_name,
+							"payment_confirmation" => $order->id,
+							"course_location" => $course_location,
+							"course_date" => $course_start_date,
+							"course_start_time" => $course_start_time,
+							"purchase_date" => date('Y-m-d H:i:s', $order->created_at),
+							"participant_name" => $client_complete_name,
+							"instructor" => $instructor_name
+						);
+						$email_data_json = json_encode($email_params);
+
+						// Sending the email notification
+						$curl_send_mail = curl_init('https://cms.bluehand.com.mx/api/v1/emails/send-purchase-notification');
+						curl_setopt($curl_send_mail, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
+						curl_setopt($curl_send_mail, CURLOPT_POSTFIELDS, $email_data_json);
+						curl_setopt($curl_send_mail, CURLOPT_RETURNTRANSFER, true);                                                                      
+						curl_setopt($curl_send_mail, CURLOPT_HTTPHEADER, array(                                                                          
+    						'Content-Type: application/json',                                                                                
+    						'Content-Length: ' . strlen($email_data_json)) 
+						);
+                                                                                                                     
+						$result = curl_exec($curl_send_mail);
+					?>
+
 					<?php } else { ?>
 				<h1>Lo sentimos :(</h1>
 				<p><?php echo $error_message; ?></p>
@@ -196,6 +227,7 @@ get_header(); ?>
 					echo $order->line_items->data[0]->quantity .
 					      "-". $order->line_items->data[0]->name .
 					      "- $". $order->line_items->data->unit_price/100 . "<br>";
+					//echo date('Y-m-d H:i:s') . " - " . $order->created_at . "<br>";
 					?>
 					Una vez hecho el pago recibirás toda la información del curso en tu correo electrónico.
 				</p>
@@ -217,7 +249,7 @@ get_header(); ?>
 						"rfc" => strtoupper($rfc),
 						"business_name" => $business_name,
 						"payment_status" => strtoupper($order->payment_status),
-						"payment_date" => $order->created_at
+						"payment_date" => date('Y-m-d H:i:s', $order->created_at)
 					);
 					$data_json = json_encode($params);
 
@@ -229,8 +261,7 @@ get_header(); ?>
 					curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
     					'Content-Type: application/json',                                                                                
     					'Content-Length: ' . strlen($data_json)) 
-					);                                                                                                                   
-                                                                                                                     
+					);                                                                                                                                                                                           
 					$result = curl_exec($ch);
 				?>
 			

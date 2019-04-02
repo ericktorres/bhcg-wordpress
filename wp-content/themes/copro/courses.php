@@ -125,8 +125,10 @@ get_header(); ?>
       								<input type="hidden" id="hdn_course_name" name="hdn_course_name" value="'.$course->{'course_name'}.'">
       								<input type="hidden" id="hdn_course_code" name="hdn_course_code" value="'.$course->{'code'}.'">
       								<input type="hidden" id="hdn_cost" name="hdn_cost" value="'.$course->{'cost'}.'">
-                                    <input type="hidden" id="hdn_location" name="hdn_location" value="'.$course->{'location'}.', '.$course->{'city'}.'">
-                                    <input type="hidden" id="hdn_start_time" name="hdn_start_time" value="Inicio: '.date('d/m/Y', strtotime($course->{'start_date'})).' a las '.date('H:i', strtotime($course->{'complete_start_date'})).' Hrs.">
+                      <input type="hidden" id="hdn_location" name="hdn_location" value="'.$course->{'location'}.', '.$course->{'city'}.'">
+                      <input type="hidden" id="hdn_start_date" name="hdn_start_date" value="'.date('d/m/Y', strtotime($course->{'start_date'})).'">
+                      <input type="hidden" id="hdn_start_time" name="hdn_start_time" value="'.date('H:i', strtotime($course->{'complete_start_date'})).' Hrs.">
+                      <input type="hidden" id="hdn_instrutor_name" name="hdn_instrutor_name" value="Peter McAllister">
         							<button type="submit" class="btn btn-lg btn-block btn-primary">INSCRIBIRME</button>
         						</form>
       						</div>

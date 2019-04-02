@@ -121,6 +121,8 @@ get_header();
 	    			<input type="text" class="form-control" id="txt_course_cost" name="txt_course_cost" placeholder="Costo" value="<? echo $_POST['hdn_cost']; ?>" style="height:38px;" readonly>
 	    			<input type="hidden" id="hdn_location" name="hdn_location" value="<? echo $_POST['hdn_location']; ?>">
 	    			<input type="hidden" id="hdn_start_time" name="hdn_start_time" value="<? echo $_POST['hdn_start_time']; ?>">
+	    			<input type="hidden" id="hdn_start_date" name="hdn_start_date" value="<? echo $_POST['hdn_start_date']; ?>">
+	    			<input type="hidden" id="hdn_instrutor_name" name="hdn_instrutor_name" value="<?php echo $_POST['hdn_instrutor_name']; ?>">
 				</div>
 				<div class="form-group">
 					<label for="txt_course_cost">IVA:</label>
