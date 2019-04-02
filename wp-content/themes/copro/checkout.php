@@ -129,13 +129,20 @@ get_header();
 			</fieldset>
 			<fieldset>
 				<legend><b>Seleccione método de pago</b></legend>
-				<div class="form-check form-check-inline">
-  					<input class="form-check-input" type="radio" name="rdo_payment_method" id="rdo_card_payment" value="card" onclick="selectPaymentType('card');">
-  					<label class="form-check-label" for="rdo_card_payment">Tarjeta de crédito/Débito</label>
-				</div>
-				<div class="form-check form-check-inline">
-  					<input class="form-check-input" type="radio" name="rdo_payment_method" id="rdo_spei_payment" value="spei" onclick="selectPaymentType('spei');">
-  					<label class="form-check-label" for="rdo_spei_payment">SPEI</label>
+				<div style="text-align: center;">
+					<div class="form-check form-check-inline">
+	  					<input class="form-check-input" type="radio" name="rdo_payment_method" id="rdo_card_payment" value="card" onclick="selectPaymentType('card');">
+	  					<label class="form-check-label" for="rdo_card_payment">Tarjeta de crédito/Débito</label>
+					</div>
+					<div class="form-check form-check-inline">
+	  					<input class="form-check-input" type="radio" name="rdo_payment_method" id="rdo_spei_payment" value="spei" onclick="selectPaymentType('spei');">
+	  					<label class="form-check-label" for="rdo_spei_payment">SPEI</label>
+					</div>
+					<div id="payment_method_image"></div>
+					<div>
+						<p>Todos los pagos realizados en BH Consulting Group son realizados mediante la plataforma de Conekta</p>
+						<img src="https://bluehand.com.mx/console/img/conekta-logo.svg" width="270">
+					</div>
 				</div>
 			</fieldset>
 			<fieldset>
@@ -155,9 +162,6 @@ get_header();
 		</form>
 
 		<div class="container" style="text-align: center;">
-			<p>Se aceptan pagos con tarjetas Visa, Mastercard y American Express.</p>
-			<img src="https://bluehand.com.mx/console/img/payments-cards.png" width="270">
-			<div id="paypal-button-container" style="width: 320px; display: block; margin: auto;"></div>
 		</div>
 		<script>
 			
@@ -202,13 +206,17 @@ get_header();
   			var selectPaymentType = function(payment_type){
   				var container = $('#payment_type_container');
   				var main_form = $('#card-form');
+  				var payment_type_image_container = $('#payment_method_image');
   				
   				if(payment_type == "card"){
   					var card_form = '<div class="form-group"><label for="txt_cardholder_name">Nombre del tarjetahabiente:</label> <input type="text" class="form-control" id="txt_cardholder_name" name="txt_cardholder_name" aria-describedby="cardholder_name" placeholder="Nombre de tarjetahabiente" style="height:38px;" data-conekta="card[name]" size="20" required> <small id="name_help" class="form-text" style="display:none; color: red;">El nombre del tarjetahabiente es un campo obligatorio.</small></div><div class="form-group"><label for="txt_card_number">Número de tarjeta de crédito:</label> <input type="text" class="form-control" id="txt_card_number" name="txt_card_number" aria-describedby="cardholder_name" placeholder="Número de tarjeta" style="height:38px;" data-conekta="card[number]" size="20" required> <small id="name_help" class="form-text" style="display:none; color: red;">El número de la tarjeta es un campo obligatorio.</small></div><div class="form-row"> <div class="form-group col-md-4 mb-3"> <label for="txt_cvc">CVC:</label> <input type="text" class="form-control" id="txt_cvc" name="txt_cvc" style="height:38px;" placeholder="CVC" size="4" data-conekta="card[cvc]" required> </div><div class="form-group col-md-4 mb-3"> <label for="txt_expiration_month">Mes de expiración (MM):</label> <input type="text" class="form-control" id="txt_expiration_month" name="txt_expiration_month" style="height:38px;" placeholder="Mes de expiración" size="2" data-conekta="card[exp_month]" required> </div><div class="form-group col-md-4 mb-3"> <label for="txt_expiration_year">Año de expiración (AAAA):</label> <input type="text" class="form-control" id="txt_expiration_year" name="txt_expiration_year" style="height:38px;" placeholder="Año de expiración" size="4" data-conekta="card[exp_year]" required> </div></div>';
   					container.html(card_form);
+  					payment_type_image_container.html('<p>Se aceptan pagos con tarjetas Visa, Mastercard y American Express.</p><img src="https://bluehand.com.mx/console/img/payments-cards.png" width="270">');
+
   				}else if(payment_type = "spei"){
   					var spei_legend = '<h4>Los datos para pago vía SPEI serán generados al momento de confirmar la compra.</h4>';
   					container.html(spei_legend);
+  					payment_type_image_container.html('<img src="https://bluehand.com.mx/console/img/spei-logo.png" width="270">');
   				}
 
   				$('#hdn_payment_type').val(payment_type);
