@@ -214,7 +214,7 @@ get_header(); ?>
 						"total_amount" => $total_price,
 						"payment_type" => strtoupper($payment_type),
 						"payment_confirmation" => $order->id,
-						"rfc" => $rfc,
+						"rfc" => strtoupper($rfc),
 						"business_name" => $business_name,
 						"payment_status" => strtoupper($order->payment_status),
 						"payment_date" => $order->created_at
