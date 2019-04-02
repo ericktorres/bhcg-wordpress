@@ -79,6 +79,8 @@ get_header(); ?>
 		$phone_number = $_POST['txt_mobile_phone'];
 		$course_code = $_POST['txt_course_code'];
 		$token_id = $_POST['conektaTokenId'];
+		$rfc = $_POST['txt_rfc'];
+		$business_name = $_POST['txt_business_name'];
 		$payment_type = $_POST['hdn_payment_type'];
 		
 		\Conekta\Conekta::setApiKey("key_tSD9hmj2QAnLj5X7JxqGNg");
@@ -212,6 +214,8 @@ get_header(); ?>
 						"total_amount" => $total_price,
 						"payment_type" => strtoupper($payment_type),
 						"payment_confirmation" => $order->id,
+						"rfc" => $rfc,
+						"business_name" => $business_name,
 						"payment_status" => strtoupper($order->payment_status),
 						"payment_date" => $order->created_at
 					);
