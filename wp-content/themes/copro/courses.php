@@ -97,7 +97,7 @@ get_header(); ?>
       									<span>Capacidad total: '.$course->{'capacity'}.' personas</span><br>
       									<span>Lugares disponibles: </span><br>
       									<span>Cierre de inscripción </span><br><br>
-      									<h1 class="card-title pricing-card-title">'.money_format('%i', $course->{'cost'}).'</h1>
+      									<h1 class="card-title pricing-card-title">'.money_format('%i', $course->{'cost'}).' <br>+ IVA</h1>
       								</div>
       								<div class="col" style="border-left:1px dotted gray;">
       									<div class="row" style="border-bottom:1px dotted gray;">
