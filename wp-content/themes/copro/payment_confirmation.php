@@ -180,7 +180,7 @@ get_header(); ?>
 				<p>
 					Has asegurado tu lugar en el curso: <b><?= $_POST['txt_course_name'] ?> </b><br>
 					Tu clave de confirmación es <b><?= $order->id ?> </b><br>
-					Guarda tu clave de confirmación y espera los detalles de curso en tu correo electrónico.
+					Guarda tu clave de confirmación y espera los detalles del curso en tu correo electrónico.
 				</p>
 					<?php
 						$email_params = array(
@@ -231,6 +231,31 @@ get_header(); ?>
 					?>
 					Una vez hecho el pago recibirás toda la información del curso en tu correo electrónico.
 				</p>
+					<?php
+						$email_params = array(
+							"to" => $email,
+							"course_name" => $course_name,
+							"payment_confirmation" => $order->id,
+							"participant_name" => $client_complete_name,
+							"bank" => $order->charges->data[0]->payment_method->receiving_account_bank,
+							"clabe" => $order->charges->data[0]->payment_method->receiving_account_number,
+							"amount" => $order->amount/100
+						);
+						$email_data_json = json_encode($email_params);
+
+						// Sending the email notification
+						$curl_send_mail = curl_init('https://cms.bluehand.com.mx/api/v1/emails/send-spei-notification');
+						curl_setopt($curl_send_mail, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
+						curl_setopt($curl_send_mail, CURLOPT_POSTFIELDS, $email_data_json);
+						curl_setopt($curl_send_mail, CURLOPT_RETURNTRANSFER, true);                                                                      
+						curl_setopt($curl_send_mail, CURLOPT_HTTPHEADER, array(                                                                          
+    						'Content-Type: application/json',                                                                                
+    						'Content-Length: ' . strlen($email_data_json)) 
+						);
+                                                                                                                     
+						$result = curl_exec($curl_send_mail);
+					?>
+
 				<?php } ?>
 
 				<?php 
