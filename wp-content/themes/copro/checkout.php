@@ -148,15 +148,28 @@ get_header();
 			<fieldset>
 				<legend><b>Información de pago</b></legend>
 				<div id="payment_type_container"></div>
-  				
-  				<div class="form-check">
+				<input type="hidden" id="hdn_payment_type" name="hdn_payment_type">
+			</fieldset>
+			<fieldset>
+				<legend><b>Información de facturación</b></legend>
+				<p>Si requiere factura favor de llenar los siguientes campos:</p>
+				<div class="form-row">
+    				<div class="form-group col-md-4">
+      					<label for="txt_rfc">RFC</label>
+      					<input type="text" class="form-control" id="txt_rfc" name="txt_rfc" style="height:38px;">
+    				</div>
+    				<div class="form-group col-md-8">
+      					<label for="txt_business_name">Razón Social</label>
+      					<input type="text" class="form-control" id="txt_business_name" name="txt_business_name" style="height:38px;">
+    				</div>
+    			</div>
+			</fieldset>
+			<div class="form-check">
   					<input class="form-check-input" type="checkbox" value="" id="chk_terms_conditions" required>
   					<label class="form-check-label" for="chk_terms_conditions">
     					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Al dar click en esta casilla acepto los <a href="https://www.bh-cg.com.mx/politica-terminos-de-servicio/" target="_blank">Términos de servicio</a>, la <a href="https://www.bh-cg.com.mx/politica-reembolso-y-cambios/" target="_blank">Política de reembolsos y/o cambios.</a> y el <a href="https://www.bh-cg.com.mx/aviso-de-privacidad/" target="_blank">Aviso de Privacidad.</a>
   					</label>
-				</div>
-				<input type="hidden" id="hdn_payment_type" name="hdn_payment_type">
-			</fieldset>
+			</div>
 			<br>
 			<button type="submit">Realizar Pago</button>
 		</form>
