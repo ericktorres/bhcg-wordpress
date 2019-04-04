@@ -87,7 +87,7 @@ get_header(); ?>
 		$business_name = $_POST['txt_business_name'];
 		$payment_type = $_POST['hdn_payment_type'];
 		
-		\Conekta\Conekta::setApiKey("key_tSD9hmj2QAnLj5X7JxqGNg");
+		\Conekta\Conekta::setApiKey("key_84G14CLBJtwftNqQfsxxpw");
 		\Conekta\Conekta::setApiVersion("2.0.0");
         
         if($payment_type == "card"){

@@ -240,7 +240,7 @@ get_header();
   			$(document).ready(function(){
   				$( "#txt_name" ).focus();
 
-  				Conekta.setPublicKey('key_JZbV8T6Ercs8rXmrNtsTobQ');
+  				Conekta.setPublicKey('key_bKFak7iY6oHRtDGBkmacraQ');
 			});
 		</script>
 	</div>
