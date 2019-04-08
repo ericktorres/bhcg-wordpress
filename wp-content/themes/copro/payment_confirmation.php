@@ -220,10 +220,16 @@ get_header(); ?>
 					Realiza el pago vía SPEI con los siguiente datos:<br>
 					<?php
 					echo "<b>Número de orden:</b> ". $order->id . "<br>";
-					echo "<b>Banco: </b>". $order->charges->data[0]->payment_method->receiving_account_bank . "<br>";
-					echo "<b>CLABE: </b>". $order->charges->data[0]->payment_method->receiving_account_number . "<br>";
-					echo "<b>$". $order->amount/100 . $order->currency . "</b><br>";
+					echo "<b>Banco: </b>". $order->charges[0]->payment_method->bank . "<br>";
+					echo "<b>CLABE: </b>". $order->charges[0]->payment_method->clabe . "<br>";
+					echo "<b>$". $total_price . " MXN I.V.A. incluido.</b><br>";
 					echo "Orden ";
+
+					/*echo 'clabe: '. $order->charges[0]->payment_method->clabe . "\r\n";
+					echo 'bank: '. $order->charges[0]->payment_method->bank . "\r\n";
+					echo 'Account Number: '. $order->charges[0]->payment_method->receiving_account_number . "\r\n";
+					echo 'Account Banck: '. $order->charges[0]->payment_method->receiving_account_bank . "\r\n";*/
+
 					echo $order->line_items->data[0]->quantity .
 					      "-". $order->line_items->data[0]->name .
 					      "- $". $order->line_items->data->unit_price/100 . "<br>";
@@ -237,9 +243,9 @@ get_header(); ?>
 							"course_name" => $course_name,
 							"payment_confirmation" => $order->id,
 							"participant_name" => $client_complete_name,
-							"bank" => $order->charges->data[0]->payment_method->receiving_account_bank,
-							"clabe" => $order->charges->data[0]->payment_method->receiving_account_number,
-							"amount" => $order->amount/100
+							"bank" => $order->charges[0]->payment_method->bank,
+							"clabe" => $order->charges[0]->payment_method->clabe,
+							"amount" => $total_price
 						);
 						$email_data_json = json_encode($email_params);
 
