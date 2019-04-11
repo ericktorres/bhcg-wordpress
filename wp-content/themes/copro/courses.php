@@ -103,18 +103,18 @@ get_header(); ?>
       									<div class="row" style="border-bottom:1px dotted gray;">
       										<div class="col">
       											<p>Instructor:</p>
-      											<img width="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHn5TfPkpW-Bwah2fQDwd1tf2yKNA4PZUyP9V5ESPQU7glPKS9oQ">
-      											<p>Peter McAllister</p>
+      											<img width="50" src="https://cms.bluehand.com.mx/files/photos/instructors/'.$course->{'instructor_photo'}.'">
+      											<p>'.$course->{'instructor_name'}.' '.$course->{'instructor_lastname'}.'</p>
       										</div>
       										<div class="col">
       											<p>CV</p>
-      											<a href="#"><i class="fas fa-file-pdf fa-3x"></i></a>
+      											<a href="https://cms.bluehand.com.mx/files/resumes/'.$course->{'instructor_resume'}.'" target="_blank"><i class="fas fa-file-pdf fa-3x"></i></a>
       										</div>
       									</div>
       									<div class="row">
       										<div class="col">	
       											<p>Temario del curso</p>
-      											<a href="#"><i class="fas fa-file-alt fa-3x"></i></a>
+      											<a href="https://cms.bluehand.com.mx/files/resumes/'.$course->{'temary_file'}.'" target="_blank"><i class="fas fa-file-alt fa-3x"></i></a>
       										</div>
       									</div>
       								</div>
