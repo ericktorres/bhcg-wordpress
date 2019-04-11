@@ -114,7 +114,7 @@ get_header(); ?>
       									<div class="row">
       										<div class="col">	
       											<p>Temario del curso</p>
-      											<a href="https://cms.bluehand.com.mx/files/resumes/'.$course->{'temary_file'}.'" target="_blank"><i class="fas fa-file-alt fa-3x"></i></a>
+      											<a href="https://cms.bluehand.com.mx/files/agendas/'.$course->{'temary_file'}.'" target="_blank"><i class="fas fa-file-alt fa-3x"></i></a>
       										</div>
       									</div>
       								</div>
