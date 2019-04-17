@@ -74,6 +74,8 @@ get_header();
 			$course = json_decode($body);
 
 			// Data variables
+			$headquarter_id = $course->{'headquarter_id'};
+			$course_code = $course->{'code'};
 			$course_name = $course->{'course_name'};
 			$location = $course->{'location'};
 			$city = $course->{'city'};
@@ -82,11 +84,34 @@ get_header();
 			$start_time = date('H:i', strtotime($course->{'complete_start_date'}));
 			$capacity = $course->{'capacity'};
 			$inscription_limit_date = date('d/m/Y', strtotime($course->{'complete_start_date'} . '- ' . $course->{'registration_deadline'} . ' days'));
-			$cost = money_format('%i', $course->{'cost'});
+			$cost_formatted = money_format('%i', $course->{'cost'});
+			$cost = $course->{'cost'};
+			$iva = (($cost * 16) / 100);
+			$total_cost = ($cost + $iva);
 			$instructor = $course->{'instructor_name'}.' '.$course->{'instructor_lastname'};
 			$instructor_photo = $course->{'instructor_photo'};
 			$instructor_resume = $course->{'instructor_resume'};
 			$temary = $course->{'temary_file'};
+		}else{
+			// We get this variables from the courses page via POST
+			$headquarter_id = $_POST['hdn_headquarter_id'];
+			$course_code = $_POST['hdn_course_code'];
+			$course_name = $_POST['hdn_course_name'];
+			$location = $_POST['hdn_location'];
+			$city = $_POST['hdn_city'];
+			$state = $_POST['hdn_state'];
+			$start_date = $_POST['hdn_start_date'];
+			$start_time = $_POST['hdn_start_time'];
+			$capacity = $_POST['hdn_capacity'];
+			$inscription_limit_date = $_POST['hdn_registration_limit'];
+			$cost_formatted = $_POST['hdn_cost_formatted'];
+			$cost = $_POST['hdn_cost'];
+			$iva = (($cost * 16) / 100);
+			$total_cost = ($cost + $iva);
+			$instructor = $_POST['hdn_instrutor_name'];
+			$instructor_photo = $_POST['hdn_instructor_photo'];
+			$instructor_resume = $_POST['hdn_instructor_resume'];
+			$temary = $_POST['hdn_temary'];
 		}
 	?>
 	<div class="container" id="main_container_checkout">
@@ -103,7 +128,7 @@ get_header();
       					<span>Capacidad total: <?php echo $capacity; ?> personas</span><br>
       					<span>Lugares disponibles: </span><br>
       					<span>Cierre de inscripción: <?php echo $inscription_limit_date; ?></span><br><br>
-      					<h1 class="card-title pricing-card-title"><?php echo $cost; ?><br>+ IVA</h1>
+      					<h1 class="card-title pricing-card-title"><?php echo $cost_formatted; ?><br>+ IVA</h1>
       				</div>
       				<div class="col" style="border-left:1px dotted gray;">
       					<div class="row" style="border-bottom:1px dotted gray;">
@@ -171,24 +196,28 @@ get_header();
 				<legend><b>Datos del curso</b></legend>
 				<div class="form-group">
 					<label for="txt_course_name">Nombre del curso:</label>
-	    			<input type="text" class="form-control" id="txt_course_name" name="txt_course_name" placeholder="Curso" value="<? echo $_POST['hdn_course_name']; ?>" style="height:38px;" readonly>
-	    			<input type="hidden" name="hdn_headquarter_id" id="hdn_headquarter_id" value="<?php echo $_POST['hdn_headquarter_id']; ?>">
+	    			<input type="text" class="form-control" id="txt_course_name" name="txt_course_name" placeholder="Curso" value="<? echo $course_name; ?>" style="height:38px;" readonly>
+	    			<input type="hidden" name="hdn_headquarter_id" id="hdn_headquarter_id" value="<?php echo $headquarter_id; ?>">
 				</div>
 				<div class="form-group">
 					<label for="txt_course_code">Código:</label>
-	    			<input type="text" class="form-control" id="txt_course_code" name="txt_course_code" placeholder="Código" value="<? echo $_POST['hdn_course_code']; ?>" style="height:38px;" readonly>
+	    			<input type="text" class="form-control" id="txt_course_code" name="txt_course_code" placeholder="Código" value="<? echo $course_code; ?>" style="height:38px;" readonly>
 				</div>
 				<div class="form-group">
 					<label for="txt_course_cost">Costo:</label>
-	    			<input type="text" class="form-control" id="txt_course_cost" name="txt_course_cost" placeholder="Costo" value="<? echo $_POST['hdn_cost']; ?>" style="height:38px;" readonly>
-	    			<input type="hidden" id="hdn_location" name="hdn_location" value="<? echo $_POST['hdn_location']; ?>">
-	    			<input type="hidden" id="hdn_start_time" name="hdn_start_time" value="<? echo $_POST['hdn_start_time']; ?>">
-	    			<input type="hidden" id="hdn_start_date" name="hdn_start_date" value="<? echo $_POST['hdn_start_date']; ?>">
-	    			<input type="hidden" id="hdn_instrutor_name" name="hdn_instrutor_name" value="<?php echo $_POST['hdn_instrutor_name']; ?>">
+	    			<input type="text" class="form-control" id="txt_course_cost" name="txt_course_cost" placeholder="Costo" value="<? echo $cost; ?>" style="height:38px;" readonly>
+	    			<input type="hidden" id="hdn_location" name="hdn_location" value="<?php echo $location . ', ' . $city . ', ' . $state; ?>">
+	    			<input type="hidden" id="hdn_start_time" name="hdn_start_time" value="<? echo $start_time; ?>">
+	    			<input type="hidden" id="hdn_start_date" name="hdn_start_date" value="<? echo $start_date; ?>">
+	    			<input type="hidden" id="hdn_instrutor_name" name="hdn_instrutor_name" value="<?php echo $instructor; ?>">
 				</div>
 				<div class="form-group">
-					<label for="txt_course_cost">IVA:</label>
-	    			<input type="text" class="form-control" id="txt_iva" name="txt_iva" placeholder="IVA" value="<? echo (($_POST['hdn_cost'] * 16) / 100); ?>" style="height:38px;" readonly>
+					<label for="txt_iva">IVA:</label>
+	    			<input type="text" class="form-control" id="txt_iva" name="txt_iva" placeholder="IVA" value="<? echo $iva; ?>" style="height:38px;" readonly>
+				</div>
+				<div class="form-group">
+					<label for="txt_total_cost">Costo total:</label>
+	    			<input type="text" class="form-control" id="txt_total_cost" name="txt_total_cost" placeholder="Costo total" value="<? echo $total_cost; ?>" style="height:38px;" readonly>
 				</div>
 			</fieldset>
 			<fieldset>

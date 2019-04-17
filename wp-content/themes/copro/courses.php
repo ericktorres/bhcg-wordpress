@@ -125,10 +125,18 @@ get_header(); ?>
       								<input type="hidden" id="hdn_course_name" name="hdn_course_name" value="'.$course->{'course_name'}.'">
       								<input type="hidden" id="hdn_course_code" name="hdn_course_code" value="'.$course->{'code'}.'">
       								<input type="hidden" id="hdn_cost" name="hdn_cost" value="'.$course->{'cost'}.'">
-                      <input type="hidden" id="hdn_location" name="hdn_location" value="'.$course->{'location'}.', '.$course->{'city'}.'">
-                      <input type="hidden" id="hdn_start_date" name="hdn_start_date" value="'.date('d/m/Y', strtotime($course->{'start_date'})).'">
-                      <input type="hidden" id="hdn_start_time" name="hdn_start_time" value="'.date('H:i', strtotime($course->{'complete_start_date'})).' Hrs.">
-                      <input type="hidden" id="hdn_instrutor_name" name="hdn_instrutor_name" value="Peter McAllister">
+                                    <input type="hidden" id="hdn_cost_formatted" name="hdn_cost_formatted" value="'.money_format('%i', $course->{'cost'}).'">
+                                    <input type="hidden" id="hdn_location" name="hdn_location" value="'.$course->{'location'}.', '.$course->{'city'}.'">
+                                    <input type="hidden" id="hdn_city" name="hdn_city" value="'.$course->{'city'}.'">
+                                    <input type="hidden" id="hdn_state" name="hdn_state" value="'.$course->{'state'}.'">
+                                    <input type="hidden" id="hdn_start_date" name="hdn_start_date" value="'.date('d/m/Y', strtotime($course->{'start_date'})).'">
+                                    <input type="hidden" id="hdn_start_time" name="hdn_start_time" value="'.date('H:i', strtotime($course->{'complete_start_date'})).' Hrs.">
+                                    <input type="hidden" id="hdn_registration_limit" name="hdn_registration_limit" value="'.date('d/m/Y', strtotime($course->{'complete_start_date'} . '- ' . $course->{'registration_deadline'} . ' days')).'">
+                                    <input type="hidden" id="hdn_capacity" name="hdn_capacity" value="'.$course->{'capacity'}.'">
+                                    <input type="hidden" id="hdn_instrutor_name" name="hdn_instrutor_name" value="'.$course->{'instructor_name'}.' '.$course->{'instructor_lastname'}.'">
+                                    <input type="hidden" id="hdn_instructor_photo" name="hdn_instructor_photo" value="'.$course->{'instructor_photo'}.'">
+                                    <input type="hidden" id="hdn_instructor_resume" name="hdn_instructor_resume" value="'.$course->{'instructor_resume'}.'">
+                                    <input type="hidden" id="hdn_temary" name="hdn_temary" value="'.$course->{'temary_file'}.'">
         							<button type="submit" class="btn btn-lg btn-block btn-primary">INSCRIBIRME</button>
         						</form>
       						</div>
