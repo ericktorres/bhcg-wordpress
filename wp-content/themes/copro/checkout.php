@@ -2,7 +2,8 @@
 /*
     Template Name: Checkout
 */
-
+wp_enqueue_style('bootstrap', get_stylesheet_directory_uri().'/css/bootstrap-for-courses.css');
+wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.7.0/css/all.css');
 get_header(); 
 
 ?>
@@ -65,7 +66,68 @@ get_header();
 	</div>
 
 	<!-- Here start the checkout components -->
+	<?php
+		if($_GET['adc']){
+			$ad_code = $_GET['adc'];
+			$request = wp_remote_get('https://cms.bluehand.com.mx/api/v1/get-headquarter/'.$ad_code);
+			$body = wp_remote_retrieve_body($request);
+			$course = json_decode($body);
+
+			// Data variables
+			$course_name = $course->{'course_name'};
+			$location = $course->{'location'};
+			$city = $course->{'city'};
+			$state = $course->{'state'};
+			$start_date = date('d/m/Y', strtotime($course->{'start_date'}));
+			$start_time = date('H:i', strtotime($course->{'complete_start_date'}));
+			$capacity = $course->{'capacity'};
+			$inscription_limit_date = date('d/m/Y', strtotime($course->{'complete_start_date'} . '- ' . $course->{'registration_deadline'} . ' days'));
+			$cost = money_format('%i', $course->{'cost'});
+			$instructor = $course->{'instructor_name'}.' '.$course->{'instructor_lastname'};
+			$instructor_photo = $course->{'instructor_photo'};
+			$instructor_resume = $course->{'instructor_resume'};
+			$temary = $course->{'temary_file'};
+		}
+	?>
 	<div class="container" id="main_container_checkout">
+
+		<div class="card" style="margin-bottom:15px;">
+      		<div class="card-header">
+        		<h4 class="my-0 font-weight-normal"><?php echo $course_name; ?></h4>
+      		</div>
+      		<div class="card-body" style="text-align:center;">
+      			<div class="row" style="padding:5px;">
+      				<div class="col">
+      					<span><?php echo $location . ', ' . $city . ', ' . $state; ?></span><br>
+      					<span>Inicio: <?php echo $start_date; ?> a las <?php echo $start_time; ?> Hrs.</span><br>
+      					<span>Capacidad total: <?php echo $capacity; ?> personas</span><br>
+      					<span>Lugares disponibles: </span><br>
+      					<span>Cierre de inscripción: <?php echo $inscription_limit_date; ?></span><br><br>
+      					<h1 class="card-title pricing-card-title"><?php echo $cost; ?><br>+ IVA</h1>
+      				</div>
+      				<div class="col" style="border-left:1px dotted gray;">
+      					<div class="row" style="border-bottom:1px dotted gray;">
+      						<div class="col">
+      							<p>Instructor:</p>
+      							<img width="50" src="https://cms.bluehand.com.mx/files/photos/instructors/<?php echo $instructor_photo; ?>">
+      							<p><?php echo $instructor; ?></p>
+      						</div>
+      						<div class="col">
+      							<p>CV</p>
+      							<a href="https://cms.bluehand.com.mx/files/resumes/<?php echo $instructor_resume; ?>" target="_blank"><i class="fas fa-file-pdf fa-3x"></i></a>
+      						</div>
+      					</div>
+      					<div class="row">
+      						<div class="col">	
+      							<p>Temario del curso</p>
+      							<a href="https://cms.bluehand.com.mx/files/agendas/<?php echo $temary; ?>" target="_blank"><i class="fas fa-file-alt fa-3x"></i></a>
+      						</div>
+      					</div>
+      				</div>
+      			</div>
+      		</div>
+    	</div><!-- end course main info -->
+    					
 		<form action="/confirmacion-de-pago" method="POST" id="card-form">
 			<span class="card-errors"></span>
 			<fieldset>
