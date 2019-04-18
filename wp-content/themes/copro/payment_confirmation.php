@@ -105,9 +105,9 @@ get_header(); ?>
       				), //line_items
       				"currency" => "MXN",
       				"customer_info" => array(
-        				"name" => $client_complete_name,
-        				"email" => $email,
-        				"phone" => $phone_number
+        				"name" => $cardholder_name,
+        				"email" => $cardholder_email,
+        				"phone" => $cardholder_phone
       				), //customer_info
       				"metadata" => array("reference" => $course_code, "more_info" => "Pago de curso en línea"),
       				"charges" => array(
@@ -147,9 +147,9 @@ get_header(); ?>
       				), //line_items
       				"currency" => "MXN",
       				"customer_info" => array(
-        				"name" => $client_complete_name,
-        				"email" => $email,
-        				"phone" => $phone_number
+        				"name" => $cardholder_name,
+        				"email" => $cardholder_email,
+        				"phone" => $cardholder_phone
       				), //customer_info
       				"metadata" => array("reference" => $course_code, "more_info" => "Pago de curso en línea"),
       				"charges" => array(
