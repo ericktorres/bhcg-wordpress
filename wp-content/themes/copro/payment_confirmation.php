@@ -90,6 +90,7 @@ get_header(); ?>
 		$cardholder_name = $_POST['txt_cardholder_name'];
 		$cardholder_email = $_POST['txt_cardholder_email'];
 		$cardholder_phone = $_POST['txt_cardholder_phone'];
+		$participant_name = $_POST['txt_name'];
 		
 		\Conekta\Conekta::setApiKey("key_84G14CLBJtwftNqQfsxxpw");
 		\Conekta\Conekta::setApiVersion("2.0.0");
@@ -272,6 +273,7 @@ get_header(); ?>
 					$params = array(
 						"course_detail_id" => $course_detail_id,
 						"name" => $cardholder_name,
+						"lastname" => "No lastname",
 						"email" => $cardholder_email,
 						"telephone" => $cardholder_phone,
 						"places" => $places,
@@ -297,6 +299,11 @@ get_header(); ?>
     					'Content-Length: ' . strlen($data_json)) 
 					);                                                                                                                                                                                           
 					$result = curl_exec($ch);
+
+					// Getting the participants data
+					for($i=0; $i<$places; $i++){
+						echo $participant_name[$i];
+					}
 				?>
 			
 		</div>
