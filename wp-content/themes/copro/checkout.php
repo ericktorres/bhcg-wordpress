@@ -152,44 +152,41 @@ get_header();
       			</div>
       		</div>
     	</div><!-- end course main info -->
-    					
+    	
 		<form action="/confirmacion-de-pago" method="POST" id="card-form">
 			<span class="card-errors"></span>
 			<fieldset>
 				<legend><b>Datos del participante</b></legend>
 			<div class="form-group">
 				<label for="txt_name">Nombre:</label>
-    			<input type="text" class="form-control" id="txt_name" name="txt_name" aria-describedby="name_help" placeholder="Nombre" style="height:38px;" required>
+    			<input type="text" class="form-control" name="txt_name[]" aria-describedby="name_help" placeholder="Nombre" style="height:38px;" required>
     			<small id="name_help" class="form-text" style="display:none; color: red;">El nombre del participante es un campo obligatorio.</small>
 			</div>
 			<div class="form-group">
 				<label for="txt_lastname">Apellidos:</label>
-    			<input type="text" class="form-control" id="txt_lastname" name="txt_lastname" aria-describedby="lastname_help" placeholder="Apellidos" style="height:38px;" required>
+    			<input type="text" class="form-control" name="txt_lastname[]" aria-describedby="lastname_help" placeholder="Apellidos" style="height:38px;" required>
     			<small id="lastname_help" class="form-text" style="display:none; color: red;">Los apellidos del participante son un campo obligatorio.</small>
 			</div>
 			<div class="row">
 				<div class="col">
 					<label for="txt_email">Correo electrónico:</label>
-    				<input type="email" class="form-control" id="txt_email" name="txt_email" aria-describedby="email_help" placeholder="Correo electrónico" style="height:38px;" required>
+    				<input type="email" class="form-control" name="txt_email[]" aria-describedby="email_help" placeholder="Correo electrónico" style="height:38px;" required>
     				<small id="email_help" class="form-text" style="display:none; color: red;">El campo correo electrónico es obligatorio.</small>
     			</div>
     			<div class="col">
-					<label for="txt_email">Confirmar correo:</label>
-    				<input type="email" class="form-control" id="txt_confirm_email" name="txt_confirm_email" aria-describedby="email2_help" placeholder="Correo electrónico" style="height:38px;" required>
-    				<small id="email2_help" class="form-text" style="display:none; color: red;">El campo correo electrónico es obligatorio.</small>
+					<label for="txt_mobile_phone">Teléfono:</label>
+    				<input type="number" class="form-control" name="txt_mobile_phone[]" aria-describedby="mobile_help" placeholder="Teléfono móvil" style="height:38px;" size="10" required>
+    				<small id="mobile_help" class="form-text" style="display:none; color: red;">El campo teléfono es obligatorio.</small>
     			</div>
 			</div>
-			<div class="row">
-				<div class="col">
-					<label for="txt_phone">Teléfono:</label>
-    				<input type="number" class="form-control" id="txt_phone" name="txt_phone" placeholder="Teléfono" style="height:38px;" size="10">
+			</fieldset>
+			
+			<fieldset id="participants_container">
+				<legend><b>Participantes adicionales</b></legend>
+				<div class="form-group" style="text-align: center;">
+    				<button type="button" id="btn_add_participant" onclick="addParticipant();"><i class="fas fa-plus"></i></button>
+    				<button type="button" id="btn_remove_participant" onclick="removeParticipant();"><i class="fas fa-minus"></i></button>
     			</div>
-    			<div class="col">
-					<label for="txt_mobile_phone">Teléfono móvil:</label>
-    				<input type="number" class="form-control" id="txt_mobile_phone" name="txt_mobile_phone" aria-describedby="mobile_help" placeholder="Teléfono móvil" style="height:38px;" size="10" required>
-    				<small id="mobile_help" class="form-text" style="display:none; color: red;">El campo teléfono móvil es obligatorio.</small>
-    			</div>
-			</div>
 			</fieldset>
 			<br>
 			<fieldset>
@@ -264,13 +261,14 @@ get_header();
   					</label>
 			</div>
 			<br>
+			<input type="hidden" id="hdn_num_places" name="hdn_num_places" value="1">
 			<button type="submit">Realizar Pago</button>
 		</form>
 
 		<div class="container" style="text-align: center;">
 		</div>
 		<script>
-			
+			var places = 1, unit_price = <?php echo $cost; ?>;
 
   			// Conekta script
 
@@ -315,7 +313,7 @@ get_header();
   				var payment_type_image_container = $('#payment_method_image');
   				
   				if(payment_type == "card"){
-  					var card_form = '<div class="form-group"><label for="txt_cardholder_name">Nombre del tarjetahabiente:</label> <input type="text" class="form-control" id="txt_cardholder_name" name="txt_cardholder_name" aria-describedby="cardholder_name" placeholder="Nombre de tarjetahabiente" style="height:38px;" data-conekta="card[name]" size="20" required> <small id="name_help" class="form-text" style="display:none; color: red;">El nombre del tarjetahabiente es un campo obligatorio.</small></div><div class="form-group"><label for="txt_card_number">Número de tarjeta de crédito:</label> <input type="text" class="form-control" id="txt_card_number" name="txt_card_number" aria-describedby="cardholder_name" placeholder="Número de tarjeta" style="height:38px;" data-conekta="card[number]" size="20" required> <small id="name_help" class="form-text" style="display:none; color: red;">El número de la tarjeta es un campo obligatorio.</small></div><div class="form-row"> <div class="form-group col-md-4 mb-3"> <label for="txt_cvc">CVC:</label> <input type="text" class="form-control" id="txt_cvc" name="txt_cvc" style="height:38px;" placeholder="CVC" size="4" data-conekta="card[cvc]" required> </div><div class="form-group col-md-4 mb-3"> <label for="txt_expiration_month">Mes de expiración (MM):</label> <input type="text" class="form-control" id="txt_expiration_month" name="txt_expiration_month" style="height:38px;" placeholder="Mes de expiración" size="2" data-conekta="card[exp_month]" required> </div><div class="form-group col-md-4 mb-3"> <label for="txt_expiration_year">Año de expiración (AAAA):</label> <input type="text" class="form-control" id="txt_expiration_year" name="txt_expiration_year" style="height:38px;" placeholder="Año de expiración" size="4" data-conekta="card[exp_year]" required> </div></div>';
+  					var card_form = '<div class="form-group"><label for="txt_cardholder_name">Nombre del tarjetahabiente:</label> <input type="text" class="form-control" id="txt_cardholder_name" name="txt_cardholder_name" aria-describedby="cardholder_name" placeholder="Nombre de tarjetahabiente" style="height:38px;" data-conekta="card[name]" size="20" required> <small id="name_help" class="form-text" style="display:none; color: red;">El nombre del tarjetahabiente es un campo obligatorio.</small></div><div class="row"><div class="col"><label for="txt_cardholder_email">Email</label><input type="text" class="form-control" id="txt_cardholder_email" name="txt_cardholder_email" style="height:38px;"></div><div class="col"><label for="txt_cardholder_phone">Teléfono</label><input type="text" class="form-control" id="txt_cardholder_phone" name="txt_cardholder_phone" style="height:38px;"></div></div><div class="form-group"><label for="txt_card_number">Número de tarjeta de crédito:</label> <input type="text" class="form-control" id="txt_card_number" name="txt_card_number" aria-describedby="cardholder_name" placeholder="Número de tarjeta" style="height:38px;" data-conekta="card[number]" size="20" required> <small id="name_help" class="form-text" style="display:none; color: red;">El número de la tarjeta es un campo obligatorio.</small></div><div class="form-row"> <div class="form-group col-md-4 mb-3"> <label for="txt_cvc">CVC:</label> <input type="text" class="form-control" id="txt_cvc" name="txt_cvc" style="height:38px;" placeholder="CVC" size="4" data-conekta="card[cvc]" required> </div><div class="form-group col-md-4 mb-3"> <label for="txt_expiration_month">Mes de expiración (MM):</label> <input type="text" class="form-control" id="txt_expiration_month" name="txt_expiration_month" style="height:38px;" placeholder="Mes de expiración" size="2" data-conekta="card[exp_month]" required> </div><div class="form-group col-md-4 mb-3"> <label for="txt_expiration_year">Año de expiración (AAAA):</label> <input type="text" class="form-control" id="txt_expiration_year" name="txt_expiration_year" style="height:38px;" placeholder="Año de expiración" size="4" data-conekta="card[exp_year]" required> </div></div>';
   					container.html(card_form);
   					payment_type_image_container.html('<p>Se aceptan pagos con tarjetas Visa, Mastercard y American Express.</p><img src="https://bluehand.com.mx/console/img/payments-cards.png" width="270">');
 
@@ -333,6 +331,70 @@ get_header();
 
   				Conekta.setPublicKey('key_bKFak7iY6oHRtDGBkmacraQ');
 			});
+
+			var addParticipant = function(){
+				var main_container = $('#participants_container');
+				var html = '<hr>';
+				html += '<div class="row">';
+				html += '<div class="col">';
+				html += '<label for="txt_name">Nombre:</label>';
+    			html += '<input type="text" class="form-control" name="txt_name[]" aria-describedby="name_help" placeholder="Nombre" style="height:38px;" required>';
+    			html += '<small id="name_help" class="form-text" style="display:none; color: red;">El nombre del participante es un campo obligatorio.</small>';
+				html += '</div>';
+
+				html += '<div class="col">';
+				html += '<label for="txt_lastname">Apellidos:</label>';
+    			html += '<input type="text" class="form-control" name="txt_lastname[]" aria-describedby="lastname_help" placeholder="Apellidos" style="height:38px;" required>';
+    			html += '<small id="lastname_help" class="form-text" style="display:none; color: red;">Los apellidos del participante son un campo obligatorio.</small>';
+				html += '</div>';
+
+				html += '<div class="col">';
+				html += '<label for="txt_email">Correo electrónico:</label>';
+    			html += '<input type="email" class="form-control" name="txt_email[]" aria-describedby="email_help" placeholder="Correo electrónico" style="height:38px;" required>';
+    			html += '<small id="email_help" class="form-text" style="display:none; color: red;">El campo correo electrónico es obligatorio.</small>';
+    			html += '</div>';
+
+    			html += '<div class="col">';
+				html += '<label for="txt_mobile_phone">Teléfono móvil:</label>';
+    			html += '<input type="number" class="form-control" name="txt_mobile_phone[]" aria-describedby="mobile_help" placeholder="Teléfono móvil" style="height:38px;" size="10" required>';
+    			html += '<small id="mobile_help" class="form-text" style="display:none; color: red;">El campo teléfono móvil es obligatorio.</small>';
+    			html += '</div>';
+
+				html += '</div>';				
+				
+				main_container.append(html);
+				
+				// Updating price
+				places++;
+				console.log('Price: ' + places);
+				$('#hdn_num_places').val(places);
+
+				var new_value = (unit_price * places);
+				var new_iva = ((new_value * 16) / 100);
+				var new_total = (new_value + new_iva);
+
+				$('#txt_course_cost').val(new_value);
+				$('#txt_iva').val(new_iva);
+				$('#txt_total_cost').val(new_total);
+			}
+
+			var removeParticipant = function(){
+				$('#participants_container .row').last().remove();
+				$('#participants_container hr').last().remove();
+				
+				// Updating price
+				places--;
+				console.log('Price: ' + places);
+				$('#hdn_num_places').val(places);
+
+				var new_value = (unit_price * places);
+				var new_iva = ((new_value * 16) / 100);
+				var new_total = (new_value + new_iva);
+
+				$('#txt_course_cost').val(new_value);
+				$('#txt_iva').val(new_iva);
+				$('#txt_total_cost').val(new_total);
+			}
 		</script>
 	</div>
 	

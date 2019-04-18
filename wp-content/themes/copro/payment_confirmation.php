@@ -75,7 +75,7 @@ get_header(); ?>
 		$client_complete_name = $_POST['txt_name'] .' '. $_POST['txt_lastname'];
 		$client_name = $_POST['txt_name'];
 		$client_lastname = $_POST['txt_lastname'];
-		$email = $_POST['txt_confirm_email'];
+		$email = $_POST['txt_email'];
 		$phone_number = $_POST['txt_mobile_phone'];
 		$course_code = $_POST['txt_course_code'];
 		$token_id = $_POST['conektaTokenId'];
@@ -86,6 +86,10 @@ get_header(); ?>
 		$rfc = $_POST['txt_rfc'];
 		$business_name = $_POST['txt_business_name'];
 		$payment_type = $_POST['hdn_payment_type'];
+		$places = $_POST['hdn_num_places'];
+		$cardholder_name = $_POST['txt_cardholder_name'];
+		$cardholder_email = $_POST['txt_cardholder_email'];
+		$cardholder_phone = $_POST['txt_cardholder_phone'];
 		
 		\Conekta\Conekta::setApiKey("key_84G14CLBJtwftNqQfsxxpw");
 		\Conekta\Conekta::setApiVersion("2.0.0");
@@ -96,7 +100,7 @@ get_header(); ?>
         				array(
           					"name" => $course_name,
           					"unit_price" => $price_in_cents,
-          					"quantity" => 1
+          					"quantity" => $places
         				)//first line_item
       				), //line_items
       				"currency" => "MXN",
@@ -267,11 +271,10 @@ get_header(); ?>
 				<?php 
 					$params = array(
 						"course_detail_id" => $course_detail_id,
-						"name" => $client_name,
-						"lastname" => $client_lastname,
-						"email" => $email,
-						"telephone" => $phone_number,
-						"places" => 1,
+						"name" => $cardholder_name,
+						"email" => $cardholder_email,
+						"telephone" => $cardholder_phone,
+						"places" => $places,
 						"amount" => $price,
 						"iva" => $iva,
 						"total_amount" => $total_price,
