@@ -273,7 +273,6 @@ get_header(); ?>
 					$params = array(
 						"course_detail_id" => $course_detail_id,
 						"name" => $cardholder_name,
-						"lastname" => "No lastname",
 						"email" => $cardholder_email,
 						"telephone" => $cardholder_phone,
 						"places" => $places,
