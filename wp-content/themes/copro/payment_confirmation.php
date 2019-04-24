@@ -141,12 +141,17 @@ get_header(); ?>
 			}
 
         }else if($payment_type == "spei"){
+        	// Set cardholder data to the first participant
+			$cardholder_name = $participant_name[0];
+			$cardholder_email = $participant_email[0];
+			$cardholder_phone = $participant_telephone[0];
+
         	$order_params = array(
       				"line_items" => array(
         				array(
           					"name" => $course_name,
           					"unit_price" => $price_in_cents,
-          					"quantity" => 1
+          					"quantity" => $places
         				)//first line_item
       				), //line_items
       				"currency" => "MXN",
@@ -227,11 +232,6 @@ get_header(); ?>
 					Estás a un paso de asegurar tu lugar en el curso: <?= $_POST['txt_course_name'] ?><br>
 					Realiza el pago vía SPEI con los siguiente datos:<br>
 					<?php
-					// Set cardholder data to the first participant
-					$cardholder_name = $participant_name[0];
-					$cardholder_email = $participant_email[0];
-					$cardholder_phone = $participant_telephone[0];
-
 
 					echo "<b>Número de orden:</b> ". $order->id . "<br>";
 					echo "<b>Banco: </b>". $order->charges[0]->payment_method->bank . "<br>";
