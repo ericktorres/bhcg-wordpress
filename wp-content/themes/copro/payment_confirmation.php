@@ -91,6 +91,9 @@ get_header(); ?>
 		$cardholder_email = $_POST['txt_cardholder_email'];
 		$cardholder_phone = $_POST['txt_cardholder_phone'];
 		$participant_name = $_POST['txt_name'];
+		$participant_lastname = $_POST['txt_lastname'];
+		$participant_email = $_POST['txt_email'];
+		$participant_telephone = $_POST['txt_mobile_phone'];
 		
 		\Conekta\Conekta::setApiKey("key_84G14CLBJtwftNqQfsxxpw");
 		\Conekta\Conekta::setApiVersion("2.0.0");
@@ -224,6 +227,12 @@ get_header(); ?>
 					Estás a un paso de asegurar tu lugar en el curso: <?= $_POST['txt_course_name'] ?><br>
 					Realiza el pago vía SPEI con los siguiente datos:<br>
 					<?php
+					// Set cardholder data to the first participant
+					$cardholder_name = $participant_name[0];
+					$cardholder_email = $participant_email[0];
+					$cardholder_phone = $participant_telephone[0];
+
+
 					echo "<b>Número de orden:</b> ". $order->id . "<br>";
 					echo "<b>Banco: </b>". $order->charges[0]->payment_method->bank . "<br>";
 					echo "<b>CLABE: </b>". $order->charges[0]->payment_method->clabe . "<br>";
@@ -284,9 +293,15 @@ get_header(); ?>
 						"rfc" => strtoupper($rfc),
 						"business_name" => $business_name,
 						"payment_status" => strtoupper($order->payment_status),
-						"payment_date" => date('Y-m-d H:i:s', $order->created_at)
+						"payment_date" => date('Y-m-d H:i:s', $order->created_at),
+						"participant_name" => $participant_name,
+						"participant_lastname" => $participant_lastname,
+						"participant_email" => $participant_email,
+						"participant_telephone" => $participant_telephone
 					);
 					$data_json = json_encode($params);
+
+					echo $data_json;
 
 					// Calling the service that register the order in our system
 					$ch = curl_init('https://cms.bluehand.com.mx/api/v1/payment/post');
