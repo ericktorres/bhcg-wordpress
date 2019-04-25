@@ -379,21 +379,23 @@ get_header();
 			}
 
 			var removeParticipant = function(){
-				$('#participants_container .row').last().remove();
-				$('#participants_container hr').last().remove();
-				
-				// Updating price
-				places--;
-				console.log('Price: ' + places);
-				$('#hdn_num_places').val(places);
+				if(places > 1){
+					$('#participants_container .row').last().remove();
+					$('#participants_container hr').last().remove();
+					
+					// Updating price
+					places--;
+					console.log('Price: ' + places);
+					$('#hdn_num_places').val(places);
 
-				var new_value = (unit_price * places);
-				var new_iva = ((new_value * 16) / 100);
-				var new_total = (new_value + new_iva);
+					var new_value = (unit_price * places);
+					var new_iva = ((new_value * 16) / 100);
+					var new_total = (new_value + new_iva);
 
-				$('#txt_course_cost').val(new_value);
-				$('#txt_iva').val(new_iva);
-				$('#txt_total_cost').val(new_total);
+					$('#txt_course_cost').val(new_value);
+					$('#txt_iva').val(new_iva);
+					$('#txt_total_cost').val(new_total);
+				}
 			}
 		</script>
 	</div>

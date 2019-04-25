@@ -197,15 +197,19 @@ get_header(); ?>
 						</p>
 						<?php
 							$email_params = array(
-								"to" => $email,
+								"to" => $cardholder_email,
 								"course_name" => $course_name,
 								"payment_confirmation" => $order->id,
 								"course_location" => $course_location,
 								"course_date" => $course_start_date,
 								"course_start_time" => $course_start_time,
-								"purchase_date" => date('Y-m-d H:i:s', $order->created_at),
-								"participant_name" => $client_complete_name,
-								"instructor" => $instructor_name
+								"purchase_date" => date('Y-m-d H:i:s', $order->created_at),								
+								"instructor" => $instructor_name,
+								"participant_name" => $participant_name,
+								"participant_lastname" => $participant_lastname,
+								"participant_email" => $participant_email,
+								"participant_telephone" => $participant_telephone,
+								"places" => $places
 							);
 							$email_data_json = json_encode($email_params);
 
@@ -237,29 +241,33 @@ get_header(); ?>
 					echo "<b>Banco: </b>". $order->charges[0]->payment_method->bank . "<br>";
 					echo "<b>CLABE: </b>". $order->charges[0]->payment_method->clabe . "<br>";
 					echo "<b>$". $total_price . " MXN I.V.A. incluido.</b><br>";
-					echo "Orden ";
+					//echo "Orden ";
 
 					/*echo 'clabe: '. $order->charges[0]->payment_method->clabe . "\r\n";
 					echo 'bank: '. $order->charges[0]->payment_method->bank . "\r\n";
 					echo 'Account Number: '. $order->charges[0]->payment_method->receiving_account_number . "\r\n";
 					echo 'Account Banck: '. $order->charges[0]->payment_method->receiving_account_bank . "\r\n";*/
 
-					echo $order->line_items->data[0]->quantity .
+					/*echo $order->line_items->data[0]->quantity .
 					      "-". $order->line_items->data[0]->name .
-					      "- $". $order->line_items->data->unit_price/100 . "<br>";
+					      "- $". $order->line_items->data->unit_price/100 . "<br>";*/
 					//echo date('Y-m-d H:i:s') . " - " . $order->created_at . "<br>";
 					?>
 					Una vez hecho el pago recibirás toda la información del curso en tu correo electrónico.
 				</p>
 					<?php
 						$email_params = array(
-							"to" => $email,
+							"to" => $cardholder_email,
 							"course_name" => $course_name,
 							"payment_confirmation" => $order->id,
-							"participant_name" => $client_complete_name,
 							"bank" => $order->charges[0]->payment_method->bank,
 							"clabe" => $order->charges[0]->payment_method->clabe,
-							"amount" => $total_price
+							"amount" => $total_price,
+							"participant_name" => $participant_name,
+							"participant_lastname" => $participant_lastname,
+							"participant_email" => $participant_email,
+							"participant_telephone" => $participant_telephone,
+							"places" => $places
 						);
 						$email_data_json = json_encode($email_params);
 
@@ -301,8 +309,6 @@ get_header(); ?>
 					);
 					$data_json = json_encode($params);
 
-					echo $data_json;
-
 					// Calling the service that register the order in our system
 					$ch = curl_init('https://cms.bluehand.com.mx/api/v1/payment/post');
 					curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
@@ -314,10 +320,6 @@ get_header(); ?>
 					);                                                                                                                                                                                           
 					$result = curl_exec($ch);
 
-					// Getting the participants data
-					for($i=0; $i<$places; $i++){
-						echo $participant_name[$i];
-					}
 				?>
 			
 		</div>
