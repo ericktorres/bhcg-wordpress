@@ -142,7 +142,7 @@ get_header(); ?>
 
         }else if($payment_type == "spei"){
         	// Set cardholder data to the first participant
-			$cardholder_name = $participant_name[0];
+			$cardholder_name = $participant_name[0] . ' ' . $participant_lastname[0];
 			$cardholder_email = $participant_email[0];
 			$cardholder_phone = $participant_telephone[0];
 
@@ -189,38 +189,38 @@ get_header(); ?>
 			
 				<?php if($payment_type == "card"){ ?>
 					<?php if($order->payment_status == 'paid'){ ?>
-				<h1>¡Felicidades!</h1>
-				<p>
-					Has asegurado tu lugar en el curso: <b><?= $_POST['txt_course_name'] ?> </b><br>
-					Tu clave de confirmación es <b><?= $order->id ?> </b><br>
-					Guarda tu clave de confirmación y espera los detalles del curso en tu correo electrónico.
-				</p>
-					<?php
-						$email_params = array(
-							"to" => $email,
-							"course_name" => $course_name,
-							"payment_confirmation" => $order->id,
-							"course_location" => $course_location,
-							"course_date" => $course_start_date,
-							"course_start_time" => $course_start_time,
-							"purchase_date" => date('Y-m-d H:i:s', $order->created_at),
-							"participant_name" => $client_complete_name,
-							"instructor" => $instructor_name
-						);
-						$email_data_json = json_encode($email_params);
+						<h1>¡Felicidades!</h1>
+						<p>
+							Has asegurado tu lugar en el curso: <b><?= $_POST['txt_course_name'] ?> </b><br>
+							Tu clave de confirmación es <b><?= $order->id ?> </b><br>
+							Guarda tu clave de confirmación y espera los detalles del curso en tu correo electrónico.
+						</p>
+						<?php
+							$email_params = array(
+								"to" => $email,
+								"course_name" => $course_name,
+								"payment_confirmation" => $order->id,
+								"course_location" => $course_location,
+								"course_date" => $course_start_date,
+								"course_start_time" => $course_start_time,
+								"purchase_date" => date('Y-m-d H:i:s', $order->created_at),
+								"participant_name" => $client_complete_name,
+								"instructor" => $instructor_name
+							);
+							$email_data_json = json_encode($email_params);
 
-						// Sending the email notification
-						$curl_send_mail = curl_init('https://cms.bluehand.com.mx/api/v1/emails/send-purchase-notification');
-						curl_setopt($curl_send_mail, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
-						curl_setopt($curl_send_mail, CURLOPT_POSTFIELDS, $email_data_json);
-						curl_setopt($curl_send_mail, CURLOPT_RETURNTRANSFER, true);                                                                      
-						curl_setopt($curl_send_mail, CURLOPT_HTTPHEADER, array(                                                                          
-    						'Content-Type: application/json',                                                                                
-    						'Content-Length: ' . strlen($email_data_json)) 
-						);
-                                                                                                                     
-						$result = curl_exec($curl_send_mail);
-					?>
+							// Sending the email notification
+							$curl_send_mail = curl_init('https://cms.bluehand.com.mx/api/v1/emails/send-purchase-notification');
+							curl_setopt($curl_send_mail, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
+							curl_setopt($curl_send_mail, CURLOPT_POSTFIELDS, $email_data_json);
+							curl_setopt($curl_send_mail, CURLOPT_RETURNTRANSFER, true);                                                                      
+							curl_setopt($curl_send_mail, CURLOPT_HTTPHEADER, array(                                                                          
+	    						'Content-Type: application/json',                                                                                
+	    						'Content-Length: ' . strlen($email_data_json)) 
+							);
+	                                                                                                                     
+							$result = curl_exec($curl_send_mail);
+						?>
 
 					<?php } else { ?>
 				<h1>Lo sentimos :(</h1>
