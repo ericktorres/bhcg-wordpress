@@ -95,7 +95,7 @@ get_header(); ?>
 		$participant_email = $_POST['txt_email'];
 		$participant_telephone = $_POST['txt_mobile_phone'];
 		
-		\Conekta\Conekta::setApiKey("key_84G14CLBJtwftNqQfsxxpw");
+		\Conekta\Conekta::setApiKey("key_tSD9hmj2QAnLj5X7JxqGNg");
 		\Conekta\Conekta::setApiVersion("2.0.0");
         
         if($payment_type == "card"){

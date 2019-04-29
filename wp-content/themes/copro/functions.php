@@ -391,21 +391,22 @@ add_action( 'wp_enqueue_scripts', 'ivan_scripts', 99 );
 /**
  * Paypal script for checkout
  */
-function paypal_checkout() {
-	// For sandbox wp_register_script('paypal_sdk_js', 'https://www.paypal.com/sdk/js?client-id=AW4bUR-JIsByh90XMkfp7nDrRfE82PymvDhsIHjHyfC4zZbjViFRm4MzPatcMIOjEQItK4EXYLpl7g01&currency=MXN');
-	//wp_register_script('paypal_sdk_js', 'https://www.paypal.com/sdk/js?client-id=AeuffiCqniXPPwchxL-s2xifsebIAYcGFglM9EczNvWQeyqtPMC2czAdhL6mxvTXVVyQEq1xG1YHhlYw&currency=MXN');
-	wp_register_script('jquery331', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js');
-	wp_register_script('conekta_script', 'https://cdn.conekta.io/js/latest/conekta.js');
+function payment_scripts() {
 	wp_register_style('bootstrap', get_template_directory_uri().'/css/bootstrap-for-courses.css');
+	wp_register_style('fontawesome', 'https://use.fontawesome.com/releases/v5.7.0/css/all.css');
+	wp_register_script('jquery441', 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js');
+	wp_register_script('conekta_script', 'https://cdn.conekta.io/js/latest/conekta.js');
+	wp_register_script('payments', get_template_directory_uri().'/js/payments.js');
 	
 	if (is_page_template('checkout.php')) {
-		wp_enqueue_script('jquery331');
-        //wp_enqueue_script('paypal_sdk_js');
+		wp_enqueue_style('bootstrap');
+		wp_enqueue_style('fontawesome');
+		wp_enqueue_script('jquery441');
         wp_enqueue_script('conekta_script');
-        wp_enqueue_style('bootstrap');
+        wp_enqueue_script('payments');
     }
 }
-add_action('wp_enqueue_scripts', 'paypal_checkout');
+add_action('wp_enqueue_scripts', 'payment_scripts');
 
 
 /**
